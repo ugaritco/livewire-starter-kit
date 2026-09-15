@@ -3,7 +3,7 @@
 use App\Actions\Teams\CreateTeam;
 use App\Rules\TeamName;
 use Flux\Flux;
-use Illuminate\Support\Facades\Auth;
+use Heritage\Support\Facades\Auth;
 use Livewire\Component;
 
 new class extends Component {

@@ -5,7 +5,7 @@ namespace App\Actions\Teams;
 use App\Enums\TeamRole;
 use App\Models\Team;
 use App\Models\User;
-use Illuminate\Support\Facades\DB;
+use Heritage\Support\Facades\DB;
 
 class CreateTeam
 {

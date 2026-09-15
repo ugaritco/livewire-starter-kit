@@ -6,7 +6,7 @@ use App\Enums\TeamRole;
 use App\Models\Team;
 use App\Models\TeamInvitation;
 use App\Models\User;
-use Illuminate\Foundation\Testing\RefreshDatabase;
+use Heritage\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 
 class PruneExpiredTeamInvitationsTest extends TestCase
@@ -37,7 +37,7 @@ class PruneExpiredTeamInvitationsTest extends TestCase
             'invited_by' => $owner->id,
         ]);
 
-        $this->artisan('schedule:run')->assertSuccessful();
+        $this->scribe('schedule:run')->assertSuccessful();
 
         $this->assertDatabaseMissing('team_invitations', [
             'id' => $expiredInvitation->id,

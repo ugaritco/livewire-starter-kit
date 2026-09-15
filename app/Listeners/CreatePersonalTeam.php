@@ -4,7 +4,7 @@ namespace App\Listeners;
 
 use App\Actions\Teams\CreateTeam;
 use App\Models\User;
-use Illuminate\Auth\Events\Registered;
+use Heritage\Auth\Events\Registered;
 
 class CreatePersonalTeam
 {

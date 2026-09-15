@@ -1,8 +1,8 @@
 <?php
 
 use App\Http\Middleware\EnsureTeamMembership;
-use Illuminate\Support\Facades\Route;
-use Laravel\WorkOS\Http\Middleware\ValidateSessionWithWorkOS;
+use Heritage\Support\Facades\Route;
+use Ugarit\WorkOS\Http\Middleware\ValidateSessionWithWorkOS;
 
 Route::view('/', 'welcome')->name('home');
 

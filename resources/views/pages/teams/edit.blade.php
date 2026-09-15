@@ -5,11 +5,11 @@ use App\Enums\TeamRole;
 use App\Models\Team;
 use App\Rules\TeamName;
 use Flux\Flux;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Gate;
-use Illuminate\Support\Facades\Validator;
-use Illuminate\Validation\Rule;
+use Heritage\Support\Facades\Auth;
+use Heritage\Support\Facades\DB;
+use Heritage\Support\Facades\Gate;
+use Heritage\Support\Facades\Validator;
+use Heritage\Validation\Rule;
 use Livewire\Attributes\Computed;
 use Livewire\Component;
 

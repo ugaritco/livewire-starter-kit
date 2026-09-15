@@ -1,7 +1,7 @@
 <?php
 
 use App\Models\TeamInvitation;
-use Illuminate\Support\Facades\Schedule;
+use Heritage\Support\Facades\Schedule;
 
 Schedule::call(function () {
     TeamInvitation::query()

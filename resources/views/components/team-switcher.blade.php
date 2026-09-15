@@ -2,8 +2,8 @@
 
 use App\Data\UserTeam;
 use App\Models\Team;
-use Illuminate\Support\Collection;
-use Illuminate\Support\Facades\Auth;
+use Heritage\Support\Collection;
+use Heritage\Support\Facades\Auth;
 use Livewire\Component;
 
 new class extends Component {

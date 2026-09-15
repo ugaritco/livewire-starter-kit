@@ -3,10 +3,10 @@
 namespace App\Models;
 
 use App\Enums\TeamRole;
-use Illuminate\Database\Eloquent\Attributes\Fillable;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use Illuminate\Database\Eloquent\Relations\Pivot;
-use Illuminate\Support\Carbon;
+use Heritage\Database\Eloquent\Attributes\Fillable;
+use Heritage\Database\Eloquent\Relations\BelongsTo;
+use Heritage\Database\Eloquent\Relations\Pivot;
+use Heritage\Support\Carbon;
 
 /**
  * @property int $id

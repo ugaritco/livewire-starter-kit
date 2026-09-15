@@ -3,10 +3,10 @@
 namespace App\Notifications\Teams;
 
 use App\Models\TeamInvitation as TeamInvitationModel;
-use Illuminate\Bus\Queueable;
-use Illuminate\Contracts\Queue\ShouldQueue;
-use Illuminate\Notifications\Messages\MailMessage;
-use Illuminate\Notifications\Notification;
+use Heritage\Bus\Queueable;
+use Heritage\Contracts\Queue\ShouldQueue;
+use Heritage\Notifications\Messages\MailMessage;
+use Heritage\Notifications\Notification;
 
 class TeamInvitation extends Notification implements ShouldQueue
 {

@@ -2,10 +2,10 @@
 
 use App\Models\TeamInvitation;
 use Flux\Flux;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Str;
-use Illuminate\Validation\ValidationException;
+use Heritage\Support\Facades\Auth;
+use Heritage\Support\Facades\DB;
+use Heritage\Support\Str;
+use Heritage\Validation\ValidationException;
 use Livewire\Attributes\Computed;
 use Livewire\Component;
 
@@ -20,10 +20,10 @@ new class extends Component {
     }
 
     /**
-     * @return \Illuminate\Support\Collection<int, array{code: string, inviter_name: string, team_name: string}>
+     * @return \Heritage\Support\Collection<int, array{code: string, inviter_name: string, team_name: string}>
      */
     #[Computed]
-    public function pendingInvitations(): \Illuminate\Support\Collection
+    public function pendingInvitations(): \Heritage\Support\Collection
     {
         $email = Str::lower(Auth::user()->email);
 

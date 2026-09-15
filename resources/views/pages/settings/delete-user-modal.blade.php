@@ -1,7 +1,7 @@
 <?php
 
 use App\Models\User;
-use Laravel\WorkOS\Http\Requests\AuthKitAccountDeletionRequest;
+use Ugarit\WorkOS\Http\Requests\AuthKitAccountDeletionRequest;
 use Livewire\Component;
 
 new class extends Component {

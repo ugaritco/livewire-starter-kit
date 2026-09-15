@@ -1,7 +1,7 @@
 <?php
 
 use Flux\Flux;
-use Illuminate\Support\Facades\Auth;
+use Heritage\Support\Facades\Auth;
 use Livewire\Attributes\Title;
 use Livewire\Component;
 

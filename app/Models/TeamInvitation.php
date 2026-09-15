@@ -4,12 +4,12 @@ namespace App\Models;
 
 use App\Enums\TeamRole;
 use Database\Factories\TeamInvitationFactory;
-use Illuminate\Database\Eloquent\Attributes\Fillable;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use Illuminate\Support\Carbon;
-use Illuminate\Support\Str;
+use Heritage\Database\Eloquent\Attributes\Fillable;
+use Heritage\Database\Eloquent\Factories\HasFactory;
+use Heritage\Database\Eloquent\Model;
+use Heritage\Database\Eloquent\Relations\BelongsTo;
+use Heritage\Support\Carbon;
+use Heritage\Support\Str;
 
 /**
  * @property int $id
