@@ -2,13 +2,13 @@
 
 namespace App\Console\Commands;
 
-use Illuminate\Console\Command;
-use Laravel\Chisel\Chisel;
-use Laravel\Chisel\Question;
-use Laravel\Chisel\Script;
+use Heritage\Console\Command;
+use Ugarit\Chisel\Chisel;
+use Ugarit\Chisel\Question;
+use Ugarit\Chisel\Script;
 
-use function Laravel\Prompts\multiselect;
-use function Laravel\Prompts\spin;
+use function Ugarit\Prompts\multiselect;
+use function Ugarit\Prompts\spin;
 
 class InstallFeaturesCommand extends Command
 {
@@ -77,12 +77,12 @@ class InstallFeaturesCommand extends Command
             return false;
         }
 
-        return $this->installerFlag('LARAVEL_INSTALLER_DEFER_HOOKS');
+        return $this->installerFlag('UGARIT_INSTALLER_DEFER_HOOKS');
     }
 
     protected function shouldSkipNode(): bool
     {
-        return $this->installerFlag('LARAVEL_INSTALLER_NO_NODE');
+        return $this->installerFlag('UGARIT_INSTALLER_NO_NODE');
     }
 
     protected function installerFlag(string $name): bool

@@ -3,8 +3,8 @@
 namespace Tests\Feature\Auth;
 
 use App\Models\User;
-use Illuminate\Foundation\Testing\RefreshDatabase;
-use Laravel\Fortify\Features;
+use Heritage\Foundation\Testing\RefreshDatabase;
+use Ugarit\Fortify\Features;
 use Tests\TestCase;
 
 class TwoFactorChallengeTest extends TestCase

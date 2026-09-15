@@ -1,8 +1,8 @@
 <?php
 
 use App\Http\Middleware\EnsureTeamMembership;
-use Illuminate\Support\Facades\Route;
-use Laravel\Fortify\Features;
+use Heritage\Support\Facades\Route;
+use Ugarit\Fortify\Features;
 
 Route::middleware(['auth'])->group(function () {
     Route::redirect('settings', 'settings/profile');

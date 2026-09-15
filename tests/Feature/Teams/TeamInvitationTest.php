@@ -6,9 +6,9 @@ use App\Enums\TeamRole;
 use App\Models\Team;
 use App\Models\TeamInvitation;
 use App\Models\User;
-use Illuminate\Database\Eloquent\ModelNotFoundException;
-use Illuminate\Foundation\Testing\RefreshDatabase;
-use Illuminate\Support\Facades\Notification;
+use Heritage\Database\Eloquent\ModelNotFoundException;
+use Heritage\Foundation\Testing\RefreshDatabase;
+use Heritage\Support\Facades\Notification;
 use Livewire\Livewire;
 use Tests\TestCase;
 

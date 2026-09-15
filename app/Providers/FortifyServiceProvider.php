@@ -20,24 +20,24 @@ use App\Http\Responses\TwoFactorLoginResponse;
 use App\Http\Responses\VerifyEmailResponse;
 /* @end-chisel-email-verification */
 use App\Models\TeamInvitation;
-use Illuminate\Cache\RateLimiting\Limit;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\RateLimiter;
-use Illuminate\Support\ServiceProvider;
-use Illuminate\Support\Str;
-use Laravel\Fortify\Contracts\LoginResponse as LoginResponseContract;
+use Heritage\Cache\RateLimiting\Limit;
+use Heritage\Http\Request;
+use Heritage\Support\Facades\RateLimiter;
+use Heritage\Support\ServiceProvider;
+use Heritage\Support\Str;
+use Ugarit\Fortify\Contracts\LoginResponse as LoginResponseContract;
 /* @chisel-registration */
-use Laravel\Fortify\Contracts\RegisterResponse as RegisterResponseContract;
+use Ugarit\Fortify\Contracts\RegisterResponse as RegisterResponseContract;
 /* @end-chisel-registration */
 /* @chisel-2fa */
-use Laravel\Fortify\Contracts\TwoFactorLoginResponse as TwoFactorLoginResponseContract;
+use Ugarit\Fortify\Contracts\TwoFactorLoginResponse as TwoFactorLoginResponseContract;
 /* @end-chisel-2fa */
 /* @chisel-email-verification */
-use Laravel\Fortify\Contracts\VerifyEmailResponse as VerifyEmailResponseContract;
+use Ugarit\Fortify\Contracts\VerifyEmailResponse as VerifyEmailResponseContract;
 /* @end-chisel-email-verification */
-use Laravel\Fortify\Fortify;
+use Ugarit\Fortify\Fortify;
 /* @chisel-passkeys */
-use Laravel\Passkeys\Contracts\PasskeyLoginResponse as PasskeyLoginResponseContract;
+use Ugarit\Passkeys\Contracts\PasskeyLoginResponse as PasskeyLoginResponseContract;
 
 /* @end-chisel-passkeys */
 

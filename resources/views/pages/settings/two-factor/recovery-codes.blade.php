@@ -1,6 +1,6 @@
 <?php
 
-use Laravel\Fortify\Actions\GenerateNewRecoveryCodes;
+use Ugarit\Fortify\Actions\GenerateNewRecoveryCodes;
 use Livewire\Attributes\Locked;
 use Livewire\Component;
 

@@ -2,11 +2,11 @@
 
 use App\Concerns\ProfileValidationRules;
 /* @chisel-email-verification */
-use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Heritage\Contracts\Auth\MustVerifyEmail;
 /* @end-chisel-email-verification */
 use Flux\Flux;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Session;
+use Heritage\Support\Facades\Auth;
+use Heritage\Support\Facades\Session;
 use Livewire\Attributes\Computed;
 use Livewire\Attributes\Title;
 use Livewire\Component;

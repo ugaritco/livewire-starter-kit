@@ -2,7 +2,7 @@
 
 use App\Concerns\PasswordValidationRules;
 use App\Livewire\Actions\Logout;
-use Illuminate\Support\Facades\Auth;
+use Heritage\Support\Facades\Auth;
 use Livewire\Component;
 
 new class extends Component {

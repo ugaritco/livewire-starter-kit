@@ -8,12 +8,12 @@ use App\Enums\TeamPermission;
 use App\Enums\TeamRole;
 use App\Models\Membership;
 use App\Models\Team;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use Illuminate\Database\Eloquent\Relations\BelongsToMany;
-use Illuminate\Database\Eloquent\Relations\HasMany;
-use Illuminate\Database\Eloquent\Relations\HasManyThrough;
-use Illuminate\Support\Collection;
-use Illuminate\Support\Facades\URL;
+use Heritage\Database\Eloquent\Relations\BelongsTo;
+use Heritage\Database\Eloquent\Relations\BelongsToMany;
+use Heritage\Database\Eloquent\Relations\HasMany;
+use Heritage\Database\Eloquent\Relations\HasManyThrough;
+use Heritage\Support\Collection;
+use Heritage\Support\Facades\URL;
 
 trait HasTeams
 {

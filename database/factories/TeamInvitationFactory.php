@@ -6,7 +6,7 @@ use App\Enums\TeamRole;
 use App\Models\Team;
 use App\Models\TeamInvitation;
 use App\Models\User;
-use Illuminate\Database\Eloquent\Factories\Factory;
+use Heritage\Database\Eloquent\Factories\Factory;
 
 /**
  * @extends Factory<TeamInvitation>

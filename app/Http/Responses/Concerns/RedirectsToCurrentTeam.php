@@ -3,8 +3,8 @@
 namespace App\Http\Responses\Concerns;
 
 use App\Models\Team;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\URL;
+use Heritage\Http\Request;
+use Heritage\Support\Facades\URL;
 
 trait RedirectsToCurrentTeam
 {

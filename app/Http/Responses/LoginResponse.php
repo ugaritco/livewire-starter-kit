@@ -3,9 +3,9 @@
 namespace App\Http\Responses;
 
 use App\Http\Responses\Concerns\RedirectsToCurrentTeam;
-use Illuminate\Http\JsonResponse;
-use Laravel\Fortify\Contracts\LoginResponse as LoginResponseContract;
-use Laravel\Fortify\Fortify;
+use Heritage\Http\JsonResponse;
+use Ugarit\Fortify\Contracts\LoginResponse as LoginResponseContract;
+use Ugarit\Fortify\Fortify;
 use Symfony\Component\HttpFoundation\Response;
 
 class LoginResponse implements LoginResponseContract

@@ -6,7 +6,7 @@ use App\Enums\TeamRole;
 use App\Models\Team;
 use App\Models\User;
 use Closure;
-use Illuminate\Http\Request;
+use Heritage\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 
 class EnsureTeamMembership

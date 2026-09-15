@@ -3,9 +3,9 @@
 namespace App\Http\Responses;
 
 use App\Http\Responses\Concerns\RedirectsToCurrentTeam;
-use Illuminate\Http\JsonResponse;
-use Laravel\Fortify\Fortify;
-use Laravel\Passkeys\Contracts\PasskeyLoginResponse as PasskeyLoginResponseContract;
+use Heritage\Http\JsonResponse;
+use Ugarit\Fortify\Fortify;
+use Ugarit\Passkeys\Contracts\PasskeyLoginResponse as PasskeyLoginResponseContract;
 use Symfony\Component\HttpFoundation\Response;
 
 class PasskeyLoginResponse implements PasskeyLoginResponseContract

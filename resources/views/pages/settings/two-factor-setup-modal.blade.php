@@ -1,7 +1,7 @@
 <?php
 
-use Laravel\Fortify\Actions\ConfirmTwoFactorAuthentication;
-use Laravel\Fortify\Actions\EnableTwoFactorAuthentication;
+use Ugarit\Fortify\Actions\ConfirmTwoFactorAuthentication;
+use Ugarit\Fortify\Actions\EnableTwoFactorAuthentication;
 use Livewire\Attributes\Computed;
 use Livewire\Attributes\Locked;
 use Livewire\Attributes\On;

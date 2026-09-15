@@ -5,14 +5,14 @@ namespace App\Models;
 use App\Concerns\GeneratesUniqueTeamSlugs;
 use App\Enums\TeamRole;
 use Database\Factories\TeamFactory;
-use Illuminate\Database\Eloquent\Attributes\Fillable;
-use Illuminate\Database\Eloquent\Collection;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsToMany;
-use Illuminate\Database\Eloquent\Relations\HasMany;
-use Illuminate\Database\Eloquent\SoftDeletes;
-use Illuminate\Support\Carbon;
+use Heritage\Database\Eloquent\Attributes\Fillable;
+use Heritage\Database\Eloquent\Collection;
+use Heritage\Database\Eloquent\Factories\HasFactory;
+use Heritage\Database\Eloquent\Model;
+use Heritage\Database\Eloquent\Relations\BelongsToMany;
+use Heritage\Database\Eloquent\Relations\HasMany;
+use Heritage\Database\Eloquent\SoftDeletes;
+use Heritage\Support\Carbon;
 
 /**
  * @property int $id

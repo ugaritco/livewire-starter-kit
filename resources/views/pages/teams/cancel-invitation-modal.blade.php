@@ -2,7 +2,7 @@
 
 use App\Models\Team;
 use Flux\Flux;
-use Illuminate\Support\Facades\Gate;
+use Heritage\Support\Facades\Gate;
 use Livewire\Component;
 
 new class extends Component {

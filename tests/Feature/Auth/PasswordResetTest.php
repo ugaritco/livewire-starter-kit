@@ -3,10 +3,10 @@
 namespace Tests\Feature\Auth;
 
 use App\Models\User;
-use Illuminate\Auth\Notifications\ResetPassword;
-use Illuminate\Foundation\Testing\RefreshDatabase;
-use Illuminate\Support\Facades\Notification;
-use Laravel\Fortify\Features;
+use Heritage\Auth\Notifications\ResetPassword;
+use Heritage\Foundation\Testing\RefreshDatabase;
+use Heritage\Support\Facades\Notification;
+use Ugarit\Fortify\Features;
 use Tests\TestCase;
 
 class PasswordResetTest extends TestCase

@@ -5,9 +5,9 @@ namespace Database\Factories;
 use App\Enums\TeamRole;
 use App\Models\Team;
 use App\Models\User;
-use Illuminate\Database\Eloquent\Factories\Factory;
-use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Str;
+use Heritage\Database\Eloquent\Factories\Factory;
+use Heritage\Support\Facades\Hash;
+use Heritage\Support\Str;
 
 /**
  * @extends Factory<User>

@@ -3,7 +3,7 @@
 namespace App\Concerns;
 
 use App\Models\Team;
-use Illuminate\Support\Str;
+use Heritage\Support\Str;
 
 trait GeneratesUniqueTeamSlugs
 {

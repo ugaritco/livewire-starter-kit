@@ -3,11 +3,11 @@
 namespace Tests\Feature\Auth;
 
 use App\Models\User;
-use Illuminate\Foundation\Testing\RefreshDatabase;
-use Illuminate\Http\Request;
-use Laravel\Fortify\Features;
+use Heritage\Foundation\Testing\RefreshDatabase;
+use Heritage\Http\Request;
+use Ugarit\Fortify\Features;
 /* @chisel-passkeys */
-use Laravel\Passkeys\Contracts\PasskeyLoginResponse;
+use Ugarit\Passkeys\Contracts\PasskeyLoginResponse;
 /* @end-chisel-passkeys */
 use Tests\TestCase;
 
@@ -46,7 +46,7 @@ class AuthenticationTest extends TestCase
         $request = Request::create(route('login', absolute: false), 'GET', server: [
             'HTTP_ACCEPT' => 'application/json',
         ]);
-        $request->setLaravelSession($this->app['session.store']);
+        $request->setUgaritSession($this->app['session.store']);
         $request->setUserResolver(fn () => $user);
 
         $jsonResponse = app(PasskeyLoginResponse::class)->toResponse($request);

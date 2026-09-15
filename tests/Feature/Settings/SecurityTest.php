@@ -3,9 +3,9 @@
 namespace Tests\Feature\Settings;
 
 use App\Models\User;
-use Illuminate\Foundation\Testing\RefreshDatabase;
-use Illuminate\Support\Facades\Hash;
-use Laravel\Fortify\Features;
+use Heritage\Foundation\Testing\RefreshDatabase;
+use Heritage\Support\Facades\Hash;
+use Ugarit\Fortify\Features;
 use Livewire\Livewire;
 use Tests\TestCase;
 

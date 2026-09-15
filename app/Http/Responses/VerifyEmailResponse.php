@@ -3,9 +3,9 @@
 namespace App\Http\Responses;
 
 use App\Http\Responses\Concerns\RedirectsToCurrentTeam;
-use Illuminate\Http\JsonResponse;
-use Laravel\Fortify\Contracts\VerifyEmailResponse as VerifyEmailResponseContract;
-use Laravel\Fortify\Fortify;
+use Heritage\Http\JsonResponse;
+use Ugarit\Fortify\Contracts\VerifyEmailResponse as VerifyEmailResponseContract;
+use Ugarit\Fortify\Fortify;
 use Symfony\Component\HttpFoundation\Response;
 
 class VerifyEmailResponse implements VerifyEmailResponseContract

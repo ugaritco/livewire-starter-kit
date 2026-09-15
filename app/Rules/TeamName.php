@@ -3,10 +3,10 @@
 namespace App\Rules;
 
 use Closure;
-use Illuminate\Contracts\Validation\ValidationRule;
-use Illuminate\Routing\Route as RouteElement;
-use Illuminate\Support\Facades\Route;
-use Illuminate\Translation\PotentiallyTranslatedString;
+use Heritage\Contracts\Validation\ValidationRule;
+use Heritage\Routing\Route as RouteElement;
+use Heritage\Support\Facades\Route;
+use Heritage\Translation\PotentiallyTranslatedString;
 
 class TeamName implements ValidationRule
 {

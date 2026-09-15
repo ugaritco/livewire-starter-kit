@@ -2,15 +2,15 @@
 
 use App\Concerns\PasswordValidationRules;
 use Flux\Flux;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Validation\ValidationException;
-use Laravel\Fortify\Actions\DisableTwoFactorAuthentication;
-use Laravel\Fortify\Features;
-use Laravel\Fortify\Fortify;
+use Heritage\Support\Facades\Auth;
+use Heritage\Validation\ValidationException;
+use Ugarit\Fortify\Actions\DisableTwoFactorAuthentication;
+use Ugarit\Fortify\Features;
+use Ugarit\Fortify\Fortify;
 use Livewire\Attributes\Title;
 use Livewire\Component;
 /* @chisel-passkeys */
-use Laravel\Passkeys\Actions\DeletePasskey;
+use Ugarit\Passkeys\Actions\DeletePasskey;
 use Livewire\Attributes\Locked;
 /* @end-chisel-passkeys */
 /* @chisel-2fa */
@@ -203,7 +203,7 @@ new #[Title('Security settings')] class extends Component {
                 type="password"
                 required
                 autocomplete="new-password"
-                passwordrules="{{ \Illuminate\Validation\Rules\Password::defaults()->toPasswordRulesString() }}"
+                passwordrules="{{ \Heritage\Validation\Rules\Password::defaults()->toPasswordRulesString() }}"
                 viewable
             />
             <flux:input
@@ -212,7 +212,7 @@ new #[Title('Security settings')] class extends Component {
                 type="password"
                 required
                 autocomplete="new-password"
-                passwordrules="{{ \Illuminate\Validation\Rules\Password::defaults()->toPasswordRulesString() }}"
+                passwordrules="{{ \Heritage\Validation\Rules\Password::defaults()->toPasswordRulesString() }}"
                 viewable
             />
 
