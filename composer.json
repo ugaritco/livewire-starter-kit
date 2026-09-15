@@ -1,0 +1,131 @@
+{
+    "$schema": "https://getcomposer.org/schema.json",
+    "name": "ugarit/livewire-starter-kit",
+    "type": "project",
+    "description": "The official Ugarit starter kit for Livewire.",
+    "keywords": [
+        "ugarit",
+        "framework"
+    ],
+    "license": "MIT",
+    "require": {
+        "php": "^8.3",
+        "ugarit/chisel": "^1.00.00",
+        "ugarit/fortify": "^1.00.00",
+        "ugarit/framework": "^1.00.00",
+        "ugarit/tinker": "^1.00.00",
+        "livewire/blaze": "^1.0",
+        "livewire/flux": "^2.13.1",
+        "livewire/livewire": "^4.1"
+    },
+    "require-dev": {
+        "fakerphp/faker": "^1.24",
+        "larastan/larastan": "^3.9",
+        "ugarit/pail": "^1.00.00",
+        "ugarit/pao": "^1.00.00",
+        "ugarit/pint": "^1.00.00",
+        "ugarit/sail": "^1.00.00",
+        "mockery/mockery": "^1.6",
+        "nunomaduro/collision": "^8.9.3",
+        "phpunit/phpunit": "^12.5.23"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "Database\\Factories\\": "database/factories/",
+            "Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "setup": [
+            "composer install",
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\"",
+            "@php scribe key:generate",
+            "@php scribe migrate --force",
+            "npm install",
+            "npm run build"
+        ],
+        "dev": [
+            "Composer\\Config::disableProcessTimeout",
+            "@php scribe dev"
+        ],
+        "lint": [
+            "pint --parallel"
+        ],
+        "lint:check": [
+            "pint --parallel --test"
+        ],
+        "ci:check": [
+            "Composer\\Config::disableProcessTimeout",
+            "@test"
+        ],
+        "types:check": [
+            "phpstan analyse"
+        ],
+        "test": [
+            "@php scribe config:clear --ansi",
+            "@lint:check",
+            "@types:check",
+            "@php scribe test"
+        ],
+        "post-autoload-dump": [
+            "Heritage\\Foundation\\ComposerScripts::postAutoloadDump",
+            "@php scribe package:discover --ansi"
+        ],
+        "post-update-cmd": [
+            "@php scribe install:features --ansi",
+            "@php scribe vendor:publish --tag=ugarit-assets --ansi --force"
+        ],
+        "post-root-package-install": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ],
+        "post-create-project-cmd": [
+            "@php rename_livewire_files.php",
+            "@php scribe key:generate --ansi",
+            "@php -r \"file_exists('database/database.sqlite') || touch('database/database.sqlite');\"",
+            "@php scribe migrate --graceful --ansi"
+        ],
+        "pre-package-uninstall": [
+            "Heritage\\Foundation\\ComposerScripts::prePackageUninstall"
+        ]
+    },
+    "extra": {
+        "ugarit": {
+            "dont-discover": [],
+            "installer": {
+                "post-create-project": [
+                    "@php scribe install:features --ansi"
+                ]
+            }
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "php-http/discovery": true
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "authors": [
+        {
+            "name": "Muath R Abu Ouda",
+            "email": "muathrabuouda@hotmail.com",
+            "role": "Vision Leader of Ugarit"
+        },
+        {
+            "name": "Taylor Otwell",
+            "email": "taylor@laravel.com",
+            "role": "Original Creator & Primary Developer"
+        }
+    ],
+    "version": "1.00.00"
+}
