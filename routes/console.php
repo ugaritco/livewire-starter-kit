@@ -1,8 +1,8 @@
 <?php
 
-use Illuminate\Foundation\Inspiring;
-use Illuminate\Support\Facades\Artisan;
+use Heritage\Foundation\Inspiring;
+use Heritage\Support\Facades\Scribe;
 
-Artisan::command('inspire', function () {
+Scribe::command('inspire', function () {
     $this->comment(Inspiring::quote());
 })->purpose('Display an inspiring quote');

@@ -7,19 +7,19 @@ use App\Concerns\PasswordValidationRules;
 use Exception;
 /* @end-chisel-2fa */
 use Flux\Flux;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Validation\ValidationException;
+use Heritage\Support\Facades\Auth;
+use Heritage\Validation\ValidationException;
 /* @chisel-2fa */
-use Laravel\Fortify\Actions\ConfirmTwoFactorAuthentication;
+use Ugarit\Fortify\Actions\ConfirmTwoFactorAuthentication;
 /* @end-chisel-2fa */
-use Laravel\Fortify\Actions\DisableTwoFactorAuthentication;
+use Ugarit\Fortify\Actions\DisableTwoFactorAuthentication;
 /* @chisel-2fa */
-use Laravel\Fortify\Actions\EnableTwoFactorAuthentication;
+use Ugarit\Fortify\Actions\EnableTwoFactorAuthentication;
 /* @end-chisel-2fa */
-use Laravel\Fortify\Features;
-use Laravel\Fortify\Fortify;
+use Ugarit\Fortify\Features;
+use Ugarit\Fortify\Fortify;
 /* @chisel-passkeys */
-use Laravel\Passkeys\Actions\DeletePasskey;
+use Ugarit\Passkeys\Actions\DeletePasskey;
 /* @end-chisel-passkeys */
 use Livewire\Attributes\Computed;
 use Livewire\Attributes\Locked;

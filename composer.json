@@ -1,19 +1,19 @@
 {
     "$schema": "https://getcomposer.org/schema.json",
-    "name": "laravel/livewire-starter-kit",
+    "name": "ugarit/livewire-starter-kit",
     "type": "project",
-    "description": "The official Laravel starter kit for Livewire.",
+    "description": "The official Ugarit starter kit for Livewire.",
     "keywords": [
-        "laravel",
+        "ugarit",
         "framework"
     ],
     "license": "MIT",
     "require": {
         "php": "^8.3",
-        "laravel/chisel": "^0.1.0",
-        "laravel/fortify": "^1.37.2",
-        "laravel/framework": "^13.17",
-        "laravel/tinker": "^3.0",
+        "ugarit/chisel": "^1.00.00",
+        "ugarit/fortify": "^1.00.00",
+        "ugarit/framework": "^1.00.00",
+        "ugarit/tinker": "^1.00.00",
         "livewire/blaze": "^1.0",
         "livewire/flux": "^2.13.1",
         "livewire/livewire": "^4.1"
@@ -21,10 +21,10 @@
     "require-dev": {
         "fakerphp/faker": "^1.24",
         "larastan/larastan": "^3.9",
-        "laravel/pail": "^1.2.5",
-        "laravel/pao": "^1.0.6",
-        "laravel/pint": "^1.27",
-        "laravel/sail": "^1.53",
+        "ugarit/pail": "^1.00.00",
+        "ugarit/pao": "^1.00.00",
+        "ugarit/pint": "^1.00.00",
+        "ugarit/sail": "^1.00.00",
         "mockery/mockery": "^1.6",
         "nunomaduro/collision": "^8.9.3",
         "phpunit/phpunit": "^12.5.23"
@@ -45,14 +45,14 @@
         "setup": [
             "composer install",
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\"",
-            "@php artisan key:generate",
-            "@php artisan migrate --force",
+            "@php scribe key:generate",
+            "@php scribe migrate --force",
             "npm install",
             "npm run build"
         ],
         "dev": [
             "Composer\\Config::disableProcessTimeout",
-            "@php artisan dev"
+            "@php scribe dev"
         ],
         "lint": [
             "pint --parallel"
@@ -68,38 +68,38 @@
             "phpstan analyse"
         ],
         "test": [
-            "@php artisan config:clear --ansi",
+            "@php scribe config:clear --ansi",
             "@lint:check",
             "@types:check",
-            "@php artisan test"
+            "@php scribe test"
         ],
         "post-autoload-dump": [
-            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
-            "@php artisan package:discover --ansi"
+            "Heritage\\Foundation\\ComposerScripts::postAutoloadDump",
+            "@php scribe package:discover --ansi"
         ],
         "post-update-cmd": [
-            "@php artisan install:features --ansi",
-            "@php artisan vendor:publish --tag=laravel-assets --ansi --force"
+            "@php scribe install:features --ansi",
+            "@php scribe vendor:publish --tag=ugarit-assets --ansi --force"
         ],
         "post-root-package-install": [
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
         ],
         "post-create-project-cmd": [
             "@php rename_livewire_files.php",
-            "@php artisan key:generate --ansi",
+            "@php scribe key:generate --ansi",
             "@php -r \"file_exists('database/database.sqlite') || touch('database/database.sqlite');\"",
-            "@php artisan migrate --graceful --ansi"
+            "@php scribe migrate --graceful --ansi"
         ],
         "pre-package-uninstall": [
-            "Illuminate\\Foundation\\ComposerScripts::prePackageUninstall"
+            "Heritage\\Foundation\\ComposerScripts::prePackageUninstall"
         ]
     },
     "extra": {
-        "laravel": {
+        "ugarit": {
             "dont-discover": [],
             "installer": {
                 "post-create-project": [
-                    "@php artisan install:features --ansi"
+                    "@php scribe install:features --ansi"
                 ]
             }
         }
@@ -114,5 +114,18 @@
         }
     },
     "minimum-stability": "stable",
-    "prefer-stable": true
+    "prefer-stable": true,
+    "version": "1.00.00",
+    "authors": [
+        {
+            "name": "Muath R Abu Ouda",
+            "email": "muathrabuouda@hotmail.com",
+            "role": "Vision Leader of Ugarit"
+        },
+        {
+            "name": "Taylor Otwell",
+            "email": "taylor@laravel.com",
+            "role": "Original Creator & Primary Developer"
+        }
+    ]
 }

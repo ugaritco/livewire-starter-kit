@@ -5,9 +5,9 @@ namespace App\Livewire\Settings;
 use App\Concerns\ProfileValidationRules;
 use Flux\Flux;
 /* @chisel-email-verification */
-use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Heritage\Contracts\Auth\MustVerifyEmail;
 /* @end-chisel-email-verification */
-use Illuminate\Support\Facades\Auth;
+use Heritage\Support\Facades\Auth;
 use Livewire\Attributes\Computed;
 use Livewire\Attributes\Title;
 use Livewire\Component;

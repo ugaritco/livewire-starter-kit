@@ -3,8 +3,8 @@
 namespace App\Concerns;
 
 use App\Models\User;
-use Illuminate\Contracts\Validation\ValidationRule;
-use Illuminate\Validation\Rule;
+use Heritage\Contracts\Validation\ValidationRule;
+use Heritage\Validation\Rule;
 
 trait ProfileValidationRules
 {

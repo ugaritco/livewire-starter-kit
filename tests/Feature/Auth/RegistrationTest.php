@@ -2,8 +2,8 @@
 
 namespace Tests\Feature\Auth;
 
-use Illuminate\Foundation\Testing\RefreshDatabase;
-use Laravel\Fortify\Features;
+use Heritage\Foundation\Testing\RefreshDatabase;
+use Ugarit\Fortify\Features;
 use Tests\TestCase;
 
 class RegistrationTest extends TestCase

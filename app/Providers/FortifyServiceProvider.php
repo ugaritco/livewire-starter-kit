@@ -6,12 +6,12 @@ namespace App\Providers;
 use App\Actions\Fortify\CreateNewUser;
 /* @end-chisel-registration */
 use App\Actions\Fortify\ResetUserPassword;
-use Illuminate\Cache\RateLimiting\Limit;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\RateLimiter;
-use Illuminate\Support\ServiceProvider;
-use Illuminate\Support\Str;
-use Laravel\Fortify\Fortify;
+use Heritage\Cache\RateLimiting\Limit;
+use Heritage\Http\Request;
+use Heritage\Support\Facades\RateLimiter;
+use Heritage\Support\ServiceProvider;
+use Heritage\Support\Str;
+use Ugarit\Fortify\Fortify;
 
 class FortifyServiceProvider extends ServiceProvider
 {

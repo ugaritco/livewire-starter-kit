@@ -19,7 +19,7 @@
                 type="password"
                 required
                 autocomplete="new-password"
-                passwordrules="{{ \Illuminate\Validation\Rules\Password::defaults()->toPasswordRulesString() }}"
+                passwordrules="{{ \Heritage\Validation\Rules\Password::defaults()->toPasswordRulesString() }}"
                 viewable
             />
             <flux:input
@@ -28,7 +28,7 @@
                 type="password"
                 required
                 autocomplete="new-password"
-                passwordrules="{{ \Illuminate\Validation\Rules\Password::defaults()->toPasswordRulesString() }}"
+                passwordrules="{{ \Heritage\Validation\Rules\Password::defaults()->toPasswordRulesString() }}"
                 viewable
             />
 

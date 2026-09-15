@@ -2,8 +2,8 @@
 
 namespace Tests;
 
-use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
-use Laravel\Fortify\Features;
+use Heritage\Foundation\Testing\TestCase as BaseTestCase;
+use Ugarit\Fortify\Features;
 
 abstract class TestCase extends BaseTestCase
 {

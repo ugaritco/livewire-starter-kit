@@ -2,9 +2,9 @@
 
 namespace App\Livewire\Actions;
 
-use Illuminate\Http\RedirectResponse;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Session;
+use Heritage\Http\RedirectResponse;
+use Heritage\Support\Facades\Auth;
+use Heritage\Support\Facades\Session;
 use Livewire\Features\SupportRedirects\Redirector;
 
 class Logout
