@@ -3,8 +3,8 @@
 namespace Database\Factories;
 
 use App\Models\User;
-use Illuminate\Database\Eloquent\Factories\Factory;
-use Illuminate\Support\Str;
+use Heritage\Database\Eloquent\Factories\Factory;
+use Heritage\Support\Str;
 
 /**
  * @extends Factory<User>

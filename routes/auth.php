@@ -1,9 +1,9 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-use Laravel\WorkOS\Http\Requests\AuthKitAuthenticationRequest;
-use Laravel\WorkOS\Http\Requests\AuthKitLoginRequest;
-use Laravel\WorkOS\Http\Requests\AuthKitLogoutRequest;
+use Heritage\Support\Facades\Route;
+use Ugarit\WorkOS\Http\Requests\AuthKitAuthenticationRequest;
+use Ugarit\WorkOS\Http\Requests\AuthKitLoginRequest;
+use Ugarit\WorkOS\Http\Requests\AuthKitLogoutRequest;
 
 Route::middleware(['guest'])->group(function () {
     Route::get('login', fn (AuthKitLoginRequest $request) => $request->redirect())->name('login');
