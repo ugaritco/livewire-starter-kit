@@ -22,12 +22,12 @@
         "fakerphp/faker": "^1.24",
         "ugarit/pail": "^1.00.00",
         "ugarit/pao": "^1.00.00",
-        "ugarit/pint": "^1.00.02",
+        "ugarit/pint": "^1.00.03",
         "ugarit/sail": "^1.00.00",
         "mockery/mockery": "^1.6",
         "nunomaduro/collision": "^8.9.3",
         "phpunit/phpunit": "^12.5.23",
-        "phpstan/phpstan": "^2.1"
+        "ugaritco/ugaritstan": "^1.00.00"
     },
     "autoload": {
         "psr-4": {
