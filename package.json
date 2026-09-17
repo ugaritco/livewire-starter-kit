@@ -10,7 +10,7 @@
     "@ugarit/passkeys": "npm:@laravel/passkeys@^0.2.0",
     "@tailwindcss/vite": "^4.1.11",
     "concurrently": "^10.0.3",
-    "ugarit-vite-plugin": "github:ugaritco/vite-plugin#v1.00.00",
+    "ugarit-vite-plugin": "github:ugaritco/vite-plugin#v1.00.01",
     "tailwindcss": "^4.0.7",
     "vite": "^8.0.0",
     "vite-plus": "0.3.0"
@@ -24,5 +24,5 @@
     "@tailwindcss/oxide-linux-x64-gnu": "^4.0.1",
     "lightningcss-linux-x64-gnu": "^1.29.1"
   },
-  "version": "1.00.00"
+  "version": "1.00.05"
 }
