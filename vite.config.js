@@ -22,6 +22,13 @@ export default defineConfig({
         }),
         tailwindcss(),
     ]),
+        build: {
+        rolldownOptions: {
+            checks: {
+                pluginTimings: false,
+            },
+        },
+    },
     server: {
         cors: true,
         watch: {
