@@ -12,7 +12,7 @@
         "php": "^8.3",
         "ugarit/chisel": "^1.00.00",
         "ugarit/fortify": "^1.00.00",
-        "ugarit/framework": "^1.00.00",
+        "ugarit/framework": "^1.00.13",
         "ugarit/tinker": "^1.00.00",
         "livewire/blaze": "^1.0",
         "livewire/flux": "^2.13.1",
@@ -22,12 +22,12 @@
         "fakerphp/faker": "^1.24",
         "ugarit/pail": "^1.00.00",
         "ugarit/pao": "^1.00.00",
-        "ugarit/pint": "^1.00.00",
+        "ugarit/pint": "^1.00.08",
         "ugarit/sail": "^1.00.00",
         "mockery/mockery": "^1.6",
         "nunomaduro/collision": "^8.9.3",
         "phpunit/phpunit": "^12.5.23",
-        "phpstan/phpstan": "^2.1"
+        "ugaritco/ugaritstan": "^3.13.0"
     },
     "autoload": {
         "psr-4": {
@@ -115,7 +115,6 @@
     },
     "minimum-stability": "stable",
     "prefer-stable": true,
-    "version": "1.00.00",
     "authors": [
         {
             "name": "Muath R Abu Ouda",
