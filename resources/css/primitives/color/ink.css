@@ -1,0 +1,36 @@
+/* Color primitive: ink
+ * ─────────────────────────────────────────────────────────────────────────────
+ * The primary dark color used for body text, headings, and high-contrast
+ * content on light backgrounds. The darkest neutral in the system.
+ *
+ * Base:      hsl(270 70% 7.8%) — deep violet-tinted near-black
+ * Note:      The purple hue undertone (270°) creates visual harmony with
+ *            the brand's --color-purple primary accent.
+ *
+ * Alpha scale:
+ *   faint   10% — very subtle dark overlay on light surfaces
+ *   subtle  15% — pressed state, light scrim
+ *   muted   25% — secondary text tint over colored backgrounds
+ *   strong  50% — overlay for focus or modal dimming
+ *   intense 75% — near-opaque dark layer
+ * ─────────────────────────────────────────────────────────────────────────────
+ */
+:root {
+    /* ── Full ── near-black primary text, headings, high-contrast UI */
+    --color-ink:         hsl(270 70% 7.8%);
+
+    /* ── Faint (10%) ── subtle dark overlay, pressed state background */
+    --color-ink-faint:   hsl(270 70% 7.8% / 0.1);
+
+    /* ── Subtle (15%) ── light scrim, hover overlay on colored surfaces */
+    --color-ink-subtle:  hsl(270 70% 7.8% / 0.15);
+
+    /* ── Muted (25%) ── secondary text tint, caption overlay */
+    --color-ink-muted:   hsl(270 70% 7.8% / 0.25);
+
+    /* ── Strong (50%) ── modal backdrop, focus dimmer */
+    --color-ink-strong:  hsl(270 70% 7.8% / 0.5);
+
+    /* ── Intense (75%) ── near-opaque dark overlay, high-contrast tint */
+    --color-ink-intense: hsl(270 70% 7.8% / 0.75);
+}

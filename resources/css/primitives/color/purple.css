@@ -1,0 +1,36 @@
+/* Color primitive: purple
+ * ─────────────────────────────────────────────────────────────────────────────
+ * The primary brand accent color of the Ugarit design system.
+ * Used for primary actions, focus rings, highlights, and brand moments.
+ *
+ * Base:      hsl(276 89.9% 57.5%) — vibrant electric purple
+ * Alpha variants use the same hue at reduced opacity for overlays,
+ * tints, and background fills without changing the color.
+ *
+ * Alpha scale:
+ *   faint   10% — barely-there background wash
+ *   subtle  15% — hover tint on light/dark surfaces
+ *   muted   25% — disabled state, secondary badge
+ *   strong  50% — semi-opaque accent overlay
+ *   intense 75% — near-solid, for border or icon use
+ * ─────────────────────────────────────────────────────────────────────────────
+ */
+:root {
+    /* ── Full ── solid brand purple, primary CTA and focus indicator */
+    --color-purple:         hsl(276 89.9% 57.5%);
+
+    /* ── Faint (10%) ── background wash, tag fill, hover surface */
+    --color-purple-faint:   hsl(276 89.9% 57.5% / 0.1);
+
+    /* ── Subtle (15%) ── hover tint overlay on any surface */
+    --color-purple-subtle:  hsl(276 89.9% 57.5% / 0.15);
+
+    /* ── Muted (25%) ── disabled badge, unselected state indicator */
+    --color-purple-muted:   hsl(276 89.9% 57.5% / 0.25);
+
+    /* ── Strong (50%) ── semi-opaque overlay, progress fill */
+    --color-purple-strong:  hsl(276 89.9% 57.5% / 0.5);
+
+    /* ── Intense (75%) ── near-solid, accent border, icon color */
+    --color-purple-intense:  hsl(276 89.9% 57.5% / 0.75);
+}

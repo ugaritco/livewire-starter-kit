@@ -1,0 +1,17 @@
+/* Font primitives — index
+ * ─────────────────────────────────────────────────────────────────────────────
+ * Aggregates all font-related primitive token files in dependency order.
+ *
+ * Load order matters:
+ *   1. family   — font-family stacks (no dependencies)
+ *   2. size     — fluid font-size scale (depends on breakpoint.css)
+ *   3. weight   — font-weight numeric scale + 17 role mappings
+ *   4. leading  — line-height unitless ratios for all 17 roles
+ *   5. tracking — letter-spacing em values for all 17 roles
+ * ─────────────────────────────────────────────────────────────────────────────
+ */
+@import './family.css';
+@import './size.css';
+@import './weight.css';
+@import './leading.css';
+@import './tracking.css';

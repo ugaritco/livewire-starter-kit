@@ -1,0 +1,45 @@
+/* Primitive: opacity
+ * ─────────────────────────────────────────────────────────────────────────────
+ * Named opacity scale with semantic clarity.
+ * Each step has a meaningful intent label — not a bare number —
+ * so designers and developers communicate in the same language.
+ *
+ * Scale:
+ *   invisible → ghost → faint → subtle → muted → dim →
+ *   moderate → strong → prominent → intense → solid
+ * ─────────────────────────────────────────────────────────────────────────────
+ */
+:root {
+    /* ── Invisible ── fully transparent, used for animation start states */
+    --opacity-invisible: 0;
+
+    /* ── Ghost ── barely perceptible, watermark / disabled-state text (5%) */
+    --opacity-ghost: 0.05;
+
+    /* ── Faint ── very subtle tint / scrim layer (10%) */
+    --opacity-faint: 0.1;
+
+    /* ── Subtle ── light overlay / hover tint on dark surfaces (15%) */
+    --opacity-subtle: 0.15;
+
+    /* ── Muted ── secondary text on dark backgrounds, skeleton (25%) */
+    --opacity-muted: 0.25;
+
+    /* ── Dim ── disabled interactive elements, placeholder text (35%) */
+    --opacity-dim: 0.35;
+
+    /* ── Moderate ── medium emphasis, inactive tabs, idle icons (50%) */
+    --opacity-moderate: 0.5;
+
+    /* ── Strong ── secondary content with clear presence (65%) */
+    --opacity-strong: 0.65;
+
+    /* ── Prominent ── near-full opacity, captions and supporting text (75%) */
+    --opacity-prominent: 0.75;
+
+    /* ── Intense ── high-emphasis elements, almost fully opaque (90%) */
+    --opacity-intense: 0.9;
+
+    /* ── Solid ── fully opaque, no transparency */
+    --opacity-solid: 1;
+}

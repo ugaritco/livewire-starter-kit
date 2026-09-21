@@ -1,0 +1,207 @@
+/* Primitive: elevation
+ * ─────────────────────────────────────────────────────────────────────────────
+ * Shadow / elevation system with named semantic tiers.
+ * Each tier has a ready-to-use shorthand AND individual component tokens
+ * for fine-grained override in semantic tokens or components.
+ *
+ * Shadow anatomy: offset-x  offset-y  blur  spread  color
+ * Color is composed via color-mix() against --color-shadow at each opacity.
+ *
+ * Tiers (ascending depth):
+ *   flat → resting → lifted → floating → overhead →
+ *   modal → sticky → toast → spotlight
+ *
+ * Additional surfaces:
+ *   glass — frosted glass elevation
+ *   inner — inset shadow for pressed / sunken states
+ *   glow  — colored ambient glow for brand / accent surfaces
+ *
+ * Note: all px values are intentional for box-shadow — they do NOT
+ * benefit from rem scaling as shadow quality is pixel-rendering dependent.
+ * Blur and spread sizes are design constants, not layout dimensions.
+ * ─────────────────────────────────────────────────────────────────────────────
+ */
+:root {
+
+    /* ══════════════════════════════════════════════════════════════════════
+       TIER 0 — Flat (no elevation)
+       ══════════════════════════════════════════════════════════════════════ */
+    --elevation-flat: none;
+
+
+    /* ══════════════════════════════════════════════════════════════════════
+       TIER 1 — Resting
+       Default surface state: table rows, list items, quiet cards
+       ══════════════════════════════════════════════════════════════════════ */
+    --elevation-resting-x:       0px;
+    --elevation-resting-y:       1px;
+    --elevation-resting-blur:    4px;
+    --elevation-resting-spread:  0px;
+    --elevation-resting-opacity: 0.04;
+    --elevation-resting:
+        var(--elevation-resting-x)
+        var(--elevation-resting-y)
+        var(--elevation-resting-blur)
+        var(--elevation-resting-spread)
+        color-mix(in srgb, var(--color-shadow) calc(var(--elevation-resting-opacity) * 100%), transparent);
+
+
+    /* ══════════════════════════════════════════════════════════════════════
+       TIER 2 — Lifted
+       Hovered cards, active list items, focused inputs
+       ══════════════════════════════════════════════════════════════════════ */
+    --elevation-lifted-x:       0px;
+    --elevation-lifted-y:       2px;
+    --elevation-lifted-blur:    8px;
+    --elevation-lifted-spread: -1px;
+    --elevation-lifted-opacity: 0.06;
+    --elevation-lifted:
+        var(--elevation-lifted-x)
+        var(--elevation-lifted-y)
+        var(--elevation-lifted-blur)
+        var(--elevation-lifted-spread)
+        color-mix(in srgb, var(--color-shadow) calc(var(--elevation-lifted-opacity) * 100%), transparent);
+
+
+    /* ══════════════════════════════════════════════════════════════════════
+       TIER 3 — Floating
+       Dropdowns, tooltips, popovers, floating cards
+       ══════════════════════════════════════════════════════════════════════ */
+    --elevation-floating-x:       0px;
+    --elevation-floating-y:       4px;
+    --elevation-floating-blur:    16px;
+    --elevation-floating-spread: -2px;
+    --elevation-floating-opacity: 0.09;
+    --elevation-floating:
+        var(--elevation-floating-x)
+        var(--elevation-floating-y)
+        var(--elevation-floating-blur)
+        var(--elevation-floating-spread)
+        color-mix(in srgb, var(--color-shadow) calc(var(--elevation-floating-opacity) * 100%), transparent);
+
+
+    /* ══════════════════════════════════════════════════════════════════════
+       TIER 4 — Overhead
+       Drawers, contextual menus, picker panels
+       ══════════════════════════════════════════════════════════════════════ */
+    --elevation-overhead-x:       0px;
+    --elevation-overhead-y:       8px;
+    --elevation-overhead-blur:    28px;
+    --elevation-overhead-spread: -4px;
+    --elevation-overhead-opacity: 0.12;
+    --elevation-overhead:
+        var(--elevation-overhead-x)
+        var(--elevation-overhead-y)
+        var(--elevation-overhead-blur)
+        var(--elevation-overhead-spread)
+        color-mix(in srgb, var(--color-shadow) calc(var(--elevation-overhead-opacity) * 100%), transparent);
+
+
+    /* ══════════════════════════════════════════════════════════════════════
+       TIER 5 — Modal
+       Modals, dialogs, sheets — highest standard surface elevation
+       ══════════════════════════════════════════════════════════════════════ */
+    --elevation-modal-x:       0px;
+    --elevation-modal-y:       16px;
+    --elevation-modal-blur:    48px;
+    --elevation-modal-spread: -8px;
+    --elevation-modal-opacity: 0.16;
+    --elevation-modal:
+        var(--elevation-modal-x)
+        var(--elevation-modal-y)
+        var(--elevation-modal-blur)
+        var(--elevation-modal-spread)
+        color-mix(in srgb, var(--color-shadow) calc(var(--elevation-modal-opacity) * 100%), transparent);
+
+
+    /* ══════════════════════════════════════════════════════════════════════
+       TIER 6 — Sticky
+       Pinned navigation, sticky headers that scroll over content
+       ══════════════════════════════════════════════════════════════════════ */
+    --elevation-sticky-x:       0px;
+    --elevation-sticky-y:       2px;
+    --elevation-sticky-blur:    12px;
+    --elevation-sticky-spread:  0px;
+    --elevation-sticky-opacity: 0.08;
+    --elevation-sticky:
+        var(--elevation-sticky-x)
+        var(--elevation-sticky-y)
+        var(--elevation-sticky-blur)
+        var(--elevation-sticky-spread)
+        color-mix(in srgb, var(--color-shadow) calc(var(--elevation-sticky-opacity) * 100%), transparent);
+
+
+    /* ══════════════════════════════════════════════════════════════════════
+       TIER 7 — Toast
+       Notification snackbars — highest ephemeral surface
+       ══════════════════════════════════════════════════════════════════════ */
+    --elevation-toast-x:       0px;
+    --elevation-toast-y:       20px;
+    --elevation-toast-blur:    56px;
+    --elevation-toast-spread: -10px;
+    --elevation-toast-opacity: 0.2;
+    --elevation-toast:
+        var(--elevation-toast-x)
+        var(--elevation-toast-y)
+        var(--elevation-toast-blur)
+        var(--elevation-toast-spread)
+        color-mix(in srgb, var(--color-shadow) calc(var(--elevation-toast-opacity) * 100%), transparent);
+
+
+    /* ══════════════════════════════════════════════════════════════════════
+       SURFACE VARIANT — Glass
+       Frosted glass panels with subtle diffused shadow
+       ══════════════════════════════════════════════════════════════════════ */
+    --elevation-glass-x:       0px;
+    --elevation-glass-y:       4px;
+    --elevation-glass-blur:    24px;
+    --elevation-glass-spread: -6px;
+    --elevation-glass-opacity: 0.05;
+    --elevation-glass:
+        var(--elevation-glass-x)
+        var(--elevation-glass-y)
+        var(--elevation-glass-blur)
+        var(--elevation-glass-spread)
+        color-mix(in srgb, var(--color-shadow) calc(var(--elevation-glass-opacity) * 100%), transparent);
+
+
+    /* ══════════════════════════════════════════════════════════════════════
+       SURFACE VARIANT — Inner / Pressed
+       Inset shadow for sunken states: pressed buttons, active inputs
+       ══════════════════════════════════════════════════════════════════════ */
+    --elevation-inner-x:       0px;
+    --elevation-inner-y:       2px;
+    --elevation-inner-blur:    6px;
+    --elevation-inner-spread:  0px;
+    --elevation-inner-opacity: 0.08;
+    --elevation-inner:
+        inset
+        var(--elevation-inner-x)
+        var(--elevation-inner-y)
+        var(--elevation-inner-blur)
+        var(--elevation-inner-spread)
+        color-mix(in srgb, var(--color-shadow) calc(var(--elevation-inner-opacity) * 100%), transparent);
+
+
+    /* ══════════════════════════════════════════════════════════════════════
+       SURFACE VARIANT — Glow
+       Colored ambient glow for brand / accent surfaces.
+       Override --elevation-glow-color in component context.
+       ══════════════════════════════════════════════════════════════════════ */
+    --elevation-glow-color:   var(--color-purple, #8b5cf6);
+    --elevation-glow-opacity: 0.28;
+    --elevation-glow:
+        0px 0px 0px 1px color-mix(in srgb, var(--elevation-glow-color) 12%, transparent),
+        0px 8px 32px -4px color-mix(in srgb, var(--elevation-glow-color) calc(var(--elevation-glow-opacity) * 100%), transparent);
+
+
+    /* ══════════════════════════════════════════════════════════════════════
+       FOCUS RING — keyboard accessibility indicator
+       Not a traditional elevation, but reuses the shadow system.
+       ══════════════════════════════════════════════════════════════════════ */
+    --elevation-focus-ring:
+        0px 0px 0px 3px color-mix(in srgb, var(--color-purple, #8b5cf6) 40%, transparent);
+
+    --elevation-focus-ring-inset:
+        inset 0px 0px 0px 2px color-mix(in srgb, var(--color-purple, #8b5cf6) 60%, transparent);
+}

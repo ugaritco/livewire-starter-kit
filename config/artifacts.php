@@ -67,8 +67,8 @@ return [
     */
 
     'artifacts' => [
-        // 'geography' => true,
-        // 'i18n' => true,
+        'i18n' => true,
+        'geography' => true,
     ],
 
 ];

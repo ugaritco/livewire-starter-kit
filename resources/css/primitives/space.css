@@ -1,0 +1,111 @@
+/* Primitive: space
+ * ─────────────────────────────────────────────────────────────────────────────
+ * Fluid spacing scale that adapts from smallest phone (320px) to desktop (1440px).
+ * Every token uses clamp() so spacing breathes proportionally with the layout.
+ *
+ * Hierarchy:
+ *   micro → tight → element → inset → component → section → layout → page
+ *
+ * Fluid range: --breakpoint-sphone (320px) → --breakpoint-desktop (1440px)
+ * ─────────────────────────────────────────────────────────────────────────────
+ */
+:root {
+    /* ── Fluid scaling basis ── */
+    --space-fluid-min-width: var(--breakpoint-sphone);
+    --space-fluid-max-width: var(--breakpoint-desktop);
+
+    /* ══════════════════════════════════════════════
+       TIER 1 — Micro (2px → 4px)
+       Gap between tightly packed inline elements
+       ══════════════════════════════════════════════ */
+    --space-micro: clamp(0.125rem, 0.125rem + 0.125 * ((100vw - var(--space-fluid-min-width)) / (var(--space-fluid-max-width) - var(--space-fluid-min-width))), 0.25rem);
+
+    /* ══════════════════════════════════════════════
+       TIER 2 — Tight (4px → 8px)
+       Icon-label gap, tag cluster spacing
+       ══════════════════════════════════════════════ */
+    --space-tight: clamp(0.25rem, 0.25rem + 0.25 * ((100vw - var(--space-fluid-min-width)) / (var(--space-fluid-max-width) - var(--space-fluid-min-width))), 0.5rem);
+
+    /* ══════════════════════════════════════════════
+       TIER 3 — Element gap (8px → 16px)
+       Spacing between inline form controls, icon rows
+       ══════════════════════════════════════════════ */
+    --space-element-gap: clamp(0.5rem, 0.5rem + 0.5 * ((100vw - var(--space-fluid-min-width)) / (var(--space-fluid-max-width) - var(--space-fluid-min-width))), 1rem);
+
+    /* ══════════════════════════════════════════════
+       TIER 4 — Element stack (12px → 20px)
+       Vertical rhythm between stacked inline elements
+       ══════════════════════════════════════════════ */
+    --space-element-stack: clamp(0.75rem, 0.75rem + 0.5 * ((100vw - var(--space-fluid-min-width)) / (var(--space-fluid-max-width) - var(--space-fluid-min-width))), 1.25rem);
+
+    /* ══════════════════════════════════════════════
+       TIER 5 — Inset compact (10px → 16px)
+       Padding inside small chips, compact buttons
+       ══════════════════════════════════════════════ */
+    --space-element-inset-compact: clamp(0.625rem, 0.625rem + 0.375 * ((100vw - var(--space-fluid-min-width)) / (var(--space-fluid-max-width) - var(--space-fluid-min-width))), 1rem);
+
+    /* ══════════════════════════════════════════════
+       TIER 6 — Inset default (14px → 24px)
+       Standard padding inside buttons, inputs, list rows
+       ══════════════════════════════════════════════ */
+    --space-element-inset-default: clamp(0.875rem, 0.875rem + 0.625 * ((100vw - var(--space-fluid-min-width)) / (var(--space-fluid-max-width) - var(--space-fluid-min-width))), 1.5rem);
+
+    /* ══════════════════════════════════════════════
+       TIER 7 — Inset comfortable (18px → 32px)
+       Padding for cards, panels, form groups
+       ══════════════════════════════════════════════ */
+    --space-element-inset-comfortable: clamp(1.125rem, 1.125rem + 0.875 * ((100vw - var(--space-fluid-min-width)) / (var(--space-fluid-max-width) - var(--space-fluid-min-width))), 2rem);
+
+    /* ══════════════════════════════════════════════
+       TIER 8 — Component group (20px → 36px)
+       Spacing between items in a card body, list section
+       ══════════════════════════════════════════════ */
+    --space-component-group: clamp(1.25rem, 1.25rem + 1 * ((100vw - var(--space-fluid-min-width)) / (var(--space-fluid-max-width) - var(--space-fluid-min-width))), 2.25rem);
+
+    /* ══════════════════════════════════════════════
+       TIER 9 — Component padding (24px → 40px)
+       Outer padding of card, dialog, form containers
+       ══════════════════════════════════════════════ */
+    --space-component-padding: clamp(1.5rem, 1.5rem + 1 * ((100vw - var(--space-fluid-min-width)) / (var(--space-fluid-max-width) - var(--space-fluid-min-width))), 2.5rem);
+
+    /* ══════════════════════════════════════════════
+       TIER 10 — Component gap (32px → 56px)
+       Gap between sibling component blocks
+       ══════════════════════════════════════════════ */
+    --space-component-gap: clamp(2rem, 2rem + 1.5 * ((100vw - var(--space-fluid-min-width)) / (var(--space-fluid-max-width) - var(--space-fluid-min-width))), 3.5rem);
+
+    /* ══════════════════════════════════════════════
+       TIER 11 — Layout panel (40px → 64px)
+       Side panel gutters, sidebar padding
+       ══════════════════════════════════════════════ */
+    --space-layout-panel: clamp(2.5rem, 2.5rem + 1.5 * ((100vw - var(--space-fluid-min-width)) / (var(--space-fluid-max-width) - var(--space-fluid-min-width))), 4rem);
+
+    /* ══════════════════════════════════════════════
+       TIER 12 — Layout section (48px → 80px)
+       Vertical space between page sections
+       ══════════════════════════════════════════════ */
+    --space-layout-section: clamp(3rem, 3rem + 2 * ((100vw - var(--space-fluid-min-width)) / (var(--space-fluid-max-width) - var(--space-fluid-min-width))), 5rem);
+
+    /* ══════════════════════════════════════════════
+       TIER 13 — Layout region (64px → 96px)
+       Major content regions within a page band
+       ══════════════════════════════════════════════ */
+    --space-layout-region: clamp(4rem, 4rem + 2 * ((100vw - var(--space-fluid-min-width)) / (var(--space-fluid-max-width) - var(--space-fluid-min-width))), 6rem);
+
+    /* ══════════════════════════════════════════════
+       TIER 14 — Layout band (80px → 128px)
+       Full-width marketing / feature band padding
+       ══════════════════════════════════════════════ */
+    --space-layout-band: clamp(5rem, 5rem + 3 * ((100vw - var(--space-fluid-min-width)) / (var(--space-fluid-max-width) - var(--space-fluid-min-width))), 8rem);
+
+    /* ══════════════════════════════════════════════
+       TIER 15 — Layout hero (96px → 160px)
+       Hero sections, above-the-fold page padding
+       ══════════════════════════════════════════════ */
+    --space-layout-hero: clamp(6rem, 6rem + 4 * ((100vw - var(--space-fluid-min-width)) / (var(--space-fluid-max-width) - var(--space-fluid-min-width))), 10rem);
+
+    /* ══════════════════════════════════════════════
+       FIXED — None (never fluid — always 0)
+       ══════════════════════════════════════════════ */
+    --space-none: 0;
+}

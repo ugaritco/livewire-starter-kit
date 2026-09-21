@@ -1,0 +1,18 @@
+/* Color primitive: shadow
+ * ─────────────────────────────────────────────────────────────────────────────
+ * The base shadow color used by all elevation tokens in elevation.css.
+ * Elevation tokens consume this via color-mix() at varying opacity levels
+ * to produce consistent, harmonious shadow tints.
+ *
+ * Base:      hsl(240 4.3% 63.5%) — cool neutral mid-gray
+ * Note:      This is NOT a transparent color — it is the pure shadow hue.
+ *            Transparency is applied at the elevation level via color-mix().
+ *
+ * Usage in elevation.css:
+ *   color-mix(in srgb, var(--color-shadow) calc(opacity * 100%), transparent)
+ * ─────────────────────────────────────────────────────────────────────────────
+ */
+:root {
+    /* ── Shadow ── cool neutral gray base for all box-shadow values */
+    --color-shadow: hsl(240 4.3% 63.5%);
+}

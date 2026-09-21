@@ -1,0 +1,36 @@
+/* Color primitive: gray
+ * ─────────────────────────────────────────────────────────────────────────────
+ * Neutral light surface color used for backgrounds, dividers, placeholders,
+ * and muted UI elements. Sits at the lightest end of the neutral scale.
+ *
+ * Base:      hsl(0 0% 97.6%) — near-white cool gray
+ * Note:      This is a very light surface gray — for dark neutrals see ink.css,
+ *            for white surfaces see paper.css.
+ *
+ * Alpha scale:
+ *   faint   10% — whisper-light wash
+ *   subtle  15% — hairline tint on surfaces
+ *   muted   25% — placeholder skeleton background
+ *   strong  50% — disabled surface
+ *   intense 75% — divider, secondary surface
+ * ─────────────────────────────────────────────────────────────────────────────
+ */
+:root {
+    /* ── Full ── near-white surface gray, page backgrounds, input fields */
+    --color-gray:         hsl(0 0% 97.6%);
+
+    /* ── Faint (10%) ── whisper-light wash overlay */
+    --color-gray-faint:   hsl(0 0% 97.6% / 0.1);
+
+    /* ── Subtle (15%) ── hairline tint on white surfaces */
+    --color-gray-subtle:  hsl(0 0% 97.6% / 0.15);
+
+    /* ── Muted (25%) ── skeleton loading background */
+    --color-gray-muted:   hsl(0 0% 97.6% / 0.25);
+
+    /* ── Strong (50%) ── disabled surface fill */
+    --color-gray-strong:  hsl(0 0% 97.6% / 0.5);
+
+    /* ── Intense (75%) ── divider, secondary panel surface */
+    --color-gray-intense: hsl(0 0% 97.6% / 0.75);
+}

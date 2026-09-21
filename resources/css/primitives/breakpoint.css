@@ -1,0 +1,39 @@
+/* Primitive: breakpoint
+ * ─────────────────────────────────────────────────────────────────────────────
+ * Viewport width breakpoints used as the foundation for all fluid scaling
+ * in the Ugarit design system (spacing, typography, radius, size, layout).
+ *
+ * All breakpoints are stored as unitless px-value numbers in :root so they
+ * can be referenced in CSS calc() expressions inside clamp() formulas.
+ *
+ * Breakpoint map:
+ *   sphone  320px — smallest supported phone (e.g. iPhone SE)
+ *   phone   375px — standard phone (e.g. iPhone 14)
+ *   tablet  768px — tablet portrait (e.g. iPad)
+ *   laptop  1024px — laptop / large tablet landscape
+ *   desktop 1440px — standard desktop / large laptop
+ *   wide    1920px — wide / ultrawide desktop monitor
+ *
+ * Usage in fluid formulas (see space.css, size.css, radius.css…):
+ *   clamp(min, min + (max - min) * ((100vw - sphone) / (desktop - sphone)), max)
+ * ─────────────────────────────────────────────────────────────────────────────
+ */
+:root {
+    /* ── sphone ── 320px — smallest supported phone viewport */
+    --breakpoint-sphone:   320px;
+
+    /* ── phone ── 375px — standard phone viewport */
+    --breakpoint-phone:    375px;
+
+    /* ── tablet ── 768px — tablet portrait / large phone landscape */
+    --breakpoint-tablet:   768px;
+
+    /* ── laptop ── 1024px — laptop screen / tablet landscape */
+    --breakpoint-laptop:   1024px;
+
+    /* ── desktop ── 1440px — standard desktop, upper fluid boundary */
+    --breakpoint-desktop:  1440px;
+
+    /* ── wide ── 1920px — wide / ultrawide desktop monitors */
+    --breakpoint-wide:     1920px;
+}

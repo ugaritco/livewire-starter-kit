@@ -1,0 +1,69 @@
+/* Font primitive: leading (line-height)
+ * ─────────────────────────────────────────────────────────────────────────────
+ * Line-height tokens mapped to each of the 17 type roles.
+ * Values are unitless ratios — the browser multiplies by the element's
+ * font-size automatically, ensuring correct relative leading at every scale.
+ *
+ * Design rationale:
+ *   Large display text needs tighter leading (closer to 1.0–1.1)
+ *   for visual cohesion. Body text needs generous leading (1.5–1.7)
+ *   for comfortable reading. Utility / label text sits in between.
+ *
+ * The 17 type roles (matching font/size.css):
+ *   hero | display | heading | title | metric | quote | callout |
+ *   body | emphasis | navigation | label | code | kbd | caption |
+ *   eyebrow | overline | hairline
+ * ─────────────────────────────────────────────────────────────────────────────
+ */
+:root {
+    /* ── Hero ── very tight, cinematic quality (ratio ≈ 1.0) */
+    --font-leading-hero: 1.0;
+
+    /* ── Display ── tight display leading (ratio ≈ 1.05) */
+    --font-leading-display: 1.05;
+
+    /* ── Heading ── compact heading rhythm (ratio ≈ 1.15) */
+    --font-leading-heading: 1.15;
+
+    /* ── Title ── section title leading (ratio ≈ 1.2) */
+    --font-leading-title: 1.2;
+
+    /* ── Metric ── data metrics, KPIs — tight for numbers (ratio ≈ 1.1) */
+    --font-leading-metric: 1.1;
+
+    /* ── Quote ── pull-quotes, blockquotes — relaxed (ratio ≈ 1.4) */
+    --font-leading-quote: 1.4;
+
+    /* ── Callout ── highlighted callout text (ratio ≈ 1.35) */
+    --font-leading-callout: 1.35;
+
+    /* ── Body ── comfortable reading rhythm (ratio ≈ 1.6) */
+    --font-leading-body: 1.6;
+
+    /* ── Emphasis ── emphasized inline body text, same rhythm (ratio ≈ 1.6) */
+    --font-leading-emphasis: 1.6;
+
+    /* ── Navigation ── nav links, menu items — balanced (ratio ≈ 1.3) */
+    --font-leading-navigation: 1.3;
+
+    /* ── Label ── form labels, data labels — compact (ratio ≈ 1.25) */
+    --font-leading-label: 1.25;
+
+    /* ── Code ── monospace code blocks — generous for readability (ratio ≈ 1.7) */
+    --font-leading-code: 1.7;
+
+    /* ── Kbd ── keyboard shortcuts — compact inline (ratio ≈ 1.2) */
+    --font-leading-kbd: 1.2;
+
+    /* ── Caption ── image / media captions (ratio ≈ 1.45) */
+    --font-leading-caption: 1.45;
+
+    /* ── Eyebrow ── section eyebrow labels — very compact (ratio ≈ 1.2) */
+    --font-leading-eyebrow: 1.2;
+
+    /* ── Overline ── overline text, table headers (ratio ≈ 1.2) */
+    --font-leading-overline: 1.2;
+
+    /* ── Hairline ── finest detail text, legal fine print (ratio ≈ 1.5) */
+    --font-leading-hairline: 1.5;
+}

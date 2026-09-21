@@ -1,0 +1,32 @@
+/* Color primitives — index
+ * ─────────────────────────────────────────────────────────────────────────────
+ * Aggregates all color primitive files into a single import.
+ * Each file defines a color palette with its full and alpha variants.
+ *
+ * Color roles:
+ *   purple  — primary brand accent, CTAs, focus rings
+ *   blue    — information, links, interactive elements
+ *   lilac   — complementary soft accent, decorative
+ *   green   — success, confirmation, positive states
+ *   yellow  — warning, caution, attention
+ *   orange  — urgent alerts, energy, high-attention
+ *   red     — error, destructive actions, danger
+ *   gray    — neutral surface, dividers, placeholders
+ *   sky     — secondary cool accent, airy backgrounds
+ *   ink     — primary text, dark surfaces, near-black neutral
+ *   paper   — white canvas, card/modal background, glass overlays
+ *   shadow  — base shadow hue consumed by elevation.css
+ * ─────────────────────────────────────────────────────────────────────────────
+ */
+@import './purple.css';
+@import './blue.css';
+@import './lilac.css';
+@import './green.css';
+@import './yellow.css';
+@import './orange.css';
+@import './red.css';
+@import './gray.css';
+@import './sky.css';
+@import './ink.css';
+@import './paper.css';
+@import './shadow.css';

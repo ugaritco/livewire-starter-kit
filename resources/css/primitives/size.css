@@ -1,0 +1,81 @@
+/* Primitive: size
+ * ─────────────────────────────────────────────────────────────────────────────
+ * Fixed component size tokens for icons, controls, and avatars.
+ * These sizes are intentionally viewport-fluid so UI elements scale
+ * proportionally across device classes.
+ *
+ * Strategy: clamp() from sphone (320px) to desktop (1440px).
+ * Icon sizes use rem, control heights use rem, avatars use rem.
+ * ─────────────────────────────────────────────────────────────────────────────
+ */
+:root {
+    /* ── Fluid scaling basis ── */
+    --size-fluid-min-width: var(--breakpoint-sphone);
+    --size-fluid-max-width: var(--breakpoint-desktop);
+
+    /* ════════════════════════════════════════
+       ICONS — scales from mobile to desktop
+       ════════════════════════════════════════ */
+
+    /* ── Inline icon ── within running text (14px → 18px) */
+    --size-icon-inline: clamp(0.875rem, 0.875rem + 0.25 * ((100vw - var(--size-fluid-min-width)) / (var(--size-fluid-max-width) - var(--size-fluid-min-width))), 1.125rem);
+
+    /* ── Button icon ── inside compact actions (16px → 20px) */
+    --size-icon-button: clamp(1rem, 1rem + 0.25 * ((100vw - var(--size-fluid-min-width)) / (var(--size-fluid-max-width) - var(--size-fluid-min-width))), 1.25rem);
+
+    /* ── Default icon ── standard UI icon (20px → 24px) */
+    --size-icon-default: clamp(1.25rem, 1.25rem + 0.25 * ((100vw - var(--size-fluid-min-width)) / (var(--size-fluid-max-width) - var(--size-fluid-min-width))), 1.5rem);
+
+    /* ── Feature icon ── card feature icons (28px → 36px) */
+    --size-icon-feature: clamp(1.75rem, 1.75rem + 0.5 * ((100vw - var(--size-fluid-min-width)) / (var(--size-fluid-max-width) - var(--size-fluid-min-width))), 2.25rem);
+
+    /* ── Tile icon ── grid tiles and large touch targets (36px → 48px) */
+    --size-icon-tile: clamp(2.25rem, 2.25rem + 0.75 * ((100vw - var(--size-fluid-min-width)) / (var(--size-fluid-max-width) - var(--size-fluid-min-width))), 3rem);
+
+    /* ── Empty state icon ── illustrations in empty views (44px → 56px) */
+    --size-icon-empty-state: clamp(2.75rem, 2.75rem + 0.75 * ((100vw - var(--size-fluid-min-width)) / (var(--size-fluid-max-width) - var(--size-fluid-min-width))), 3.5rem);
+
+    /* ── Hero icon ── large graphic icon / splash screen (56px → 80px) */
+    --size-icon-hero: clamp(3.5rem, 3.5rem + 1.5 * ((100vw - var(--size-fluid-min-width)) / (var(--size-fluid-max-width) - var(--size-fluid-min-width))), 5rem);
+
+    /* ════════════════════════════════════════
+       CONTROLS — interactive element heights
+       ════════════════════════════════════════ */
+
+    /* ── Inline control ── compact / dense UI (28px → 36px) */
+    --size-control-inline: clamp(1.75rem, 1.75rem + 0.5 * ((100vw - var(--size-fluid-min-width)) / (var(--size-fluid-max-width) - var(--size-fluid-min-width))), 2.25rem);
+
+    /* ── Default control ── standard button / input (36px → 44px) */
+    --size-control-default: clamp(2.25rem, 2.25rem + 0.5 * ((100vw - var(--size-fluid-min-width)) / (var(--size-fluid-max-width) - var(--size-fluid-min-width))), 2.75rem);
+
+    /* ── Primary control ── prominent CTA button (44px → 52px) */
+    --size-control-primary: clamp(2.75rem, 2.75rem + 0.5 * ((100vw - var(--size-fluid-min-width)) / (var(--size-fluid-max-width) - var(--size-fluid-min-width))), 3.25rem);
+
+    /* ── Hero control ── large full-width action (52px → 64px) */
+    --size-control-hero: clamp(3.25rem, 3.25rem + 0.75 * ((100vw - var(--size-fluid-min-width)) / (var(--size-fluid-max-width) - var(--size-fluid-min-width))), 4rem);
+
+    /* ════════════════════════════════════════
+       AVATARS — user profile image sizes
+       ════════════════════════════════════════ */
+
+    /* ── Inline avatar ── within text run, comment threads (20px → 24px) */
+    --size-avatar-inline: clamp(1.25rem, 1.25rem + 0.25 * ((100vw - var(--size-fluid-min-width)) / (var(--size-fluid-max-width) - var(--size-fluid-min-width))), 1.5rem);
+
+    /* ── List avatar ── in list rows and compact cards (28px → 36px) */
+    --size-avatar-list: clamp(1.75rem, 1.75rem + 0.5 * ((100vw - var(--size-fluid-min-width)) / (var(--size-fluid-max-width) - var(--size-fluid-min-width))), 2.25rem);
+
+    /* ── Card avatar ── in card components (36px → 48px) */
+    --size-avatar-card: clamp(2.25rem, 2.25rem + 0.75 * ((100vw - var(--size-fluid-min-width)) / (var(--size-fluid-max-width) - var(--size-fluid-min-width))), 3rem);
+
+    /* ── Header avatar ── navigation / top-bar user identity (44px → 56px) */
+    --size-avatar-header: clamp(2.75rem, 2.75rem + 0.75 * ((100vw - var(--size-fluid-min-width)) / (var(--size-fluid-max-width) - var(--size-fluid-min-width))), 3.5rem);
+
+    /* ── Profile avatar ── profile page medium format (56px → 80px) */
+    --size-avatar-profile: clamp(3.5rem, 3.5rem + 1.5 * ((100vw - var(--size-fluid-min-width)) / (var(--size-fluid-max-width) - var(--size-fluid-min-width))), 5rem);
+
+    /* ── Feature avatar ── team grid, large mentions (80px → 112px) */
+    --size-avatar-feature: clamp(5rem, 5rem + 2 * ((100vw - var(--size-fluid-min-width)) / (var(--size-fluid-max-width) - var(--size-fluid-min-width))), 7rem);
+
+    /* ── Hero avatar ── profile hero / cover page (112px → 160px) */
+    --size-avatar-hero: clamp(7rem, 7rem + 3 * ((100vw - var(--size-fluid-min-width)) / (var(--size-fluid-max-width) - var(--size-fluid-min-width))), 10rem);
+}

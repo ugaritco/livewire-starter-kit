@@ -1,0 +1,40 @@
+/* Font primitive: family
+ * ─────────────────────────────────────────────────────────────────────────────
+ * Typeface family tokens used across the design system.
+ *
+ * Rules:
+ *   - Always include a generic fallback category (sans-serif, monospace, serif).
+ *   - UI system fonts are listed as secondary fallbacks for performance.
+ *   - Monospace stack is used for code, kbd, and technical content.
+ *
+ * Loading: Cairo is served via Google Fonts (weights 100–900).
+ * ─────────────────────────────────────────────────────────────────────────────
+ */
+:root {
+    /* ── Primary ── main UI and body typeface (Arabic + Latin support) */
+    --font-family-primary:
+        'Cairo',
+        ui-sans-serif,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        'Segoe UI',
+        sans-serif;
+
+    /* ── Mono ── code blocks, kbd shortcuts, technical content */
+    --font-family-mono:
+        ui-monospace,
+        'Cascadia Code',
+        'Fira Code',
+        'JetBrains Mono',
+        'Menlo',
+        'Consolas',
+        monospace;
+
+    /* ── Serif ── editorial / long-form reading contexts */
+    --font-family-serif:
+        ui-serif,
+        Georgia,
+        'Times New Roman',
+        serif;
+}

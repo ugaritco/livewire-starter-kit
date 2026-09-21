@@ -1,0 +1,34 @@
+/* Color primitive: red
+ * ─────────────────────────────────────────────────────────────────────────────
+ * Used for error states, destructive actions, critical alerts, and
+ * danger indicators. Communicates failure, deletion, and risk.
+ *
+ * Base:      hsl(11 92.1% 49.8%) — warm tomato red
+ *
+ * Alpha scale:
+ *   faint   10% — error section background
+ *   subtle  15% — error hover tint
+ *   muted   25% — error badge / invalid state
+ *   strong  50% — semi-opaque error overlay
+ *   intense 75% — error border / destructive icon
+ * ─────────────────────────────────────────────────────────────────────────────
+ */
+:root {
+    /* ── Full ── solid error red, destructive actions, validation errors */
+    --color-red:         hsl(11 92.1% 49.8%);
+
+    /* ── Faint (10%) ── error form field background, danger banner */
+    --color-red-faint:   hsl(11 92.1% 49.8% / 0.1);
+
+    /* ── Subtle (15%) ── hover tint on error-themed surfaces */
+    --color-red-subtle:  hsl(11 92.1% 49.8% / 0.15);
+
+    /* ── Muted (25%) ── error badge, invalid state chip */
+    --color-red-muted:   hsl(11 92.1% 49.8% / 0.25);
+
+    /* ── Strong (50%) ── semi-opaque destructive confirmation overlay */
+    --color-red-strong:  hsl(11 92.1% 49.8% / 0.5);
+
+    /* ── Intense (75%) ── error border, delete icon fill */
+    --color-red-intense: hsl(11 92.1% 49.8% / 0.75);
+}

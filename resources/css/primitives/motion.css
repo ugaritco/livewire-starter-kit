@@ -1,0 +1,229 @@
+/* Primitive: motion
+ * ─────────────────────────────────────────────────────────────────────────────
+ * A comprehensive motion system covering duration, easing, delay,
+ * reduced-motion safety, and composite animation shorthands.
+ *
+ * Sections:
+ *   1. Duration   — how long transitions take
+ *   2. Easing     — the curve shape of transitions
+ *   3. Delay      — stagger and sequence timing offsets
+ *   4. Composite  — pre-composed transition shorthands
+ *   5. Spring     — physics-based spring presets
+ *   6. Stagger    — sequence delay increments
+ *   7. Safe guard — respects prefers-reduced-motion
+ * ─────────────────────────────────────────────────────────────────────────────
+ */
+:root {
+
+    /* ══════════════════════════════════════════════════════════════════════
+       §1  DURATION — named time steps
+       ══════════════════════════════════════════════════════════════════════ */
+
+    /* ── Instant ── no perceived delay, state-only changes */
+    --motion-duration-instant: 0ms;
+
+    /* ── Flicker ── imperceptible, ripple / highlight flash (60ms) */
+    --motion-duration-flicker: 60ms;
+
+    /* ── Fast ── micro-interactions: button press, toggle (100ms) */
+    --motion-duration-fast: 100ms;
+
+    /* ── Snappy ── hover states, tooltip open (150ms) */
+    --motion-duration-snappy: 150ms;
+
+    /* ── Base ── standard UI transition baseline (200ms) */
+    --motion-duration-base: 200ms;
+
+    /* ── Relaxed ── menu / dropdown expand (280ms) */
+    --motion-duration-relaxed: 280ms;
+
+    /* ── Moderate ── panel slide-in, card flip (350ms) */
+    --motion-duration-moderate: 350ms;
+
+    /* ── Slow ── modal enter, drawer open (450ms) */
+    --motion-duration-slow: 450ms;
+
+    /* ── Deliberate ── page transition, hero reveal (600ms) */
+    --motion-duration-deliberate: 600ms;
+
+    /* ── Cinematic ── full-screen intro / splash (900ms) */
+    --motion-duration-cinematic: 900ms;
+
+    /* ── Epic ── dramatic brand animations (1200ms) */
+    --motion-duration-epic: 1200ms;
+
+
+    /* ══════════════════════════════════════════════════════════════════════
+       §2  EASING — cubic-bezier curves
+       ══════════════════════════════════════════════════════════════════════ */
+
+    /* ── Linear ── constant velocity, progress bars */
+    --motion-easing-linear: linear;
+
+    /* ── Standard ── balanced ease-in-out, most UI elements */
+    --motion-easing-standard: cubic-bezier(0.2, 0, 0, 1);
+
+    /* ── Decelerate ── element enters the screen (ease-out) */
+    --motion-easing-decelerate: cubic-bezier(0, 0, 0.2, 1);
+
+    /* ── Accelerate ── element exits the screen (ease-in) */
+    --motion-easing-accelerate: cubic-bezier(0.4, 0, 1, 1);
+
+    /* ── Overshoot ── spring-like bounce, interactive feedback */
+    --motion-easing-overshoot: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+    /* ── Anticipate ── slight pull-back before launch, dramatic CTA */
+    --motion-easing-anticipate: cubic-bezier(0.36, 0, 0.66, -0.56);
+
+    /* ── Crisp ── sharp ease-out for immediate-feeling UI (snappy exit) */
+    --motion-easing-crisp: cubic-bezier(0, 0, 0, 1);
+
+    /* ── Smooth ── gentle sine-based curve for ambient motion */
+    --motion-easing-smooth: cubic-bezier(0.37, 0, 0.63, 1);
+
+    /* ── Expressive ── pronounced elastic for brand moments */
+    --motion-easing-expressive: cubic-bezier(0.68, -0.6, 0.32, 1.6);
+
+
+    /* ══════════════════════════════════════════════════════════════════════
+       §3  DELAY — stagger offsets for sequential animations
+       ══════════════════════════════════════════════════════════════════════ */
+
+    /* ── None ── no delay, synchronous start */
+    --motion-delay-none: 0ms;
+
+    /* ── Micro stagger ── adjacent item in a list (30ms) */
+    --motion-delay-micro: 30ms;
+
+    /* ── Short stagger ── card grid sequential entry (60ms) */
+    --motion-delay-short: 60ms;
+
+    /* ── Medium stagger ── section reveals (100ms) */
+    --motion-delay-medium: 100ms;
+
+    /* ── Long stagger ── page-level orchestrated reveal (150ms) */
+    --motion-delay-long: 150ms;
+
+    /* ── Extended ── cinematic scene composition (250ms) */
+    --motion-delay-extended: 250ms;
+
+
+    /* ══════════════════════════════════════════════════════════════════════
+       §4  COMPOSITE — pre-composed transition shorthands
+       Usage: transition: var(--motion-transition-{intent});
+       ══════════════════════════════════════════════════════════════════════ */
+
+    /* ── Hover ── button / link hover state change */
+    --motion-transition-hover:
+        color             var(--motion-duration-fast)     var(--motion-easing-standard),
+        background-color  var(--motion-duration-fast)     var(--motion-easing-standard),
+        border-color      var(--motion-duration-fast)     var(--motion-easing-standard),
+        box-shadow        var(--motion-duration-snappy)   var(--motion-easing-standard),
+        opacity           var(--motion-duration-fast)     var(--motion-easing-standard);
+
+    /* ── Transform ── scale, rotate, translate interactions */
+    --motion-transition-transform:
+        transform         var(--motion-duration-snappy)   var(--motion-easing-overshoot);
+
+    /* ── Fade ── opacity crossfades */
+    --motion-transition-fade:
+        opacity           var(--motion-duration-base)     var(--motion-easing-standard);
+
+    /* ── Expand ── height / max-height accordions */
+    --motion-transition-expand:
+        max-height        var(--motion-duration-relaxed)  var(--motion-easing-decelerate),
+        opacity           var(--motion-duration-base)     var(--motion-easing-decelerate);
+
+    /* ── Slide ── panel and drawer enter/exit */
+    --motion-transition-slide:
+        transform         var(--motion-duration-moderate) var(--motion-easing-decelerate),
+        opacity           var(--motion-duration-moderate) var(--motion-easing-decelerate);
+
+    /* ── Modal ── dialog entrance / exit */
+    --motion-transition-modal:
+        transform         var(--motion-duration-slow)     var(--motion-easing-overshoot),
+        opacity           var(--motion-duration-relaxed)  var(--motion-easing-decelerate);
+
+    /* ── Color ── theme or scheme color transitions */
+    --motion-transition-color:
+        color             var(--motion-duration-moderate) var(--motion-easing-smooth),
+        background-color  var(--motion-duration-moderate) var(--motion-easing-smooth),
+        border-color      var(--motion-duration-moderate) var(--motion-easing-smooth),
+        fill              var(--motion-duration-moderate) var(--motion-easing-smooth);
+
+    /* ── Layout ── grid reflow / resizing */
+    --motion-transition-layout:
+        width             var(--motion-duration-deliberate) var(--motion-easing-standard),
+        height            var(--motion-duration-deliberate) var(--motion-easing-standard),
+        gap               var(--motion-duration-relaxed)    var(--motion-easing-standard);
+
+
+    /* ══════════════════════════════════════════════════════════════════════
+       §5  SPRING — named spring-physics presets (for Web Animations API)
+       ══════════════════════════════════════════════════════════════════════ */
+
+    /* ── Bounce ── playful elastic bounce */
+    --motion-spring-bounce: linear(
+        0, 0.004, 0.016, 0.035, 0.063, 0.098, 0.141, 0.191, 0.245, 0.304,
+        0.366, 0.43, 0.495, 0.56, 0.622, 0.682, 0.737, 0.789, 0.835, 0.877,
+        0.913, 0.943, 0.967, 0.985, 0.996, 1.001, 1, 0.994, 0.983, 0.968,
+        0.95, 0.93, 0.908, 0.885, 0.861, 0.837, 0.813, 0.789, 0.766, 0.744,
+        0.724, 0.705, 0.689, 0.675, 0.664, 0.655, 0.65, 0.648, 0.65, 0.655,
+        0.664, 0.677, 0.693, 0.711, 0.732, 0.755, 0.78, 0.806, 0.833, 0.861,
+        0.888, 0.915, 0.941, 0.965, 0.987, 1.005, 1.019, 1.03, 1.036, 1.038,
+        1.036, 1.03, 1.02, 1.008, 0.994, 0.979, 0.963, 0.947, 0.931, 0.916,
+        0.901, 0.888, 0.876, 0.866, 0.858, 0.852, 0.849, 0.848, 0.85, 0.855,
+        0.861, 0.87, 0.88, 0.891, 0.904, 0.916, 0.929, 0.941, 0.952, 0.963,
+        0.972, 0.98, 0.986, 0.991, 0.995, 0.998, 1
+    );
+
+    /* ── Firm ── controlled, minimal overshoot (CSS linear approximation) */
+    --motion-spring-firm: linear(
+        0, 0.021, 0.082, 0.181, 0.309, 0.454, 0.604, 0.742, 0.856, 0.937,
+        0.983, 1.005, 1.014, 1.012, 1.004, 0.995, 0.988, 0.985, 0.984, 0.986,
+        0.989, 0.994, 0.998, 1.001, 1.002, 1.001, 1
+    );
+
+
+    /* ══════════════════════════════════════════════════════════════════════
+       §6  STAGGER MULTIPLIERS — CSS custom property helpers for nth-child stagger
+       Usage: animation-delay: calc(var(--motion-stagger-base) * var(--stagger-index));
+       ══════════════════════════════════════════════════════════════════════ */
+    --motion-stagger-base:  40ms;
+    --motion-stagger-tight: 20ms;
+    --motion-stagger-wide:  80ms;
+}
+
+
+/* ══════════════════════════════════════════════════════════════════════
+   §7  REDUCED MOTION OVERRIDE
+   When the user prefers reduced motion, all durations collapse to
+   near-instant and springs are disabled. Fades are still allowed
+   (non-disorienting) per WCAG 2.3 guidelines.
+   ══════════════════════════════════════════════════════════════════════ */
+@media (prefers-reduced-motion: reduce) {
+    :root {
+        --motion-duration-flicker:    0ms;
+        --motion-duration-fast:       0ms;
+        --motion-duration-snappy:     0ms;
+        --motion-duration-base:       0ms;
+        --motion-duration-relaxed:    0ms;
+        --motion-duration-moderate:   0ms;
+        --motion-duration-slow:       0ms;
+        --motion-duration-deliberate: 0ms;
+        --motion-duration-cinematic:  0ms;
+        --motion-duration-epic:       0ms;
+
+        --motion-easing-overshoot:   linear;
+        --motion-easing-anticipate:  linear;
+        --motion-easing-expressive:  linear;
+        --motion-spring-bounce:      linear;
+        --motion-spring-firm:        linear;
+
+        --motion-transition-hover:     opacity var(--motion-duration-base) linear;
+        --motion-transition-transform: opacity var(--motion-duration-base) linear;
+        --motion-transition-slide:     opacity var(--motion-duration-base) linear;
+        --motion-transition-modal:     opacity var(--motion-duration-base) linear;
+        --motion-transition-expand:    opacity var(--motion-duration-base) linear;
+    }
+}

@@ -1,0 +1,34 @@
+/* Color primitive: yellow
+ * ─────────────────────────────────────────────────────────────────────────────
+ * Used for warning states, attention callouts, highlights, and
+ * caution indicators. Communicates awareness without alarm.
+ *
+ * Base:      hsl(40 100% 50%) — amber yellow
+ *
+ * Alpha scale:
+ *   faint   10% — warning section background
+ *   subtle  15% — caution hover tint
+ *   muted   25% — warning badge
+ *   strong  50% — semi-opaque highlight
+ *   intense 75% — warning border / alert icon
+ * ─────────────────────────────────────────────────────────────────────────────
+ */
+:root {
+    /* ── Full ── solid amber yellow, warnings and caution states */
+    --color-yellow:         hsl(40 100% 50%);
+
+    /* ── Faint (10%) ── warning banner background */
+    --color-yellow-faint:   hsl(40 100% 50% / 0.1);
+
+    /* ── Subtle (15%) ── hover tint on warning-themed surfaces */
+    --color-yellow-subtle:  hsl(40 100% 50% / 0.15);
+
+    /* ── Muted (25%) ── caution badge, attention chip */
+    --color-yellow-muted:   hsl(40 100% 50% / 0.25);
+
+    /* ── Strong (50%) ── semi-opaque highlight overlay */
+    --color-yellow-strong:  hsl(40 100% 50% / 0.5);
+
+    /* ── Intense (75%) ── warning border, caution icon */
+    --color-yellow-intense: hsl(40 100% 50% / 0.75);
+}

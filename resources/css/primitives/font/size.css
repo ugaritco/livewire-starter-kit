@@ -1,0 +1,227 @@
+/* Font primitive: size - fluid (scales with viewport) */
+:root {
+    /* Fluid range: sphone -> desktop (see breakpoint.css) */
+    --font-fluid-min-width: var(--breakpoint-sphone);
+    --font-fluid-max-width: var(--breakpoint-desktop);
+
+    /* hero: 40px -> 96px */
+    --font-size-hero-min: 2.5rem;
+    --font-size-hero-max: 6rem;
+    --font-size-hero: clamp(
+        var(--font-size-hero-min),
+        calc(
+            var(--font-size-hero-min) + (var(--font-size-hero-max) - var(--font-size-hero-min))
+                * ((100vw - var(--font-fluid-min-width))
+                    / (var(--font-fluid-max-width) - var(--font-fluid-min-width)))
+        ),
+        var(--font-size-hero-max)
+    );
+
+    /* display: 36px -> 64px */
+    --font-size-display-min: 2.25rem;
+    --font-size-display-max: 4rem;
+    --font-size-display: clamp(
+        var(--font-size-display-min),
+        calc(
+            var(--font-size-display-min) + (var(--font-size-display-max) - var(--font-size-display-min))
+                * ((100vw - var(--font-fluid-min-width))
+                    / (var(--font-fluid-max-width) - var(--font-fluid-min-width)))
+        ),
+        var(--font-size-display-max)
+    );
+
+    /* heading: 28px -> 48px */
+    --font-size-heading-min: 1.75rem;
+    --font-size-heading-max: 3rem;
+    --font-size-heading: clamp(
+        var(--font-size-heading-min),
+        calc(
+            var(--font-size-heading-min) + (var(--font-size-heading-max) - var(--font-size-heading-min))
+                * ((100vw - var(--font-fluid-min-width))
+                    / (var(--font-fluid-max-width) - var(--font-fluid-min-width)))
+        ),
+        var(--font-size-heading-max)
+    );
+
+    /* title: 24px -> 40px */
+    --font-size-title-min: 1.5rem;
+    --font-size-title-max: 2.5rem;
+    --font-size-title: clamp(
+        var(--font-size-title-min),
+        calc(
+            var(--font-size-title-min) + (var(--font-size-title-max) - var(--font-size-title-min))
+                * ((100vw - var(--font-fluid-min-width))
+                    / (var(--font-fluid-max-width) - var(--font-fluid-min-width)))
+        ),
+        var(--font-size-title-max)
+    );
+
+    /* metric: 20px -> 24px */
+    --font-size-metric-min: 1.25rem;
+    --font-size-metric-max: 1.5rem;
+    --font-size-metric: clamp(
+        var(--font-size-metric-min),
+        calc(
+            var(--font-size-metric-min) + (var(--font-size-metric-max) - var(--font-size-metric-min))
+                * ((100vw - var(--font-fluid-min-width))
+                    / (var(--font-fluid-max-width) - var(--font-fluid-min-width)))
+        ),
+        var(--font-size-metric-max)
+    );
+
+    /* quote: 18px -> 24px */
+    --font-size-quote-min: 1.125rem;
+    --font-size-quote-max: 1.5rem;
+    --font-size-quote: clamp(
+        var(--font-size-quote-min),
+        calc(
+            var(--font-size-quote-min) + (var(--font-size-quote-max) - var(--font-size-quote-min))
+                * ((100vw - var(--font-fluid-min-width))
+                    / (var(--font-fluid-max-width) - var(--font-fluid-min-width)))
+        ),
+        var(--font-size-quote-max)
+    );
+
+    /* callout: 18px -> 24px */
+    --font-size-callout-min: 1.125rem;
+    --font-size-callout-max: 1.5rem;
+    --font-size-callout: clamp(
+        var(--font-size-callout-min),
+        calc(
+            var(--font-size-callout-min) + (var(--font-size-callout-max) - var(--font-size-callout-min))
+                * ((100vw - var(--font-fluid-min-width))
+                    / (var(--font-fluid-max-width) - var(--font-fluid-min-width)))
+        ),
+        var(--font-size-callout-max)
+    );
+
+    /* body: 16px -> 24px */
+    --font-size-body-min: 1rem;
+    --font-size-body-max: 1.5rem;
+    --font-size-body: clamp(
+        var(--font-size-body-min),
+        calc(
+            var(--font-size-body-min) + (var(--font-size-body-max) - var(--font-size-body-min))
+                * ((100vw - var(--font-fluid-min-width))
+                    / (var(--font-fluid-max-width) - var(--font-fluid-min-width)))
+        ),
+        var(--font-size-body-max)
+    );
+
+    /* emphasis: 16px -> 24px */
+    --font-size-emphasis-min: 1rem;
+    --font-size-emphasis-max: 1.5rem;
+    --font-size-emphasis: clamp(
+        var(--font-size-emphasis-min),
+        calc(
+            var(--font-size-emphasis-min) + (var(--font-size-emphasis-max) - var(--font-size-emphasis-min))
+                * ((100vw - var(--font-fluid-min-width))
+                    / (var(--font-fluid-max-width) - var(--font-fluid-min-width)))
+        ),
+        var(--font-size-emphasis-max)
+    );
+
+    /* navigation: 14px -> 24px */
+    --font-size-navigation-min: 0.875rem;
+    --font-size-navigation-max: 1.5rem;
+    --font-size-navigation: clamp(
+        var(--font-size-navigation-min),
+        calc(
+            var(--font-size-navigation-min) + (var(--font-size-navigation-max) - var(--font-size-navigation-min))
+                * ((100vw - var(--font-fluid-min-width))
+                    / (var(--font-fluid-max-width) - var(--font-fluid-min-width)))
+        ),
+        var(--font-size-navigation-max)
+    );
+
+    /* label: 12px -> 14px */
+    --font-size-label-min: 0.75rem;
+    --font-size-label-max: 0.875rem;
+    --font-size-label: clamp(
+        var(--font-size-label-min),
+        calc(
+            var(--font-size-label-min) + (var(--font-size-label-max) - var(--font-size-label-min))
+                * ((100vw - var(--font-fluid-min-width))
+                    / (var(--font-fluid-max-width) - var(--font-fluid-min-width)))
+        ),
+        var(--font-size-label-max)
+    );
+
+    /* code: 12px -> 14px */
+    --font-size-code-min: 0.75rem;
+    --font-size-code-max: 0.875rem;
+    --font-size-code: clamp(
+        var(--font-size-code-min),
+        calc(
+            var(--font-size-code-min) + (var(--font-size-code-max) - var(--font-size-code-min))
+                * ((100vw - var(--font-fluid-min-width))
+                    / (var(--font-fluid-max-width) - var(--font-fluid-min-width)))
+        ),
+        var(--font-size-code-max)
+    );
+
+    /* kbd: 12px -> 14px */
+    --font-size-kbd-min: 0.75rem;
+    --font-size-kbd-max: 0.875rem;
+    --font-size-kbd: clamp(
+        var(--font-size-kbd-min),
+        calc(
+            var(--font-size-kbd-min) + (var(--font-size-kbd-max) - var(--font-size-kbd-min))
+                * ((100vw - var(--font-fluid-min-width))
+                    / (var(--font-fluid-max-width) - var(--font-fluid-min-width)))
+        ),
+        var(--font-size-kbd-max)
+    );
+
+    /* caption: 12px -> 14px */
+    --font-size-caption-min: 0.75rem;
+    --font-size-caption-max: 0.875rem;
+    --font-size-caption: clamp(
+        var(--font-size-caption-min),
+        calc(
+            var(--font-size-caption-min) + (var(--font-size-caption-max) - var(--font-size-caption-min))
+                * ((100vw - var(--font-fluid-min-width))
+                    / (var(--font-fluid-max-width) - var(--font-fluid-min-width)))
+        ),
+        var(--font-size-caption-max)
+    );
+
+    /* eyebrow: 12px -> 16px */
+    --font-size-eyebrow-min: 0.75rem;
+    --font-size-eyebrow-max: 1rem;
+    --font-size-eyebrow: clamp(
+        var(--font-size-eyebrow-min),
+        calc(
+            var(--font-size-eyebrow-min) + (var(--font-size-eyebrow-max) - var(--font-size-eyebrow-min))
+                * ((100vw - var(--font-fluid-min-width))
+                    / (var(--font-fluid-max-width) - var(--font-fluid-min-width)))
+        ),
+        var(--font-size-eyebrow-max)
+    );
+
+    /* overline: 12px -> 16px */
+    --font-size-overline-min: 0.75rem;
+    --font-size-overline-max: 1rem;
+    --font-size-overline: clamp(
+        var(--font-size-overline-min),
+        calc(
+            var(--font-size-overline-min) + (var(--font-size-overline-max) - var(--font-size-overline-min))
+                * ((100vw - var(--font-fluid-min-width))
+                    / (var(--font-fluid-max-width) - var(--font-fluid-min-width)))
+        ),
+        var(--font-size-overline-max)
+    );
+
+    /* hairline: 11px -> 16px */
+    --font-size-hairline-min: 0.6875rem;
+    --font-size-hairline-max: 1rem;
+    --font-size-hairline: clamp(
+        var(--font-size-hairline-min),
+        calc(
+            var(--font-size-hairline-min) + (var(--font-size-hairline-max) - var(--font-size-hairline-min))
+                * ((100vw - var(--font-fluid-min-width))
+                    / (var(--font-fluid-max-width) - var(--font-fluid-min-width)))
+        ),
+        var(--font-size-hairline-max)
+    );
+}

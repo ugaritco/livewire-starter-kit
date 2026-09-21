@@ -1,0 +1,34 @@
+/* Color primitive: orange
+ * ─────────────────────────────────────────────────────────────────────────────
+ * Used for high-attention states, important notifications, energy, and
+ * urgency signals. More intense than yellow but less critical than red.
+ *
+ * Base:      hsl(29 100% 50%) — vivid orange
+ *
+ * Alpha scale:
+ *   faint   10% — urgent background tint
+ *   subtle  15% — hover tint on orange surfaces
+ *   muted   25% — notification badge
+ *   strong  50% — semi-opaque alert overlay
+ *   intense 75% — alert border / icon fill
+ * ─────────────────────────────────────────────────────────────────────────────
+ */
+:root {
+    /* ── Full ── solid vivid orange, urgent alerts, activity indicators */
+    --color-orange:         hsl(29 100% 50%);
+
+    /* ── Faint (10%) ── urgent notification background */
+    --color-orange-faint:   hsl(29 100% 50% / 0.1);
+
+    /* ── Subtle (15%) ── hover tint on orange-accented surfaces */
+    --color-orange-subtle:  hsl(29 100% 50% / 0.15);
+
+    /* ── Muted (25%) ── notification dot, unread indicator */
+    --color-orange-muted:   hsl(29 100% 50% / 0.25);
+
+    /* ── Strong (50%) ── semi-opaque alert or progress fill */
+    --color-orange-strong:  hsl(29 100% 50% / 0.5);
+
+    /* ── Intense (75%) ── alert border, activity icon */
+    --color-orange-intense: hsl(29 100% 50% / 0.75);
+}

@@ -1,0 +1,34 @@
+/* Color primitive: green
+ * ─────────────────────────────────────────────────────────────────────────────
+ * Used for success states, positive indicators, confirmations, and
+ * "go" signals across the UI. Communicates safety and completion.
+ *
+ * Base:      hsl(92 100% 42.5%) — vivid lime green
+ *
+ * Alpha scale:
+ *   faint   10% — success section background
+ *   subtle  15% — success hover tint
+ *   muted   25% — success badge / unconfirmed state
+ *   strong  50% — semi-opaque progress fill
+ *   intense 75% — success border / checkmark icon
+ * ─────────────────────────────────────────────────────────────────────────────
+ */
+:root {
+    /* ── Full ── solid success green, checkmarks, confirmed states */
+    --color-green:         hsl(92 100% 42.5%);
+
+    /* ── Faint (10%) ── success notification background */
+    --color-green-faint:   hsl(92 100% 42.5% / 0.1);
+
+    /* ── Subtle (15%) ── hover tint on success-themed surfaces */
+    --color-green-subtle:  hsl(92 100% 42.5% / 0.15);
+
+    /* ── Muted (25%) ── pending / in-progress state badge */
+    --color-green-muted:   hsl(92 100% 42.5% / 0.25);
+
+    /* ── Strong (50%) ── semi-opaque upload / progress fill */
+    --color-green-strong:  hsl(92 100% 42.5% / 0.5);
+
+    /* ── Intense (75%) ── success border, icon fill */
+    --color-green-intense: hsl(92 100% 42.5% / 0.75);
+}

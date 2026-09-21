@@ -1,0 +1,42 @@
+/* Primitive: border
+ * ─────────────────────────────────────────────────────────────────────────────
+ * Border width tokens covering hairline strokes through heavy dividers.
+ *
+ * Strategy: Use relative em units so border widths naturally scale
+ * with the component's local font-size, ensuring proportional strokes
+ * at every text size. em → scales with component; rem → scales with root.
+ * The global --border-* tokens use rem (root-relative, layout-level),
+ * while per-component overrides can switch to em (component-relative).
+ * ─────────────────────────────────────────────────────────────────────────────
+ */
+:root {
+    /* ── None ── explicitly zero, for conditional reset */
+    --border-none: 0;
+
+    /* ── Hairline ── lightest possible stroke (1px equivalent) */
+    --border-hairline: 0.0625rem;
+
+    /* ── Subtle ── slightly visible definition line (1.5px) */
+    --border-subtle: 0.09375rem;
+
+    /* ── Default ── standard border for inputs, cards (2px) */
+    --border-default: 0.125rem;
+
+    /* ── Thick ── prominent separator or active state (3px) */
+    --border-thick: 0.1875rem;
+
+    /* ── Heavy ── bold structural division (4px) */
+    --border-heavy: 0.25rem;
+
+    /* ── Focus ring ── accessibility focus indicator offset (3px) */
+    --border-focus-ring: 0.1875rem;
+
+    /* ── Focus ring offset ── gap between element and ring (2px) */
+    --border-focus-offset: 0.125rem;
+
+    /* ── Accent ── decorative side accent / left-border quote mark (4px) */
+    --border-accent: 0.25rem;
+
+    /* ── Progress ── stroke width for progress bars / charts (6px) */
+    --border-progress: 0.375rem;
+}

@@ -1,0 +1,34 @@
+/* Color primitive: blue
+ * ─────────────────────────────────────────────────────────────────────────────
+ * Cyan-blue used for informational states, links, and data visualization.
+ * Communicates trust, clarity, and information.
+ *
+ * Base:      hsl(200 100% 50%) — electric sky blue
+ *
+ * Alpha scale:
+ *   faint   10% — info background tint
+ *   subtle  15% — hover tint on surfaces
+ *   muted   25% — secondary info indicator
+ *   strong  50% — semi-opaque info overlay
+ *   intense 75% — near-solid for border / icon use
+ * ─────────────────────────────────────────────────────────────────────────────
+ */
+:root {
+    /* ── Full ── solid electric blue, links, info banners */
+    --color-blue:         hsl(200 100% 50%);
+
+    /* ── Faint (10%) ── info section background tint */
+    --color-blue-faint:   hsl(200 100% 50% / 0.1);
+
+    /* ── Subtle (15%) ── hover overlay on blue-tinted surfaces */
+    --color-blue-subtle:  hsl(200 100% 50% / 0.15);
+
+    /* ── Muted (25%) ── secondary info badge, unselected tab */
+    --color-blue-muted:   hsl(200 100% 50% / 0.25);
+
+    /* ── Strong (50%) ── semi-opaque info overlay or progress */
+    --color-blue-strong:  hsl(200 100% 50% / 0.5);
+
+    /* ── Intense (75%) ── near-solid, info border or icon */
+    --color-blue-intense: hsl(200 100% 50% / 0.75);
+}

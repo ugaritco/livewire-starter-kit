@@ -1,0 +1,35 @@
+/* Color primitive: lilac
+ * ─────────────────────────────────────────────────────────────────────────────
+ * A soft, lighter purple used for complementary accents, highlights,
+ * secondary badges, and decorative UI elements.
+ * Works in harmony with the primary --color-purple.
+ *
+ * Base:      hsl(280 92.8% 83.7%) — soft lavender lilac
+ *
+ * Alpha scale:
+ *   faint   10% — very light decorative wash
+ *   subtle  15% — hover tint on lilac surfaces
+ *   muted   25% — secondary badge background
+ *   strong  50% — semi-opaque accent
+ *   intense 75% — near-solid decorative border
+ * ─────────────────────────────────────────────────────────────────────────────
+ */
+:root {
+    /* ── Full ── soft lavender lilac, decorative accent */
+    --color-lilac:         hsl(280 92.8% 83.7%);
+
+    /* ── Faint (10%) ── light decorative background wash */
+    --color-lilac-faint:   hsl(280 92.8% 83.7% / 0.1);
+
+    /* ── Subtle (15%) ── hover tint for lilac-tinted surfaces */
+    --color-lilac-subtle:  hsl(280 92.8% 83.7% / 0.15);
+
+    /* ── Muted (25%) ── secondary badge fill */
+    --color-lilac-muted:   hsl(280 92.8% 83.7% / 0.25);
+
+    /* ── Strong (50%) ── semi-opaque accent layer */
+    --color-lilac-strong:  hsl(280 92.8% 83.7% / 0.5);
+
+    /* ── Intense (75%) ── near-solid decorative border or chip */
+    --color-lilac-intense: hsl(280 92.8% 83.7% / 0.75);
+}

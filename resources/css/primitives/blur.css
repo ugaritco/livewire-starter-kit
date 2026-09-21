@@ -1,0 +1,34 @@
+/* Primitive: blur
+ * ─────────────────────────────────────────────────────────────────────────────
+ * Backdrop and element blur values used across glassmorphism surfaces,
+ * overlays, modals, and frosted-glass UI patterns.
+ *
+ * Strategy: unitless rem-based blur values so they respect zoom level.
+ * All values scale with the base 1rem = 16px convention.
+ * ─────────────────────────────────────────────────────────────────────────────
+ */
+:root {
+    /* ── Hairline blur ── used for very subtle depth separation (1px) */
+    --blur-hairline: 0.0625rem;
+
+    /* ── Soft blur ── subtle edge diffusion for inner panels (4px) */
+    --blur-soft: 0.25rem;
+
+    /* ── Base blur ── cards floating over backgrounds (8px) */
+    --blur-base: 0.5rem;
+
+    /* ── Glass blur ── standard frosted glass surface (16px) */
+    --blur-glass: 1rem;
+
+    /* ── Heavy blur ── modals, sheets, drawers (24px) */
+    --blur-heavy: 1.5rem;
+
+    /* ── Deep blur ── immersive overlays / hero areas (32px) */
+    --blur-deep: 2rem;
+
+    /* ── Extreme blur ── full-screen overlays / dramatic effect (48px) */
+    --blur-extreme: 3rem;
+
+    /* ── Cinematic blur ── hero video / splash treatments (64px) */
+    --blur-cinematic: 4rem;
+}

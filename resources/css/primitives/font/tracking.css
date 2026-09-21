@@ -1,0 +1,71 @@
+/* Font primitive: tracking (letter-spacing)
+ * ─────────────────────────────────────────────────────────────────────────────
+ * Letter-spacing tokens mapped to each of the 17 type roles.
+ * Values are expressed in em so they scale proportionally with font-size —
+ * a token that reads well at 12px will also read well at 96px.
+ *
+ * Design rationale:
+ *   Large display text benefits from tighter tracking (negative em)
+ *   to prevent optical gaps at large sizes.
+ *   Small utility text (eyebrow, overline, label) benefits from
+ *   wider tracking to improve readability at small sizes.
+ *   Body text should remain at 0 (default browser tracking).
+ *
+ * The 17 type roles (matching font/size.css):
+ *   hero | display | heading | title | metric | quote | callout |
+ *   body | emphasis | navigation | label | code | kbd | caption |
+ *   eyebrow | overline | hairline
+ * ─────────────────────────────────────────────────────────────────────────────
+ */
+:root {
+    /* ── Hero ── very tight optical tracking for large display (−0.03em) */
+    --font-tracking-hero: -0.03em;
+
+    /* ── Display ── tight display tracking (−0.025em) */
+    --font-tracking-display: -0.025em;
+
+    /* ── Heading ── slightly condensed heading tracking (−0.02em) */
+    --font-tracking-heading: -0.02em;
+
+    /* ── Title ── gentle tightening for section titles (−0.015em) */
+    --font-tracking-title: -0.015em;
+
+    /* ── Metric ── tabular data, numbers — neutral to slight tight (−0.01em) */
+    --font-tracking-metric: -0.01em;
+
+    /* ── Quote ── pull-quotes — natural tracking, no adjustment (0em) */
+    --font-tracking-quote: 0em;
+
+    /* ── Callout ── callout text — neutral (0em) */
+    --font-tracking-callout: 0em;
+
+    /* ── Body ── prose body copy — always zero (browser default) */
+    --font-tracking-body: 0em;
+
+    /* ── Emphasis ── same as body, emphasis does not shift tracking */
+    --font-tracking-emphasis: 0em;
+
+    /* ── Navigation ── nav items — very slight open feel (+0.005em) */
+    --font-tracking-navigation: 0.005em;
+
+    /* ── Label ── form and data labels — slightly open (+0.01em) */
+    --font-tracking-label: 0.01em;
+
+    /* ── Code ── monospace — zero tracking (let font handle it) */
+    --font-tracking-code: 0em;
+
+    /* ── Kbd ── keyboard shortcut text — slightly tight for compactness */
+    --font-tracking-kbd: -0.01em;
+
+    /* ── Caption ── image captions — neutral (+0.005em) */
+    --font-tracking-caption: 0.005em;
+
+    /* ── Eyebrow ── ALL-CAPS eyebrow — wide tracking (+0.08em) */
+    --font-tracking-eyebrow: 0.08em;
+
+    /* ── Overline ── ALL-CAPS overline — wide tracking (+0.1em) */
+    --font-tracking-overline: 0.1em;
+
+    /* ── Hairline ── finest spaced-out detail text (+0.06em) */
+    --font-tracking-hairline: 0.06em;
+}

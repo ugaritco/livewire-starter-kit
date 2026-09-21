@@ -1,0 +1,34 @@
+/* Color primitive: sky
+ * ─────────────────────────────────────────────────────────────────────────────
+ * A lighter, softer blue for airy backgrounds, cool tints, and secondary
+ * informational contexts. Lighter sibling to --color-blue.
+ *
+ * Base:      hsl(200 100% 70%) — soft sky blue
+ *
+ * Alpha scale:
+ *   faint   10% — airy background tint, cloud-like wash
+ *   subtle  15% — cool hover tint on light surfaces
+ *   muted   25% — secondary info chip, secondary tag
+ *   strong  50% — semi-opaque sky overlay
+ *   intense 75% — soft info border, icon fill
+ * ─────────────────────────────────────────────────────────────────────────────
+ */
+:root {
+    /* ── Full ── soft sky blue, secondary links and cool accents */
+    --color-sky:         hsl(200 100% 70%);
+
+    /* ── Faint (10%) ── airy background wash, cloud-like surface */
+    --color-sky-faint:   hsl(200 100% 70% / 0.1);
+
+    /* ── Subtle (15%) ── cool hover tint on light surfaces */
+    --color-sky-subtle:  hsl(200 100% 70% / 0.15);
+
+    /* ── Muted (25%) ── secondary info chip, read-only tag */
+    --color-sky-muted:   hsl(200 100% 70% / 0.25);
+
+    /* ── Strong (50%) ── semi-opaque sky overlay */
+    --color-sky-strong:  hsl(200 100% 70% / 0.5);
+
+    /* ── Intense (75%) ── soft info border, icon fill */
+    --color-sky-intense: hsl(200 100% 70% / 0.75);
+}

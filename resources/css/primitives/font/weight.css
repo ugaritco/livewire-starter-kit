@@ -1,0 +1,87 @@
+/* Font primitive: weight
+ * ─────────────────────────────────────────────────────────────────────────────
+ * Font-weight tokens mapped to the 17 type roles of the Ugarit type system.
+ * Each role has a recommended weight that reflects its visual hierarchy intent.
+ *
+ * Base scale (9 numeric weights available):
+ *   100 thin | 200 extralight | 300 light | 400 regular |
+ *   500 medium | 600 semibold | 700 bold | 800 extrabold | 900 black
+ *
+ * The 17 type roles (matching font/size.css):
+ *   hero | display | heading | title | metric | quote | callout |
+ *   body | emphasis | navigation | label | code | kbd | caption |
+ *   eyebrow | overline | hairline
+ * ─────────────────────────────────────────────────────────────────────────────
+ */
+:root {
+
+    /* ════════════════════════════════════════
+       NUMERIC WEIGHT SCALE (base tokens)
+       ════════════════════════════════════════ */
+
+    --font-weight-thin:        100;
+    --font-weight-extralight:  200;
+    --font-weight-light:       300;
+    --font-weight-regular:     400;
+    --font-weight-medium:      500;
+    --font-weight-semibold:    600;
+    --font-weight-bold:        700;
+    --font-weight-extrabold:   800;
+    --font-weight-black:       900;
+
+
+    /* ════════════════════════════════════════
+       ROLE-MAPPED WEIGHTS (17 type roles)
+       ════════════════════════════════════════ */
+
+    /* ── Hero ── maximum visual impact, black weight */
+    --font-weight-hero:        var(--font-weight-black);
+
+    /* ── Display ── bold brand statement */
+    --font-weight-display:     var(--font-weight-extrabold);
+
+    /* ── Heading ── strong section heading */
+    --font-weight-heading:     var(--font-weight-bold);
+
+    /* ── Title ── clear subsection title */
+    --font-weight-title:       var(--font-weight-semibold);
+
+    /* ── Metric ── data metric numbers — bold for legibility */
+    --font-weight-metric:      var(--font-weight-bold);
+
+    /* ── Quote ── pull-quotes — medium to feel considered */
+    --font-weight-quote:       var(--font-weight-medium);
+
+    /* ── Callout ── callout text — semibold for distinction */
+    --font-weight-callout:     var(--font-weight-semibold);
+
+    /* ── Body ── primary reading text — regular for comfort */
+    --font-weight-body:        var(--font-weight-regular);
+
+    /* ── Emphasis ── inline bold/strong emphasis within body */
+    --font-weight-emphasis:    var(--font-weight-semibold);
+
+    /* ── Navigation ── nav links — medium for subtle presence */
+    --font-weight-navigation:  var(--font-weight-medium);
+
+    /* ── Label ── form labels and data labels — medium */
+    --font-weight-label:       var(--font-weight-medium);
+
+    /* ── Code ── monospace code — regular (mono fonts handle visual weight) */
+    --font-weight-code:        var(--font-weight-regular);
+
+    /* ── Kbd ── keyboard shortcut badges — medium */
+    --font-weight-kbd:         var(--font-weight-medium);
+
+    /* ── Caption ── supporting captions — light for subtlety */
+    --font-weight-caption:     var(--font-weight-light);
+
+    /* ── Eyebrow ── uppercase section tag — semibold for presence at small size */
+    --font-weight-eyebrow:     var(--font-weight-semibold);
+
+    /* ── Overline ── uppercase overline — semibold */
+    --font-weight-overline:    var(--font-weight-semibold);
+
+    /* ── Hairline ── finest detail text — light or regular */
+    --font-weight-hairline:    var(--font-weight-light);
+}

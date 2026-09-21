@@ -1,0 +1,36 @@
+/* Color primitive: paper
+ * ─────────────────────────────────────────────────────────────────────────────
+ * The primary light surface color — pure white used for page backgrounds,
+ * card surfaces, modals, and any white-canvas context.
+ *
+ * Base:      hsl(0 0% 100%) — pure white
+ * Note:      Alpha variants are used for white overlays on dark surfaces
+ *            (e.g. glassmorphism panels, overlay text containers).
+ *
+ * Alpha scale:
+ *   faint   10% — frosted glass hint on dark surfaces
+ *   subtle  15% — glass panel edge tint
+ *   muted   25% — translucent white overlay
+ *   strong  50% — semi-opaque white glass panel
+ *   intense 75% — near-solid white surface on dark background
+ * ─────────────────────────────────────────────────────────────────────────────
+ */
+:root {
+    /* ── Full ── pure white, page canvas, card and modal backgrounds */
+    --color-paper:         hsl(0 0% 100%);
+
+    /* ── Faint (10%) ── frosted glass hint on dark surfaces */
+    --color-paper-faint:   hsl(0 0% 100% / 0.1);
+
+    /* ── Subtle (15%) ── glass panel edge highlight */
+    --color-paper-subtle:  hsl(0 0% 100% / 0.15);
+
+    /* ── Muted (25%) ── translucent white overlay on imagery */
+    --color-paper-muted:   hsl(0 0% 100% / 0.25);
+
+    /* ── Strong (50%) ── semi-opaque frosted glass panel */
+    --color-paper-strong:  hsl(0 0% 100% / 0.5);
+
+    /* ── Intense (75%) ── near-solid white surface on dark background */
+    --color-paper-intense: hsl(0 0% 100% / 0.75);
+}

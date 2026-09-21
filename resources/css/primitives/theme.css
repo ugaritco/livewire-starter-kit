@@ -1,0 +1,60 @@
+/* Primitives — Tailwind CSS v4 Theme Bridge
+ * ─────────────────────────────────────────────────────────────────────────────
+ * Maps primitive tokens into the Tailwind v4 utility namespace (@theme inline).
+ * Enables utility classes like font-sans, text-hero, rounded-card, gap-element-gap.
+ * ─────────────────────────────────────────────────────────────────────────────
+ */
+@theme inline {
+    /* ── Typography Families ── */
+    --font-sans: var(--font-family-primary);
+    --font-mono: var(--font-family-mono);
+    --font-serif: var(--font-family-serif);
+
+    /* ── 17 Typographical Roles as Text Sizes ── */
+    --text-hero: var(--font-size-hero);
+    --text-display: var(--font-size-display);
+    --text-heading: var(--font-size-heading);
+    --text-title: var(--font-size-title);
+    --text-metric: var(--font-size-metric);
+    --text-quote: var(--font-size-quote);
+    --text-callout: var(--font-size-callout);
+    --text-body: var(--font-size-body);
+    --text-emphasis: var(--font-size-emphasis);
+    --text-navigation: var(--font-size-navigation);
+    --text-label: var(--font-size-label);
+    --text-code: var(--font-size-code);
+    --text-kbd: var(--font-size-kbd);
+    --text-caption: var(--font-size-caption);
+    --text-eyebrow: var(--font-size-eyebrow);
+    --text-overline: var(--font-size-overline);
+    --text-hairline: var(--font-size-hairline);
+
+    /* ── Fluid Border Radii ── */
+    --radius-lg: var(--radius-rounded);
+    --radius-md: var(--radius-soft);
+    --radius-sm: var(--radius-subtle);
+    --radius-sharp: var(--radius-sharp);
+    --radius-hairline: var(--radius-hairline);
+    --radius-subtle: var(--radius-subtle);
+    --radius-soft: var(--radius-soft);
+    --radius-rounded: var(--radius-rounded);
+    --radius-card: var(--radius-card);
+    --radius-panel: var(--radius-panel);
+    --radius-modal: var(--radius-modal);
+    --radius-sheet: var(--radius-sheet);
+    --radius-feature: var(--radius-feature);
+    --radius-pill: var(--radius-pill);
+
+    /* ── Fluid Spacing ── */
+    --spacing-micro: var(--space-micro);
+    --spacing-tight: var(--space-tight);
+    --spacing-element-gap: var(--space-element-gap);
+    --spacing-element-stack: var(--space-element-stack);
+    --spacing-element-inset-compact: var(--space-element-inset-compact);
+    --spacing-element-inset-default: var(--space-element-inset-default);
+    --spacing-element-inset-comfortable: var(--space-element-inset-comfortable);
+    --spacing-component-group: var(--space-component-group);
+    --spacing-section-gap: var(--space-section-gap);
+    --spacing-layout-gap: var(--space-layout-gap);
+    --spacing-page-gap: var(--space-page-gap);
+}

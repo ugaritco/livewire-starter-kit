@@ -1,0 +1,207 @@
+/* Primitive: layout
+ * ─────────────────────────────────────────────────────────────────────────────
+ * Layout grid system primitives covering container widths, margins, gutters,
+ * column counts, fixed chrome heights, sidebar dimensions, and z-index layers.
+ *
+ * Breakpoint reference (from breakpoint.css):
+ *   sphone  320px  | phone  375px  | tablet  768px
+ *   laptop  1024px | desktop 1440px | wide  1920px
+ *
+ * Sections:
+ *   §1  Grid per breakpoint   — container, margin, gutter, columns
+ *   §2  Container max-widths  — semantic content width caps
+ *   §3  Chrome heights        — navigation, tab bar, toolbar
+ *   §4  Sidebar / panel       — side navigation widths
+ *   §5  Z-index layers        — stacking order tokens
+ *   §6  Aspect ratios         — common media ratios
+ *   §7  Column presets        — common grid template shorthand values
+ * ─────────────────────────────────────────────────────────────────────────────
+ */
+:root {
+
+    /* ══════════════════════════════════════════════════════════════════════
+       §1  GRID PER BREAKPOINT
+       Each breakpoint has: container, margin, gutter, columns
+       ══════════════════════════════════════════════════════════════════════ */
+
+    /* ── Small phone (320px) — 4-col grid ── */
+    --layout-container-sphone:  18rem;      /* 288px max content width */
+    --layout-margin-sphone:     1rem;       /* 16px side margin */
+    --layout-gutter-sphone:     0.5rem;     /* 8px column gap */
+    --layout-columns-sphone:    4;
+
+    /* ── Phone (375px) — 4-col grid ── */
+    --layout-container-phone:   21.4375rem; /* 343px max content width */
+    --layout-margin-phone:      2rem;       /* 32px side margin */
+    --layout-gutter-phone:      0.5rem;     /* 8px column gap */
+    --layout-columns-phone:     4;
+
+    /* ── Tablet (768px) — 8-col grid ── */
+    --layout-container-tablet:  44rem;      /* 704px max content width */
+    --layout-margin-tablet:     5rem;       /* 80px side margin */
+    --layout-gutter-tablet:     2rem;       /* 32px column gap */
+    --layout-columns-tablet:    8;
+
+    /* ── Laptop (1024px) — 8-col grid ── */
+    --layout-container-laptop:  54rem;      /* 864px max content width */
+    --layout-margin-laptop:     5rem;       /* 80px side margin */
+    --layout-gutter-laptop:     2rem;       /* 32px column gap */
+    --layout-columns-laptop:    8;
+
+    /* ── Desktop (1440px) — 12-col grid ── */
+    --layout-container-desktop: 70rem;      /* 1120px max content width */
+    --layout-margin-desktop:    10rem;      /* 160px side margin */
+    --layout-gutter-desktop:    2rem;       /* 32px column gap */
+    --layout-columns-desktop:   12;
+
+    /* ── Wide (1920px) — 12-col grid ── */
+    --layout-container-wide:    80rem;      /* 1280px max content width */
+    --layout-margin-wide:       20rem;      /* 320px side margin */
+    --layout-gutter-wide:       2rem;       /* 32px column gap */
+    --layout-columns-wide:      12;
+
+
+    /* ══════════════════════════════════════════════════════════════════════
+       §2  CONTAINER MAX-WIDTHS — semantic content caps
+       Use these to constrain content regions inside the grid.
+       ══════════════════════════════════════════════════════════════════════ */
+
+    /* ── Prose ── reading-optimized line length cap (~70ch ≈ 45rem) */
+    --layout-content-prose:  45rem;
+
+    /* ── Form ── ideal width for single-column forms */
+    --layout-content-form:   32rem;
+
+    /* ── Card ── maximum width of a standalone card */
+    --layout-content-card:   26rem;
+
+    /* ── Narrow ── dialog, auth form, confirmation panels */
+    --layout-content-narrow: 22rem;
+
+    /* ── Medium ── typical article / blog content */
+    --layout-content-medium: 54rem;
+
+    /* ── Wide ── dashboard / data table content area */
+    --layout-content-wide:   72rem;
+
+    /* ── Full ── edge-to-edge (no constraint) */
+    --layout-content-full:   100%;
+
+
+    /* ══════════════════════════════════════════════════════════════════════
+       §3  CHROME HEIGHTS — fixed interface chrome measurements
+       ══════════════════════════════════════════════════════════════════════ */
+
+    /* ── Nav desktop ── top navigation bar height */
+    --layout-nav-height-desktop: 5.5rem;    /* 88px */
+
+    /* ── Nav phone ── compact top bar on mobile */
+    --layout-nav-height-phone:   3.5rem;    /* 56px */
+
+    /* ── Tab bar ── iOS-style bottom tab bar */
+    --layout-tab-bar-height:     4rem;      /* 64px */
+
+    /* ── Toolbar ── secondary action bar (contextual) */
+    --layout-toolbar-height:     3rem;      /* 48px */
+
+    /* ── Status bar ── OS system status bar safe area */
+    --layout-status-bar:         env(safe-area-inset-top, 0px);
+
+    /* ── Home indicator ── iOS home indicator safe area */
+    --layout-home-indicator:     env(safe-area-inset-bottom, 0px);
+
+
+    /* ══════════════════════════════════════════════════════════════════════
+       §4  SIDEBAR / PANEL WIDTHS
+       ══════════════════════════════════════════════════════════════════════ */
+
+    /* ── Nav rail ── icon-only collapsed sidebar */
+    --layout-sidebar-rail:      4rem;       /* 64px — icon rail width */
+
+    /* ── Sidebar compact ── expanded with labels, compact mode */
+    --layout-sidebar-compact:   14rem;      /* 224px */
+
+    /* ── Sidebar default ── standard navigation sidebar */
+    --layout-sidebar-default:   16rem;      /* 256px */
+
+    /* ── Sidebar wide ── content sidebar / filter panel */
+    --layout-sidebar-wide:      20rem;      /* 320px */
+
+    /* ── Sidebar drawer ── full mobile side drawer */
+    --layout-sidebar-drawer:    22.5rem;    /* 360px */
+
+    /* ── Panel detail ── detail / preview side panel */
+    --layout-panel-detail:      24rem;      /* 384px */
+
+    /* ── Panel settings ── settings / preferences panel */
+    --layout-panel-settings:    28rem;      /* 448px */
+
+
+    /* ══════════════════════════════════════════════════════════════════════
+       §5  Z-INDEX LAYERS — stacking context tokens
+       ══════════════════════════════════════════════════════════════════════ */
+
+    /* ── Ground ── default document flow */
+    --z-ground:     0;
+
+    /* ── Raised ── sticky table headers, pinned rows */
+    --z-raised:     10;
+
+    /* ── Dropdown ── autocomplete, combobox menus */
+    --z-dropdown:   100;
+
+    /* ── Sticky ── sticky navigation, pinned sidebars */
+    --z-sticky:     200;
+
+    /* ── Overlay ── background scrim / dimmer */
+    --z-overlay:    300;
+
+    /* ── Modal ── dialog / sheet sitting above overlay */
+    --z-modal:      400;
+
+    /* ── Popover ── tooltip, context menu, popover */
+    --z-popover:    500;
+
+    /* ── Toast ── notification snackbars */
+    --z-toast:      600;
+
+    /* ── Spotlight ── onboarding, feature highlight overlays */
+    --z-spotlight:  700;
+
+    /* ── System ── OS-level chrome, debug overlays */
+    --z-system:     9999;
+
+
+    /* ══════════════════════════════════════════════════════════════════════
+       §6  ASPECT RATIOS — common media / container ratios
+       ══════════════════════════════════════════════════════════════════════ */
+
+    --layout-ratio-square:       1 / 1;
+    --layout-ratio-portrait:     3 / 4;
+    --layout-ratio-landscape:    4 / 3;
+    --layout-ratio-widescreen:   16 / 9;
+    --layout-ratio-ultrawide:    21 / 9;
+    --layout-ratio-cinema:       2.39 / 1;
+    --layout-ratio-story:        9 / 16;
+    --layout-ratio-card:         5 / 3;
+    --layout-ratio-thumbnail:    16 / 10;
+
+
+    /* ══════════════════════════════════════════════════════════════════════
+       §7  COLUMN TEMPLATE PRESETS — grid-template-columns shorthand values
+       ══════════════════════════════════════════════════════════════════════ */
+
+    /* ── Auto-fill dense ── auto-flowing equal-width columns */
+    --layout-grid-auto-fill-sm:  repeat(auto-fill, minmax(12rem, 1fr));
+    --layout-grid-auto-fill-md:  repeat(auto-fill, minmax(18rem, 1fr));
+    --layout-grid-auto-fill-lg:  repeat(auto-fill, minmax(24rem, 1fr));
+
+    /* ── Sidebar + content ── classic two-column layout */
+    --layout-grid-sidebar-content: var(--layout-sidebar-default) 1fr;
+
+    /* ── Content + sidebar ── right-rail layout */
+    --layout-grid-content-sidebar: 1fr var(--layout-sidebar-wide);
+
+    /* ── Holy grail ── left nav + content + right panel */
+    --layout-grid-holy-grail: var(--layout-sidebar-default) 1fr var(--layout-panel-detail);
+}

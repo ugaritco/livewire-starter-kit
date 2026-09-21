@@ -1,0 +1,36 @@
+/* Primitives — index
+ * ─────────────────────────────────────────────────────────────────────────────
+ * Entry point for all design primitive tokens in the Ugarit design system.
+ * Primitives are raw, context-free values — they carry no semantic meaning
+ * on their own. Semantic tokens (in /semantic/) reference these primitives.
+ *
+ * Load order:
+ *   1. color/      — raw color palette (HSL + alpha variants)
+ *   2. breakpoint  — viewport width constants used in all fluid formulas
+ *   3. font/       — family stacks, fluid size scale, weight, leading, tracking
+ *   4. space       — fluid spacing scale (micro → hero)
+ *   5. radius      — fluid border-radius scale (sharp → pill)
+ *   6. size        — fluid component sizes (icons, controls, avatars)
+ *   7. border      — border-width scale in rem
+ *   8. opacity     — named opacity scale (invisible → solid)
+ *   9. motion      — duration, easing, delay, composite transitions, springs
+ *  10. elevation   — shadow / depth tiers (flat → toast) + glass / glow
+ *  11. blur        — backdrop-filter blur levels (hairline → cinematic)
+ *  12. layout      — grid, containers, z-index, chrome heights, aspect ratios
+ * ─────────────────────────────────────────────────────────────────────────────
+ */
+@import './color/index.css';
+@import './breakpoint.css';
+@import './font/index.css';
+@import './space.css';
+@import './radius.css';
+@import './size.css';
+@import './border.css';
+@import './opacity.css';
+@import './motion.css';
+@import './elevation.css';
+@import './blur.css';
+@import './layout.css';
+
+/* Tailwind CSS v4 Theme Bridge */
+@import './theme.css';
