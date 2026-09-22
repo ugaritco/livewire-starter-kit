@@ -1,0 +1,13 @@
+/* Semantic type: display
+ * ─────────────────────────────────────────────────────────────────────────────
+ * Bold brand statements and primary page banner headlines.
+ * ─────────────────────────────────────────────────────────────────────────────
+ */
+:root {
+    --type-display-family:            var(--font-family-primary);
+    --type-display-weight:            var(--font-weight-display);
+    --type-display-size:              var(--font-size-display);
+    --type-display-line-height:       var(--font-leading-display);
+    --type-display-letter-spacing:    var(--font-tracking-display);
+    --type-display-paragraph-spacing: 0;
+}

@@ -1,0 +1,56 @@
+/* Semantic color: text
+ * ─────────────────────────────────────────────────────────────────────────────
+ * Text tokens define typography colors across all levels of hierarchy.
+ * All text tokens adapt automatically to light and dark modes via foundation tokens.
+ *
+ * Contrast hierarchy:
+ *   primary (highest) → secondary → muted → subtle → disabled (lowest)
+ * ─────────────────────────────────────────────────────────────────────────────
+ */
+:root {
+
+    /* ── Primary ── headlines, titles, main body text (highest contrast) */
+    --text-primary:            var(--foreground);
+
+    /* ── Secondary ── captions, subheadings, metadata */
+    --text-secondary:          var(--muted-foreground);
+
+    /* ── Muted ── placeholder text, subtle annotations, timestamps */
+    --text-muted:              var(--muted-foreground);
+
+    /* ── Subtle ── de-emphasized metadata, auxiliary helper text */
+    --text-subtle:             var(--color-ink-faint);
+
+    /* ── Disabled ── inactive input text, disabled button labels */
+    --text-disabled:           var(--disabled-foreground);
+
+    /* ── Inverse ── text rendered on dark surfaces in light mode (or vice-versa) */
+    --text-inverse:            var(--background);
+
+    /* ── Brand ── text styled with the primary brand identity */
+    --text-brand:              var(--primary);
+
+    /* ── Link ── interactive hyperlink default state */
+    --text-link:               var(--color-sky-strong);
+
+    /* ── Link hover ── interactive hyperlink hovered / focused state */
+    --text-link-hover:         var(--color-sky-intense);
+
+    /* ── Code ── inline code snippets and code block text */
+    --text-code:               var(--color-purple-strong);
+
+    /* ── On accent ── high-contrast text on solid accent / primary backgrounds */
+    --text-on-accent:          var(--primary-foreground);
+
+    /* ── Success ── confirmation messages, positive trends */
+    --text-success:            var(--color-emerald-strong);
+
+    /* ── Warning ── caution notices, pending status text */
+    --text-warning:            var(--color-amber-strong);
+
+    /* ── Error ── validation failures, critical destructive messages */
+    --text-error:              var(--destructive);
+
+    /* ── Info ── informative notes, neutral tips */
+    --text-info:               var(--color-sky-strong);
+}

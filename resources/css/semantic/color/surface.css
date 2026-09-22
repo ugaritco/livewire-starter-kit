@@ -1,0 +1,54 @@
+/* Semantic color: surface
+ * ─────────────────────────────────────────────────────────────────────────────
+ * Surface tokens define the background fills of UI containers.
+ * They are theme-aware via the foundation layer — components reference
+ * --surface-* and automatically adapt to light / dark mode.
+ *
+ * Surface hierarchy (ascending prominence):
+ *   page → default → raised → sunken → inverse
+ *
+ * Interactive surfaces:
+ *   hover / selected / disabled / brand / overlay / glass
+ * ─────────────────────────────────────────────────────────────────────────────
+ */
+:root {
+
+    /* ── Page ── the outermost page / body background */
+    --surface-page:            var(--background);
+
+    /* ── Default ── standard card, panel, dialog background */
+    --surface-default:         var(--card);
+
+    /* ── Raised ── elevated surface: popover, dropdown, tooltip */
+    --surface-raised:          var(--popover);
+
+    /* ── Sunken ── recessed area: sidebar, code block, table stripe */
+    --surface-sunken:          var(--muted);
+
+    /* ── Inverse ── high-contrast flipped surface (dark on light / light on dark) */
+    --surface-inverse:         var(--foreground);
+
+    /* ── Accent subtle ── lightly tinted accent background: selected item, badge */
+    --surface-accent-subtle:   var(--accent);
+
+    /* ── Overlay ── full-screen scrim / modal backdrop fill */
+    --surface-overlay:         var(--scrim);
+
+    /* ── Glass ── frosted glass panel surface (same as card with blur treatment) */
+    --surface-glass:           var(--card);
+
+    /* ── Hover ── interactive element hover fill */
+    --surface-hover:           var(--muted);
+
+    /* ── Selected ── active / selected state fill */
+    --surface-selected:        var(--accent);
+
+    /* ── Disabled ── non-interactive element fill */
+    --surface-disabled:        var(--disabled);
+
+    /* ── Brand ── brand-primary fill for callout sections */
+    --surface-brand:           var(--primary);
+
+    /* ── Brand subtle ── soft brand tint for feature highlight areas */
+    --surface-brand-subtle:    var(--color-purple-faint);
+}

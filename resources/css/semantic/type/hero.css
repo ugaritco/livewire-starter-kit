@@ -1,0 +1,13 @@
+/* Semantic type: hero
+ * ─────────────────────────────────────────────────────────────────────────────
+ * Highest impact display typography for marketing hero sections and title splashes.
+ * ─────────────────────────────────────────────────────────────────────────────
+ */
+:root {
+    --type-hero-family:            var(--font-family-primary);
+    --type-hero-weight:            var(--font-weight-hero);
+    --type-hero-size:              var(--font-size-hero);
+    --type-hero-line-height:       var(--font-leading-hero);
+    --type-hero-letter-spacing:    var(--font-tracking-hero);
+    --type-hero-paragraph-spacing: 0;
+}

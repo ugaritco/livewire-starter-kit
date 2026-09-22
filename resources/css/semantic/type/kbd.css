@@ -1,0 +1,13 @@
+/* Semantic type: kbd
+ * ─────────────────────────────────────────────────────────────────────────────
+ * Monospace keyboard key cap indicators (e.g. ⌘K, Ctrl+C).
+ * ─────────────────────────────────────────────────────────────────────────────
+ */
+:root {
+    --type-kbd-family:            var(--font-family-mono);
+    --type-kbd-weight:            var(--font-weight-kbd);
+    --type-kbd-size:              var(--font-size-kbd);
+    --type-kbd-line-height:       var(--font-leading-kbd);
+    --type-kbd-letter-spacing:    var(--font-tracking-kbd);
+    --type-kbd-paragraph-spacing: 0;
+}

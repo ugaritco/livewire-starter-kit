@@ -1,0 +1,24 @@
+/* Ugarit Design System — Semantic Layer
+ * ─────────────────────────────────────────────────────────────────────────────
+ * The semantic layer bridges raw design primitives into meaningful UI tokens:
+ *
+ * 1. foundation/ — Light & dark mode base tokens (shadcn-compatible core tokens)
+ * 2. color/      — Theme-aware role colors (surface, text, stroke, action, status, icon, overlay)
+ * 3. type/       — Typographical hierarchy (17 standardized roles)
+ *
+ * Geometry (radius, space, size, elevation, motion) is fully self-contained
+ * in the primitives/ layer without duplicate definitions.
+ * ─────────────────────────────────────────────────────────────────────────────
+ */
+
+/* Theme Foundation (shadcn-compatible core tokens) */
+@import './foundation/index.css';
+
+/* Semantic Color Roles (theme-aware) */
+@import './color/index.css';
+
+/* Semantic Typography (17 roles) */
+@import './type/index.css';
+
+/* Tailwind CSS v4 Theme Bridge */
+@import './theme.css';

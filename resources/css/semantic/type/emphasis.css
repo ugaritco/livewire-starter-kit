@@ -1,0 +1,13 @@
+/* Semantic type: emphasis
+ * ─────────────────────────────────────────────────────────────────────────────
+ * Inline bolded or emphasized text runs within body copy.
+ * ─────────────────────────────────────────────────────────────────────────────
+ */
+:root {
+    --type-emphasis-family:            var(--font-family-primary);
+    --type-emphasis-weight:            var(--font-weight-emphasis);
+    --type-emphasis-size:              var(--font-size-emphasis);
+    --type-emphasis-line-height:       var(--font-leading-emphasis);
+    --type-emphasis-letter-spacing:    var(--font-tracking-emphasis);
+    --type-emphasis-paragraph-spacing: 0;
+}

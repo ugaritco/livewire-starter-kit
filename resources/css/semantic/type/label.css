@@ -1,0 +1,13 @@
+/* Semantic type: label
+ * ─────────────────────────────────────────────────────────────────────────────
+ * Form field labels, table headers, and input descriptions.
+ * ─────────────────────────────────────────────────────────────────────────────
+ */
+:root {
+    --type-label-family:            var(--font-family-primary);
+    --type-label-weight:            var(--font-weight-label);
+    --type-label-size:              var(--font-size-label);
+    --type-label-line-height:       var(--font-leading-label);
+    --type-label-letter-spacing:    var(--font-tracking-label);
+    --type-label-paragraph-spacing: 0;
+}

@@ -1,0 +1,13 @@
+/* Semantic type: caption
+ * ─────────────────────────────────────────────────────────────────────────────
+ * Image captions, figure notes, and subtle auxiliary descriptions.
+ * ─────────────────────────────────────────────────────────────────────────────
+ */
+:root {
+    --type-caption-family:            var(--font-family-primary);
+    --type-caption-weight:            var(--font-weight-caption);
+    --type-caption-size:              var(--font-size-caption);
+    --type-caption-line-height:       var(--font-leading-caption);
+    --type-caption-letter-spacing:    var(--font-tracking-caption);
+    --type-caption-paragraph-spacing: 0;
+}

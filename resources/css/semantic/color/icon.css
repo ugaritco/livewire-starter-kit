@@ -1,0 +1,38 @@
+/* Semantic color: icon
+ * ─────────────────────────────────────────────────────────────────────────────
+ * Icon tokens govern SVG icons, glyphs, and decorative pictorial symbols.
+ * They align with the text contrast hierarchy to preserve visual cohesion.
+ * ─────────────────────────────────────────────────────────────────────────────
+ */
+:root {
+
+    /* ── Default ── primary content icons alongside main text */
+    --icon-default:        var(--foreground);
+
+    /* ── Subtle ── secondary glyphs, auxiliary indicators */
+    --icon-subtle:         var(--color-ink-faint);
+
+    /* ── Muted ── low-contrast icons: input ornaments, chevrons */
+    --icon-muted:          var(--muted-foreground);
+
+    /* ── Brand ── icons carrying primary brand recognition */
+    --icon-brand:          var(--primary);
+
+    /* ── On accent ── high-contrast icons overlaid on solid primary fills */
+    --icon-on-accent:      var(--primary-foreground);
+
+    /* ── Success ── checkmarks, positive state badges */
+    --icon-success:        var(--color-emerald-base);
+
+    /* ── Warning ── alert triangles, clock/pending indicators */
+    --icon-warning:        var(--color-amber-base);
+
+    /* ── Error ── cross marks, error badges */
+    --icon-error:          var(--destructive);
+
+    /* ── Info ── info circles, help question marks */
+    --icon-info:           var(--color-sky-base);
+
+    /* ── Disabled ── inactive action icons */
+    --icon-disabled:       var(--disabled-foreground);
+}

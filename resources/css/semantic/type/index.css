@@ -1,0 +1,24 @@
+/* Semantic typography tokens
+ * ─────────────────────────────────────────────────────────────────────────────
+ * Aggregates all 17 semantic typography roles into a single entry point.
+ * Each role connects primitive font family, weight, fluid size, leading,
+ * and tracking tokens into a cohesive typographical hierarchy.
+ * ─────────────────────────────────────────────────────────────────────────────
+ */
+@import './hero.css';
+@import './display.css';
+@import './heading.css';
+@import './title.css';
+@import './metric.css';
+@import './quote.css';
+@import './callout.css';
+@import './body.css';
+@import './emphasis.css';
+@import './navigation.css';
+@import './label.css';
+@import './code.css';
+@import './kbd.css';
+@import './caption.css';
+@import './eyebrow.css';
+@import './overline.css';
+@import './hairline.css';

@@ -1,0 +1,13 @@
+/* Semantic type: hairline
+ * ─────────────────────────────────────────────────────────────────────────────
+ * Micro-fine detail text, legal footnotes, and copyright disclosures.
+ * ─────────────────────────────────────────────────────────────────────────────
+ */
+:root {
+    --type-hairline-family:            var(--font-family-primary);
+    --type-hairline-weight:            var(--font-weight-hairline);
+    --type-hairline-size:              var(--font-size-hairline);
+    --type-hairline-line-height:       var(--font-leading-hairline);
+    --type-hairline-letter-spacing:    var(--font-tracking-hairline);
+    --type-hairline-paragraph-spacing: 0;
+}

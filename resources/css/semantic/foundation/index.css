@@ -1,0 +1,14 @@
+/* Semantic Foundation — index
+ * ─────────────────────────────────────────────────────────────────────────────
+ * Loads the foundation token bridge files in theme order.
+ * Light is applied to :root (always-on base).
+ * Dark is applied to .dark class (opt-in dark mode).
+ *
+ * Both files define the same set of foundation tokens (--background,
+ * --foreground, --primary, --card, --border, --ring, --chart-*, etc.)
+ * so components need only one set of semantic color references that
+ * automatically switch with the theme.
+ * ─────────────────────────────────────────────────────────────────────────────
+ */
+@import './light.css';
+@import './dark.css';

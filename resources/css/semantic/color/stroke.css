@@ -1,0 +1,47 @@
+/* Semantic color: stroke
+ * ─────────────────────────────────────────────────────────────────────────────
+ * Stroke tokens define boundary lines, dividers, component borders,
+ * and focus rings throughout the interface.
+ * ─────────────────────────────────────────────────────────────────────────────
+ */
+:root {
+
+    /* ── Default ── standard component border: cards, inputs, dropdowns */
+    --stroke-default:             var(--border);
+
+    /* ── Subtle ── faint dividers, table row separators, quiet borders */
+    --stroke-subtle:              var(--color-ink-faint);
+
+    /* ── Muted ── low-contrast boundary lines */
+    --stroke-muted:               var(--border);
+
+    /* ── Strong ── emphasized container perimeter or active card border */
+    --stroke-strong:              var(--color-ink-muted);
+
+    /* ── Focus ── accessible keyboard focus outline */
+    --stroke-focus:               var(--ring);
+
+    /* ── Interactive ── clickable element rest border */
+    --stroke-interactive:         var(--input);
+
+    /* ── Interactive hover ── clickable element hover border */
+    --stroke-interactive-hover:   var(--ring);
+
+    /* ── Brand ── primary brand perimeter highlight */
+    --stroke-brand:               var(--primary);
+
+    /* ── Success ── valid input field or positive status border */
+    --stroke-success:             var(--color-emerald-base);
+
+    /* ── Warning ── caution status or warning state border */
+    --stroke-warning:             var(--color-amber-base);
+
+    /* ── Error ── invalid form field or destructive alert border */
+    --stroke-error:               var(--destructive);
+
+    /* ── Info ── informational badge or tooltip border */
+    --stroke-info:                var(--color-sky-base);
+
+    /* ── Disabled ── inactive element perimeter */
+    --stroke-disabled:            var(--disabled);
+}

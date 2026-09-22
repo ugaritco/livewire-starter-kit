@@ -1,0 +1,41 @@
+/* Semantic color: action
+ * ─────────────────────────────────────────────────────────────────────────────
+ * Action tokens define interactive button and control state colors.
+ * Covers rest, hover, pressed, and foreground states for all core variants.
+ * ─────────────────────────────────────────────────────────────────────────────
+ */
+:root {
+
+    /* ── Primary ── high-priority call-to-action button */
+    --action-primary-rest:             var(--primary);
+    --action-primary-hover:            var(--color-purple-strong);
+    --action-primary-pressed:          var(--color-purple-intense);
+    --action-primary-foreground:       var(--primary-foreground);
+
+    /* ── Secondary ── medium-priority alternate action */
+    --action-secondary-rest:           var(--secondary);
+    --action-secondary-hover:          var(--muted);
+    --action-secondary-pressed:        var(--accent);
+    --action-secondary-foreground:     var(--secondary-foreground);
+
+    /* ── Destructive ── dangerous or irreversible action (delete, reject) */
+    --action-destructive-rest:         var(--destructive);
+    --action-destructive-hover:        var(--color-crimson-strong);
+    --action-destructive-pressed:      var(--color-crimson-intense);
+    --action-destructive-foreground:   var(--destructive-foreground);
+
+    /* ── Ghost ── borderless quiet button */
+    --action-ghost-rest:               transparent;
+    --action-ghost-hover:              var(--muted);
+    --action-ghost-pressed:            var(--accent);
+    --action-ghost-foreground:         var(--foreground);
+
+    /* ── Link ── text-style button action */
+    --action-link-rest:                var(--text-link);
+    --action-link-hover:               var(--text-link-hover);
+    --action-link-pressed:             var(--color-sky-intense);
+
+    /* ── Disabled ── inactive non-clickable action */
+    --action-disabled-rest:            var(--disabled);
+    --action-disabled-foreground:      var(--disabled-foreground);
+}

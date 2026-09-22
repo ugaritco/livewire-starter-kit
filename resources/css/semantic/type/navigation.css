@@ -1,0 +1,13 @@
+/* Semantic type: navigation
+ * ─────────────────────────────────────────────────────────────────────────────
+ * Topbars, sidebars, breadcrumbs, tab labels, and navigation menus.
+ * ─────────────────────────────────────────────────────────────────────────────
+ */
+:root {
+    --type-navigation-family:            var(--font-family-primary);
+    --type-navigation-weight:            var(--font-weight-navigation);
+    --type-navigation-size:              var(--font-size-navigation);
+    --type-navigation-line-height:       var(--font-leading-navigation);
+    --type-navigation-letter-spacing:    var(--font-tracking-navigation);
+    --type-navigation-paragraph-spacing: 0;
+}

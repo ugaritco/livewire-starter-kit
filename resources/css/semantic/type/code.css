@@ -1,0 +1,13 @@
+/* Semantic type: code
+ * ─────────────────────────────────────────────────────────────────────────────
+ * Monospace code blocks, terminal prompts, and inline code snippets.
+ * ─────────────────────────────────────────────────────────────────────────────
+ */
+:root {
+    --type-code-family:            var(--font-family-mono);
+    --type-code-weight:            var(--font-weight-code);
+    --type-code-size:              var(--font-size-code);
+    --type-code-line-height:       var(--font-leading-code);
+    --type-code-letter-spacing:    var(--font-tracking-code);
+    --type-code-paragraph-spacing: 0;
+}

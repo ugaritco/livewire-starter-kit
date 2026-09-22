@@ -1,0 +1,13 @@
+/* Semantic color tokens
+ * ─────────────────────────────────────────────────────────────────────────────
+ * Combines all theme-aware semantic color role definitions.
+ * All tokens reference foundation variables and adapt across light and dark modes.
+ * ─────────────────────────────────────────────────────────────────────────────
+ */
+@import './surface.css';
+@import './text.css';
+@import './stroke.css';
+@import './action.css';
+@import './status.css';
+@import './icon.css';
+@import './overlay.css';

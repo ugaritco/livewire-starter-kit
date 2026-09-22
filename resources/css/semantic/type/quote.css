@@ -1,0 +1,13 @@
+/* Semantic type: quote
+ * ─────────────────────────────────────────────────────────────────────────────
+ * Blockquotes, testimonials, and editorial pull-quotes.
+ * ─────────────────────────────────────────────────────────────────────────────
+ */
+:root {
+    --type-quote-family:            var(--font-family-serif);
+    --type-quote-weight:            var(--font-weight-quote);
+    --type-quote-size:              var(--font-size-quote);
+    --type-quote-line-height:       var(--font-leading-quote);
+    --type-quote-letter-spacing:    var(--font-tracking-quote);
+    --type-quote-paragraph-spacing: var(--space-element-gap);
+}

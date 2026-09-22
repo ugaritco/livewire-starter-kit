@@ -1,0 +1,13 @@
+/* Semantic type: callout
+ * ─────────────────────────────────────────────────────────────────────────────
+ * Prominent notes, summary tips, and emphasized callout blocks.
+ * ─────────────────────────────────────────────────────────────────────────────
+ */
+:root {
+    --type-callout-family:            var(--font-family-primary);
+    --type-callout-weight:            var(--font-weight-callout);
+    --type-callout-size:              var(--font-size-callout);
+    --type-callout-line-height:       var(--font-leading-callout);
+    --type-callout-letter-spacing:    var(--font-tracking-callout);
+    --type-callout-paragraph-spacing: var(--space-element-gap);
+}

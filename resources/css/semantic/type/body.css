@@ -1,0 +1,13 @@
+/* Semantic type: body
+ * ─────────────────────────────────────────────────────────────────────────────
+ * Primary reading body text for UI descriptions, articles, and documentation.
+ * ─────────────────────────────────────────────────────────────────────────────
+ */
+:root {
+    --type-body-family:            var(--font-family-primary);
+    --type-body-weight:            var(--font-weight-body);
+    --type-body-size:              var(--font-size-body);
+    --type-body-line-height:       var(--font-leading-body);
+    --type-body-letter-spacing:    var(--font-tracking-body);
+    --type-body-paragraph-spacing: var(--space-element-gap);
+}

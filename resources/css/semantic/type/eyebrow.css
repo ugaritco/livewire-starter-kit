@@ -1,0 +1,13 @@
+/* Semantic type: eyebrow
+ * ─────────────────────────────────────────────────────────────────────────────
+ * Uppercase section taglines placed above headings.
+ * ─────────────────────────────────────────────────────────────────────────────
+ */
+:root {
+    --type-eyebrow-family:            var(--font-family-primary);
+    --type-eyebrow-weight:            var(--font-weight-eyebrow);
+    --type-eyebrow-size:              var(--font-size-eyebrow);
+    --type-eyebrow-line-height:       var(--font-leading-eyebrow);
+    --type-eyebrow-letter-spacing:    var(--font-tracking-eyebrow);
+    --type-eyebrow-paragraph-spacing: 0;
+}

@@ -1,0 +1,54 @@
+/* Semantic color: status
+ * ─────────────────────────────────────────────────────────────────────────────
+ * Status tokens provide consistent color-coding for state messaging,
+ * alerts, toast notifications, badges, and progress indicators.
+ *
+ * Each status tier provides:
+ *   - solid:      vibrant fill for high-emphasis pills and icons
+ *   - surface:    tinted background for alerts and cards
+ *   - foreground: accessible text / icon color on tinted surfaces
+ *   - stroke:     border outline for notifications and inputs
+ * ─────────────────────────────────────────────────────────────────────────────
+ */
+:root {
+
+    /* ════════════════════════════════════════
+       SUCCESS — positive outcome / completed
+       ════════════════════════════════════════ */
+    --status-success-solid:          var(--color-emerald-base);
+    --status-success-surface:        var(--color-emerald-faint);
+    --status-success-foreground:     var(--color-emerald-strong);
+    --status-success-stroke:         var(--color-emerald-subtle);
+
+    /* ════════════════════════════════════════
+       WARNING — caution / pending / review
+       ════════════════════════════════════════ */
+    --status-warning-solid:          var(--color-amber-base);
+    --status-warning-surface:        var(--color-amber-faint);
+    --status-warning-foreground:     var(--color-amber-strong);
+    --status-warning-stroke:         var(--color-amber-subtle);
+
+    /* ════════════════════════════════════════
+       ERROR — failure / destructive / critical
+       ════════════════════════════════════════ */
+    --status-error-solid:            var(--destructive);
+    --status-error-surface:          var(--color-crimson-faint);
+    --status-error-foreground:       var(--destructive-foreground);
+    --status-error-stroke:           var(--color-crimson-subtle);
+
+    /* ════════════════════════════════════════
+       INFO — informative / guidance / neutral help
+       ════════════════════════════════════════ */
+    --status-info-solid:             var(--color-sky-base);
+    --status-info-surface:           var(--color-sky-faint);
+    --status-info-foreground:        var(--color-sky-strong);
+    --status-info-stroke:            var(--color-sky-subtle);
+
+    /* ════════════════════════════════════════
+       NEUTRAL — quiet / archived / default
+       ════════════════════════════════════════ */
+    --status-neutral-solid:          var(--muted-foreground);
+    --status-neutral-surface:        var(--muted);
+    --status-neutral-foreground:     var(--foreground);
+    --status-neutral-stroke:         var(--border);
+}

@@ -1,0 +1,13 @@
+/* Semantic type: metric
+ * ─────────────────────────────────────────────────────────────────────────────
+ * Numerical KPI stats, dashboard indicators, and large data callouts.
+ * ─────────────────────────────────────────────────────────────────────────────
+ */
+:root {
+    --type-metric-family:            var(--font-family-primary);
+    --type-metric-weight:            var(--font-weight-metric);
+    --type-metric-size:              var(--font-size-metric);
+    --type-metric-line-height:       var(--font-leading-metric);
+    --type-metric-letter-spacing:    var(--font-tracking-metric);
+    --type-metric-paragraph-spacing: 0;
+}

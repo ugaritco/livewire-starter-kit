@@ -1,0 +1,13 @@
+/* Semantic type: heading
+ * ─────────────────────────────────────────────────────────────────────────────
+ * Primary section headings and major content division titles.
+ * ─────────────────────────────────────────────────────────────────────────────
+ */
+:root {
+    --type-heading-family:            var(--font-family-primary);
+    --type-heading-weight:            var(--font-weight-heading);
+    --type-heading-size:              var(--font-size-heading);
+    --type-heading-line-height:       var(--font-leading-heading);
+    --type-heading-letter-spacing:    var(--font-tracking-heading);
+    --type-heading-paragraph-spacing: 0;
+}

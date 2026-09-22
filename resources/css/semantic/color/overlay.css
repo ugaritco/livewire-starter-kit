@@ -1,0 +1,17 @@
+/* Semantic color: overlay
+ * ─────────────────────────────────────────────────────────────────────────────
+ * Overlay tokens govern backdrop scrims, translucent dialog backings,
+ * and high-elevation floating UI treatments.
+ * ─────────────────────────────────────────────────────────────────────────────
+ */
+:root {
+
+    /* ── Scrim ── full-screen modal or sheet dark backdrop wash */
+    --overlay-scrim:       var(--scrim);
+
+    /* ── Glass ── translucent container backdrop with backdrop-filter blur */
+    --overlay-glass:       var(--card);
+
+    /* ── Tooltip ── inverse high-contrast compact popover fill */
+    --overlay-tooltip:     var(--foreground);
+}

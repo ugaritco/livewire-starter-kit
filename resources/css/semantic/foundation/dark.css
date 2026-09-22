@@ -1,0 +1,211 @@
+/* Semantic Foundation: Dark Theme
+ * ─────────────────────────────────────────────────────────────────────────────
+ * Dark mode overrides for all foundation tokens.
+ * Applied to the `.dark` class on the root element (e.g. <html class="dark">).
+ *
+ * All values reference --color-* primitives with appropriate alpha variants
+ * to achieve the dark mode inversion.
+ *
+ * Structure mirrors foundation/light.css exactly (same sections, same order).
+ *
+ * Sections:
+ *   §1  Canvas        — inverted background (ink) and foreground (paper)
+ *   §2  Surface       — dark card / panel surfaces (paper-faint overlays)
+ *   §3  Brand / Primary — brand color unchanged (purple stays purple)
+ *   §4  Secondary     — secondary action inverted to paper
+ *   §5  Muted / Ghost — de-emphasized fills on dark
+ *   §6  Accent        — softer accent on dark (lilac-muted)
+ *   §7  Destructive   — same red, same usage
+ *   §8  Semantic status — success, warning, info, disabled on dark
+ *   §9  Form chrome   — input border and ring on dark
+ *   §10 Sidebar       — dark sidebar surface
+ *   §11 Charts        — unchanged data palette
+ *   §12 Scrim         — darker, more opaque scrim
+ * ─────────────────────────────────────────────────────────────────────────────
+ */
+.dark {
+
+    /* ══════════════════════════════════════════════
+       §1  CANVAS — inverted page background / text
+       ══════════════════════════════════════════════ */
+
+    /* ── Background ── deep ink (near-black) as the page canvas */
+    --background:              var(--color-ink);
+
+    /* ── Foreground ── white paper text on dark canvas */
+    --foreground:              var(--color-paper);
+
+
+    /* ══════════════════════════════════════════════
+       §2  SURFACE — dark card and floating surfaces
+       ══════════════════════════════════════════════ */
+
+    /* ── Card ── slightly lighter than background (paper-faint glass) */
+    --card:                    var(--color-paper-faint);
+
+    /* ── Card foreground ── white text on dark cards */
+    --card-foreground:         var(--color-paper);
+
+    /* ── Popover ── slightly more visible than card */
+    --popover:                 var(--color-paper-subtle);
+
+    /* ── Popover foreground ── white text in popovers */
+    --popover-foreground:      var(--color-paper);
+
+
+    /* ══════════════════════════════════════════════
+       §3  BRAND / PRIMARY — brand color (unchanged)
+       ══════════════════════════════════════════════ */
+
+    /* ── Primary ── purple unchanged — brand color is consistent across themes */
+    --primary:                 var(--color-purple);
+
+    /* ── Primary foreground ── white text on primary buttons */
+    --primary-foreground:      var(--color-paper);
+
+    /* ── Primary hover ── intense purple for hover */
+    --primary-hover:           var(--color-purple-intense);
+
+    /* ── Primary pressed ── medium purple for press feedback */
+    --primary-pressed:         var(--color-purple-strong);
+
+
+    /* ══════════════════════════════════════════════
+       §4  SECONDARY — inverted secondary action
+       ══════════════════════════════════════════════ */
+
+    /* ── Secondary ── paper (white) as the secondary fill on dark */
+    --secondary:               var(--color-paper);
+
+    /* ── Secondary foreground ── ink text on white secondary buttons */
+    --secondary-foreground:    var(--color-ink);
+
+    /* ── Secondary hover ── intense white on hover */
+    --secondary-hover:         var(--color-paper-intense);
+
+
+    /* ══════════════════════════════════════════════
+       §5  MUTED / GHOST — de-emphasized fills on dark
+       ══════════════════════════════════════════════ */
+
+    /* ── Muted ── very subtle white tint as ghost fill */
+    --muted:                   var(--color-paper-faint);
+
+    /* ── Muted foreground ── secondary text on dark (strong white) */
+    --muted-foreground:        var(--color-paper-strong);
+
+
+    /* ══════════════════════════════════════════════
+       §6  ACCENT — softer accent on dark backgrounds
+       ══════════════════════════════════════════════ */
+
+    /* ── Accent ── muted lilac for selected states on dark */
+    --accent:                  var(--color-lilac-muted);
+
+    /* ── Accent foreground ── white text on dark accent */
+    --accent-foreground:       var(--color-paper);
+
+
+    /* ══════════════════════════════════════════════
+       §7  DESTRUCTIVE — error color (same, theme-agnostic)
+       ══════════════════════════════════════════════ */
+
+    /* ── Destructive ── same red in dark mode */
+    --destructive:             var(--color-red);
+
+    /* ── Destructive foreground ── white text on red */
+    --destructive-foreground:  var(--color-paper);
+
+    /* ── Destructive hover ── intensified red */
+    --destructive-hover:       var(--color-red-intense);
+
+    /* ── Destructive muted ── dark-appropriate red tint background */
+    --destructive-muted:       var(--color-red-muted);
+
+
+    /* ══════════════════════════════════════════════
+       §8  STATUS — semantic feedback colors on dark
+       ══════════════════════════════════════════════ */
+
+    /* ─ Success ─ */
+    --success:                 var(--color-green);
+    --success-foreground:      var(--color-ink);
+    --success-muted:           var(--color-green-muted);
+
+    /* ─ Warning ─ */
+    --warning:                 var(--color-yellow);
+    --warning-foreground:      var(--color-ink);
+    --warning-muted:           var(--color-yellow-muted);
+
+    /* ─ Info ─ */
+    --info:                    var(--color-blue);
+    --info-foreground:         var(--color-ink);
+    --info-muted:              var(--color-blue-muted);
+
+    /* ─ Disabled ─ */
+    --disabled:                var(--color-paper-faint);
+    --disabled-foreground:     var(--color-paper-muted);
+
+
+    /* ══════════════════════════════════════════════
+       §9  FORM CHROME — inputs and focus rings on dark
+       ══════════════════════════════════════════════ */
+
+    /* ── Border ── subtle white border on dark surfaces */
+    --border:                  var(--color-paper-subtle);
+
+    /* ── Input ── visible white-tint input border */
+    --input:                   var(--color-paper-muted);
+
+    /* ── Ring ── purple focus ring (unchanged) */
+    --ring:                    var(--color-purple);
+
+
+    /* ══════════════════════════════════════════════
+       §10 SIDEBAR — dark navigation sidebar
+       ══════════════════════════════════════════════ */
+
+    /* ── Sidebar fill ── dark sidebar surface (paper-faint on ink) */
+    --sidebar:                     var(--color-paper-faint);
+    --sidebar-background:          var(--color-paper-faint);
+
+    /* ── Sidebar text ── white text in dark sidebar */
+    --sidebar-foreground:          var(--color-paper);
+
+    /* ── Sidebar primary ── active item (purple unchanged) */
+    --sidebar-primary:             var(--color-purple);
+    --sidebar-primary-foreground:  var(--color-paper);
+
+    /* ── Sidebar accent ── hovered item on dark sidebar */
+    --sidebar-accent:              var(--color-lilac-muted);
+    --sidebar-accent-foreground:   var(--color-paper);
+
+    /* ── Sidebar border ── subtle divider on dark sidebar */
+    --sidebar-border:              var(--color-paper-subtle);
+
+    /* ── Sidebar ring ── focus ring inside dark sidebar */
+    --sidebar-ring:                var(--color-purple);
+
+
+    /* ══════════════════════════════════════════════
+       §11 CHARTS — data palette (unchanged across themes)
+       ══════════════════════════════════════════════ */
+
+    /* ── Chart colors ── same ordered palette works on dark backgrounds */
+    --chart-1:  var(--color-purple);
+    --chart-2:  var(--color-blue);
+    --chart-3:  var(--color-green);
+    --chart-4:  var(--color-yellow);
+    --chart-5:  var(--color-orange);
+    --chart-6:  var(--color-lilac);
+    --chart-7:  var(--color-red);
+    --chart-8:  var(--color-sky);
+
+
+    /* ══════════════════════════════════════════════
+       §12 SCRIM — darker backdrop on dark backgrounds
+       ══════════════════════════════════════════════ */
+
+    /* ── Scrim ── very dark, near-opaque modal backdrop */
+    --scrim:  var(--color-ink-intense);
+}

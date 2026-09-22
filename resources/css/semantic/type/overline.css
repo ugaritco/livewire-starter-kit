@@ -1,0 +1,13 @@
+/* Semantic type: overline
+ * ─────────────────────────────────────────────────────────────────────────────
+ * Uppercase small overline metadata labels above titles or metrics.
+ * ─────────────────────────────────────────────────────────────────────────────
+ */
+:root {
+    --type-overline-family:            var(--font-family-primary);
+    --type-overline-weight:            var(--font-weight-overline);
+    --type-overline-size:              var(--font-size-overline);
+    --type-overline-line-height:       var(--font-leading-overline);
+    --type-overline-letter-spacing:    var(--font-tracking-overline);
+    --type-overline-paragraph-spacing: 0;
+}

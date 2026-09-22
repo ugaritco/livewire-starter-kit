@@ -1,0 +1,212 @@
+/* Semantic Foundation: Light Theme
+ * ─────────────────────────────────────────────────────────────────────────────
+ * Foundation tokens are the bridge between raw color primitives (--color-*)
+ * and semantic UI tokens (--surface-*, --text-*, --stroke-*…).
+ *
+ * These tokens are consumed by all semantic color files.
+ * They define the resolved values for the current theme (light mode = :root).
+ *
+ * IMPORTANT: Do NOT use these tokens directly in components.
+ * Components should always reference semantic tokens (--surface-*, --text-*, …).
+ *
+ * Sections:
+ *   §1  Canvas        — page background and foreground text
+ *   §2  Surface       — card, popover, panel fills
+ *   §3  Brand / Primary — brand color, CTAs
+ *   §4  Secondary     — secondary action color
+ *   §5  Muted / Ghost — de-emphasized fills
+ *   §6  Accent        — complementary highlight color
+ *   §7  Destructive   — error and danger color
+ *   §8  Semantic status — success, warning, info, disabled
+ *   §9  Form chrome   — input border, focus ring
+ *   §10 Sidebar       — navigation sidebar surface
+ *   §11 Charts        — data visualization color sequence
+ *   §12 Scrim         — modal backdrop color
+ * ─────────────────────────────────────────────────────────────────────────────
+ */
+:root {
+
+    /* ══════════════════════════════════════════════
+       §1  CANVAS — page-level background / text
+       ══════════════════════════════════════════════ */
+
+    /* ── Background ── the page canvas color (white) */
+    --background:              var(--color-paper);
+
+    /* ── Foreground ── the primary text color on background */
+    --foreground:              var(--color-ink);
+
+
+    /* ══════════════════════════════════════════════
+       §2  SURFACE — card and floating element fills
+       ══════════════════════════════════════════════ */
+
+    /* ── Card ── default card / panel surface */
+    --card:                    var(--color-paper);
+
+    /* ── Card foreground ── text on cards */
+    --card-foreground:         var(--color-ink);
+
+    /* ── Popover ── dropdown, tooltip, popover surface */
+    --popover:                 var(--color-paper);
+
+    /* ── Popover foreground ── text inside popovers */
+    --popover-foreground:      var(--color-ink);
+
+
+    /* ══════════════════════════════════════════════
+       §3  BRAND / PRIMARY — main action color
+       ══════════════════════════════════════════════ */
+
+    /* ── Primary ── brand CTA fill (purple) */
+    --primary:                 var(--color-purple);
+
+    /* ── Primary foreground ── text on primary buttons */
+    --primary-foreground:      var(--color-paper);
+
+    /* ── Primary hover ── darkened on hover */
+    --primary-hover:           var(--color-purple-intense);
+
+    /* ── Primary pressed ── pressed / active state */
+    --primary-pressed:         var(--color-purple-strong);
+
+
+    /* ══════════════════════════════════════════════
+       §4  SECONDARY — secondary action color
+       ══════════════════════════════════════════════ */
+
+    /* ── Secondary ── secondary button fill (ink = dark) */
+    --secondary:               var(--color-ink);
+
+    /* ── Secondary foreground ── text on secondary buttons */
+    --secondary-foreground:    var(--color-paper);
+
+    /* ── Secondary hover ── darkened secondary on hover */
+    --secondary-hover:         var(--color-ink-intense);
+
+
+    /* ══════════════════════════════════════════════
+       §5  MUTED / GHOST — de-emphasized fills
+       ══════════════════════════════════════════════ */
+
+    /* ── Muted ── ghost button fill, section background */
+    --muted:                   var(--color-gray);
+
+    /* ── Muted foreground ── secondary / caption text color */
+    --muted-foreground:        var(--color-ink-strong);
+
+
+    /* ══════════════════════════════════════════════
+       §6  ACCENT — complementary highlight
+       ══════════════════════════════════════════════ */
+
+    /* ── Accent ── selected state, active badge background */
+    --accent:                  var(--color-lilac-strong);
+
+    /* ── Accent foreground ── text on accent backgrounds */
+    --accent-foreground:       var(--color-ink);
+
+
+    /* ══════════════════════════════════════════════
+       §7  DESTRUCTIVE — error and danger
+       ══════════════════════════════════════════════ */
+
+    /* ── Destructive ── delete / error button fill */
+    --destructive:             var(--color-red);
+
+    /* ── Destructive foreground ── text on destructive buttons */
+    --destructive-foreground:  var(--color-paper);
+
+    /* ── Destructive hover ── deeper red on hover */
+    --destructive-hover:       var(--color-red-intense);
+
+    /* ── Destructive muted ── soft red for error backgrounds */
+    --destructive-muted:       var(--color-red-subtle);
+
+
+    /* ══════════════════════════════════════════════
+       §8  STATUS — semantic feedback colors
+       ══════════════════════════════════════════════ */
+
+    /* ─ Success ─ */
+    --success:                 var(--color-green);
+    --success-foreground:      var(--color-ink);
+    --success-muted:           var(--color-green-subtle);
+
+    /* ─ Warning ─ */
+    --warning:                 var(--color-yellow);
+    --warning-foreground:      var(--color-ink);
+    --warning-muted:           var(--color-yellow-subtle);
+
+    /* ─ Info ─ */
+    --info:                    var(--color-blue);
+    --info-foreground:         var(--color-ink);
+    --info-muted:              var(--color-blue-subtle);
+
+    /* ─ Disabled ─ */
+    --disabled:                var(--color-ink-faint);
+    --disabled-foreground:     var(--color-ink-muted);
+
+
+    /* ══════════════════════════════════════════════
+       §9  FORM CHROME — input borders and rings
+       ══════════════════════════════════════════════ */
+
+    /* ── Border ── default form element and divider border */
+    --border:                  var(--color-ink-subtle);
+
+    /* ── Input ── input field border color */
+    --input:                   var(--color-ink-muted);
+
+    /* ── Ring ── keyboard focus ring color */
+    --ring:                    var(--color-purple);
+
+
+    /* ══════════════════════════════════════════════
+       §10 SIDEBAR — navigation sidebar surface
+       ══════════════════════════════════════════════ */
+
+    /* ── Sidebar fill ── sidebar background surface */
+    --sidebar:                     var(--color-gray);
+    --sidebar-background:          var(--color-gray);
+
+    /* ── Sidebar text ── primary sidebar text */
+    --sidebar-foreground:          var(--color-ink);
+
+    /* ── Sidebar primary ── active nav item fill */
+    --sidebar-primary:             var(--color-purple);
+    --sidebar-primary-foreground:  var(--color-paper);
+
+    /* ── Sidebar accent ── hovered nav item background */
+    --sidebar-accent:              var(--color-lilac-strong);
+    --sidebar-accent-foreground:   var(--color-ink);
+
+    /* ── Sidebar border ── sidebar divider */
+    --sidebar-border:              var(--color-ink-subtle);
+
+    /* ── Sidebar ring ── focus ring within sidebar */
+    --sidebar-ring:                var(--color-purple);
+
+
+    /* ══════════════════════════════════════════════
+       §11 CHARTS — data visualization sequence
+       ══════════════════════════════════════════════ */
+
+    /* ── Chart colors ── ordered palette for series data */
+    --chart-1:  var(--color-purple);
+    --chart-2:  var(--color-blue);
+    --chart-3:  var(--color-green);
+    --chart-4:  var(--color-yellow);
+    --chart-5:  var(--color-orange);
+    --chart-6:  var(--color-lilac);
+    --chart-7:  var(--color-red);
+    --chart-8:  var(--color-sky);
+
+
+    /* ══════════════════════════════════════════════
+       §12 SCRIM — modal and overlay backdrop
+       ══════════════════════════════════════════════ */
+
+    /* ── Scrim ── modal backdrop (semi-opaque dark wash) */
+    --scrim:  var(--color-ink-strong);
+}

@@ -1,0 +1,13 @@
+/* Semantic type: title
+ * ─────────────────────────────────────────────────────────────────────────────
+ * Subsection titles, card group headings, and modal headers.
+ * ─────────────────────────────────────────────────────────────────────────────
+ */
+:root {
+    --type-title-family:            var(--font-family-primary);
+    --type-title-weight:            var(--font-weight-title);
+    --type-title-size:              var(--font-size-title);
+    --type-title-line-height:       var(--font-leading-title);
+    --type-title-letter-spacing:    var(--font-tracking-title);
+    --type-title-paragraph-spacing: 0;
+}
