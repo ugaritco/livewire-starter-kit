@@ -1,0 +1,42 @@
+{
+    "name": "ugarit-artifacts/geography",
+    "description": "Ugarit Geography Artifact — autonomous backend countries, governorates, cities, and locations territorial hierarchy capabilities.",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "ugarit",
+        "ugarit-artifact",
+        "ada",
+        "geography",
+        "countries",
+        "cities",
+        "locations",
+        "territories"
+    ],
+    "authors": [
+        {
+            "name": "Muath R Abu Ouda",
+            "email": "muathrabuouda@hotmail.com",
+            "role": "Vision Leader of Ugarit"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "ugarit/framework": "^1.00.14",
+        "ugarit-artifacts/i18n": "^1.00.00"
+    },
+    "autoload": {
+        "psr-4": {
+            "Ugarit\\Artifacts\\Geography\\": "src/"
+        }
+    },
+    "extra": {
+        "ugarit": {
+            "providers": [
+                "Ugarit\\Artifacts\\Geography\\Providers\\GeographyServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

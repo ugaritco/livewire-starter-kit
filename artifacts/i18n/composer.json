@@ -1,0 +1,40 @@
+{
+    "name": "ugarit-artifacts/i18n",
+    "description": "Ugarit I18n Artifact — autonomous backend internationalization, locales, and linguistic capabilities.",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "ugarit",
+        "ugarit-artifact",
+        "ada",
+        "i18n",
+        "localization",
+        "locales",
+        "rtl"
+    ],
+    "authors": [
+        {
+            "name": "Muath R Abu Ouda",
+            "email": "muathrabuouda@hotmail.com",
+            "role": "Vision Leader of Ugarit"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "ugarit/framework": "^1.00.14"
+    },
+    "autoload": {
+        "psr-4": {
+            "Ugarit\\Artifacts\\I18n\\": "src/"
+        }
+    },
+    "extra": {
+        "ugarit": {
+            "providers": [
+                "Ugarit\\Artifacts\\I18n\\Providers\\I18nServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
