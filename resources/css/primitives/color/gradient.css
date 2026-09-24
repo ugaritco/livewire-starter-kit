@@ -1,0 +1,49 @@
+/* Color primitive: orange→red gradient
+ * ─────────────────────────────────────────────────────────────────────────────
+ * Warm heat ramp bridging brand orange (#FF8700) and signal red (#FF0000).
+ * Intermediate stops keep hue in the same 100%-saturated family so charts,
+ * progress fills, and brand flourishes can step smoothly between the two.
+ *
+ * Stops (hue lerp 32° → 0° at L=50%):
+ *   heat-1  hsl(32 100% 50%) — #FF8700 brand orange
+ *   heat-2  hsl(24 100% 50%) — #FF6600
+ *   heat-3  hsl(16 100% 50%) — #FF4400
+ *   heat-4  hsl(8 100% 50%)  — #FF2200
+ *   heat-5  hsl(0 100% 50%)  — #FF0000 signal red
+ *
+ * Gradient tokens expose ready-to-use CSS linear-gradients.
+ * ─────────────────────────────────────────────────────────────────────────────
+ */
+:root {
+    /* ── Heat stops ── discrete ramp from orange to red */
+    --color-heat-1: hsl(32 100% 50%);
+    --color-heat-2: hsl(24 100% 50%);
+    --color-heat-3: hsl(16 100% 50%);
+    --color-heat-4: hsl(8 100% 50%);
+    --color-heat-5: hsl(0 100% 50%);
+
+    /* ── Continuous gradients ── brand / urgency flourishes */
+    --gradient-orange-red: linear-gradient(
+        90deg,
+        var(--color-orange) 0%,
+        var(--color-heat-2) 25%,
+        var(--color-heat-3) 50%,
+        var(--color-heat-4) 75%,
+        var(--color-red) 100%
+    );
+
+    --gradient-orange-red-vertical: linear-gradient(
+        180deg,
+        var(--color-orange) 0%,
+        var(--color-heat-2) 25%,
+        var(--color-heat-3) 50%,
+        var(--color-heat-4) 75%,
+        var(--color-red) 100%
+    );
+
+    --gradient-brand-heat: linear-gradient(
+        135deg,
+        var(--color-orange) 0%,
+        var(--color-red) 100%
+    );
+}

@@ -1,7 +1,8 @@
 /* Color primitive: purple
  * ─────────────────────────────────────────────────────────────────────────────
- * The primary brand accent color of the Ugarit design system.
- * Used for primary actions, focus rings, highlights, and brand moments.
+ * Secondary cool accent in the Ugarit design system.
+ * Used for complementary highlights, decorative moments, and chart series.
+ * Brand primary is --color-orange (#FF8700).
  *
  * Base:      hsl(276 89.9% 57.5%) — vibrant electric purple
  * Alpha variants use the same hue at reduced opacity for overlays,
@@ -16,7 +17,7 @@
  * ─────────────────────────────────────────────────────────────────────────────
  */
 :root {
-    /* ── Full ── solid brand purple, primary CTA and focus indicator */
+    /* ── Full ── solid purple accent, decorative and chart use */
     --color-purple:         hsl(276 89.9% 57.5%);
 
     /* ── Faint (10%) ── background wash, tag fill, hover surface */

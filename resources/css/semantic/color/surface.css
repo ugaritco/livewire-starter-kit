@@ -50,5 +50,5 @@
     --surface-brand:           var(--primary);
 
     /* ── Brand subtle ── soft brand tint for feature highlight areas */
-    --surface-brand-subtle:    var(--color-purple-faint);
+    --surface-brand-subtle:    var(--color-orange-faint);
 }

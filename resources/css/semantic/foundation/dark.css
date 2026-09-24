@@ -11,7 +11,7 @@
  * Sections:
  *   §1  Canvas        — inverted background (ink) and foreground (paper)
  *   §2  Surface       — dark card / panel surfaces (paper-faint overlays)
- *   §3  Brand / Primary — brand color unchanged (purple stays purple)
+ *   §3  Brand / Primary — brand color unchanged (orange stays orange)
  *   §4  Secondary     — secondary action inverted to paper
  *   §5  Muted / Ghost — de-emphasized fills on dark
  *   §6  Accent        — softer accent on dark (lilac-muted)
@@ -57,17 +57,17 @@
        §3  BRAND / PRIMARY — brand color (unchanged)
        ══════════════════════════════════════════════ */
 
-    /* ── Primary ── purple unchanged — brand color is consistent across themes */
-    --primary:                 var(--color-purple);
+    /* ── Primary ── orange unchanged — brand color is consistent across themes */
+    --primary:                 var(--color-orange);
 
     /* ── Primary foreground ── white text on primary buttons */
     --primary-foreground:      var(--color-paper);
 
-    /* ── Primary hover ── intense purple for hover */
-    --primary-hover:           var(--color-purple-intense);
+    /* ── Primary hover ── intense orange for hover */
+    --primary-hover:           var(--color-orange-intense);
 
-    /* ── Primary pressed ── medium purple for press feedback */
-    --primary-pressed:         var(--color-purple-strong);
+    /* ── Primary pressed ── medium orange for press feedback */
+    --primary-pressed:         var(--color-orange-strong);
 
 
     /* ══════════════════════════════════════════════
@@ -157,8 +157,8 @@
     /* ── Input ── visible white-tint input border */
     --input:                   var(--color-paper-muted);
 
-    /* ── Ring ── purple focus ring (unchanged) */
-    --ring:                    var(--color-purple);
+    /* ── Ring ── orange focus ring (unchanged) */
+    --ring:                    var(--color-orange);
 
 
     /* ══════════════════════════════════════════════
@@ -172,8 +172,8 @@
     /* ── Sidebar text ── white text in dark sidebar */
     --sidebar-foreground:          var(--color-paper);
 
-    /* ── Sidebar primary ── active item (purple unchanged) */
-    --sidebar-primary:             var(--color-purple);
+    /* ── Sidebar primary ── active item (orange unchanged) */
+    --sidebar-primary:             var(--color-orange);
     --sidebar-primary-foreground:  var(--color-paper);
 
     /* ── Sidebar accent ── hovered item on dark sidebar */
@@ -184,7 +184,7 @@
     --sidebar-border:              var(--color-paper-subtle);
 
     /* ── Sidebar ring ── focus ring inside dark sidebar */
-    --sidebar-ring:                var(--color-purple);
+    --sidebar-ring:                var(--color-orange);
 
 
     /* ══════════════════════════════════════════════
@@ -192,11 +192,11 @@
        ══════════════════════════════════════════════ */
 
     /* ── Chart colors ── same ordered palette works on dark backgrounds */
-    --chart-1:  var(--color-purple);
+    --chart-1:  var(--color-orange);
     --chart-2:  var(--color-blue);
     --chart-3:  var(--color-green);
     --chart-4:  var(--color-yellow);
-    --chart-5:  var(--color-orange);
+    --chart-5:  var(--color-purple);
     --chart-6:  var(--color-lilac);
     --chart-7:  var(--color-red);
     --chart-8:  var(--color-sky);

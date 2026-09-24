@@ -188,7 +188,7 @@
        Colored ambient glow for brand / accent surfaces.
        Override --elevation-glow-color in component context.
        ══════════════════════════════════════════════════════════════════════ */
-    --elevation-glow-color:   var(--color-purple, #8b5cf6);
+    --elevation-glow-color:   var(--color-orange, #FF8700);
     --elevation-glow-opacity: 0.28;
     --elevation-glow:
         0px 0px 0px 1px color-mix(in srgb, var(--elevation-glow-color) 12%, transparent),
@@ -200,8 +200,8 @@
        Not a traditional elevation, but reuses the shadow system.
        ══════════════════════════════════════════════════════════════════════ */
     --elevation-focus-ring:
-        0px 0px 0px 3px color-mix(in srgb, var(--color-purple, #8b5cf6) 40%, transparent);
+        0px 0px 0px 3px color-mix(in srgb, var(--color-orange, #FF8700) 40%, transparent);
 
     --elevation-focus-ring-inset:
-        inset 0px 0px 0px 2px color-mix(in srgb, var(--color-purple, #8b5cf6) 60%, transparent);
+        inset 0px 0px 0px 2px color-mix(in srgb, var(--color-orange, #FF8700) 60%, transparent);
 }

@@ -32,9 +32,9 @@
        ERROR — failure / destructive / critical
        ════════════════════════════════════════ */
     --status-error-solid:            var(--destructive);
-    --status-error-surface:          var(--color-crimson-faint);
+    --status-error-surface:          var(--color-red-faint);
     --status-error-foreground:       var(--destructive-foreground);
-    --status-error-stroke:           var(--color-crimson-subtle);
+    --status-error-stroke:           var(--color-red-subtle);
 
     /* ════════════════════════════════════════
        INFO — informative / guidance / neutral help

@@ -58,17 +58,17 @@
        §3  BRAND / PRIMARY — main action color
        ══════════════════════════════════════════════ */
 
-    /* ── Primary ── brand CTA fill (purple) */
-    --primary:                 var(--color-purple);
+    /* ── Primary ── brand CTA fill (orange #FF8700) */
+    --primary:                 var(--color-orange);
 
     /* ── Primary foreground ── text on primary buttons */
     --primary-foreground:      var(--color-paper);
 
-    /* ── Primary hover ── darkened on hover */
-    --primary-hover:           var(--color-purple-intense);
+    /* ── Primary hover ── intensified orange on hover */
+    --primary-hover:           var(--color-orange-intense);
 
     /* ── Primary pressed ── pressed / active state */
-    --primary-pressed:         var(--color-purple-strong);
+    --primary-pressed:         var(--color-orange-strong);
 
 
     /* ══════════════════════════════════════════════
@@ -159,7 +159,7 @@
     --input:                   var(--color-ink-muted);
 
     /* ── Ring ── keyboard focus ring color */
-    --ring:                    var(--color-purple);
+    --ring:                    var(--color-orange);
 
 
     /* ══════════════════════════════════════════════
@@ -174,7 +174,7 @@
     --sidebar-foreground:          var(--color-ink);
 
     /* ── Sidebar primary ── active nav item fill */
-    --sidebar-primary:             var(--color-purple);
+    --sidebar-primary:             var(--color-orange);
     --sidebar-primary-foreground:  var(--color-paper);
 
     /* ── Sidebar accent ── hovered nav item background */
@@ -185,7 +185,7 @@
     --sidebar-border:              var(--color-ink-subtle);
 
     /* ── Sidebar ring ── focus ring within sidebar */
-    --sidebar-ring:                var(--color-purple);
+    --sidebar-ring:                var(--color-orange);
 
 
     /* ══════════════════════════════════════════════
@@ -193,11 +193,11 @@
        ══════════════════════════════════════════════ */
 
     /* ── Chart colors ── ordered palette for series data */
-    --chart-1:  var(--color-purple);
+    --chart-1:  var(--color-orange);
     --chart-2:  var(--color-blue);
     --chart-3:  var(--color-green);
     --chart-4:  var(--color-yellow);
-    --chart-5:  var(--color-orange);
+    --chart-5:  var(--color-purple);
     --chart-6:  var(--color-lilac);
     --chart-7:  var(--color-red);
     --chart-8:  var(--color-sky);

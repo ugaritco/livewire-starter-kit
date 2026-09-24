@@ -4,13 +4,14 @@
  * Each file defines a color palette with its full and alpha variants.
  *
  * Color roles:
- *   purple  — primary brand accent, CTAs, focus rings
+ *   orange  — primary brand accent (#FF8700), CTAs, focus rings
+ *   red     — error / destructive (#FF0000); hot end of heat ramp
+ *   gradient— orange→red heat stops and CSS gradient tokens
+ *   purple  — secondary cool accent, decorative highlights
  *   blue    — information, links, interactive elements
  *   lilac   — complementary soft accent, decorative
  *   green   — success, confirmation, positive states
  *   yellow  — warning, caution, attention
- *   orange  — urgent alerts, energy, high-attention
- *   red     — error, destructive actions, danger
  *   gray    — neutral surface, dividers, placeholders
  *   sky     — secondary cool accent, airy backgrounds
  *   ink     — primary text, dark surfaces, near-black neutral
@@ -18,13 +19,14 @@
  *   shadow  — base shadow hue consumed by elevation.css
  * ─────────────────────────────────────────────────────────────────────────────
  */
+@import './orange.css';
+@import './red.css';
+@import './gradient.css';
 @import './purple.css';
 @import './blue.css';
 @import './lilac.css';
 @import './green.css';
 @import './yellow.css';
-@import './orange.css';
-@import './red.css';
 @import './gray.css';
 @import './sky.css';
 @import './ink.css';

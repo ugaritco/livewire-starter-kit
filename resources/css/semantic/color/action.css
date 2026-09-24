@@ -8,8 +8,8 @@
 
     /* ── Primary ── high-priority call-to-action button */
     --action-primary-rest:             var(--primary);
-    --action-primary-hover:            var(--color-purple-strong);
-    --action-primary-pressed:          var(--color-purple-intense);
+    --action-primary-hover:            var(--color-orange-strong);
+    --action-primary-pressed:          var(--color-orange-intense);
     --action-primary-foreground:       var(--primary-foreground);
 
     /* ── Secondary ── medium-priority alternate action */
@@ -20,8 +20,8 @@
 
     /* ── Destructive ── dangerous or irreversible action (delete, reject) */
     --action-destructive-rest:         var(--destructive);
-    --action-destructive-hover:        var(--color-crimson-strong);
-    --action-destructive-pressed:      var(--color-crimson-intense);
+    --action-destructive-hover:        var(--color-red-strong);
+    --action-destructive-pressed:      var(--color-red-intense);
     --action-destructive-foreground:   var(--destructive-foreground);
 
     /* ── Ghost ── borderless quiet button */

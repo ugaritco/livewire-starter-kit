@@ -4,8 +4,8 @@
  * content on light backgrounds. The darkest neutral in the system.
  *
  * Base:      hsl(270 70% 7.8%) — deep violet-tinted near-black
- * Note:      The purple hue undertone (270°) creates visual harmony with
- *            the brand's --color-purple primary accent.
+ * Note:      Warm-neutral undertone stays readable against the brand
+ *            --color-orange (#FF8700) primary accent.
  *
  * Alpha scale:
  *   faint   10% — very subtle dark overlay on light surfaces
