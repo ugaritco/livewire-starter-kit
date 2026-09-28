@@ -12,7 +12,7 @@
  *   §1  Canvas        — inverted background (ink) and foreground (paper)
  *   §2  Surface       — dark card / panel surfaces (paper-faint overlays)
  *   §3  Brand / Primary — brand color unchanged (orange stays orange)
- *   §4  Secondary     — secondary action inverted to paper
+ *   §4  Secondary     — secondary action stays soft black (#212121)
  *   §5  Muted / Ghost — de-emphasized fills on dark
  *   §6  Accent        — softer accent on dark (lilac-muted)
  *   §7  Destructive   — same red, same usage
@@ -74,14 +74,14 @@
        §4  SECONDARY — inverted secondary action
        ══════════════════════════════════════════════ */
 
-    /* ── Secondary ── paper (white) as the secondary fill on dark */
-    --secondary:               var(--color-paper);
+    /* ── Secondary ── soft black (#212121), same brand secondary across themes */
+    --secondary:               var(--color-ink);
 
-    /* ── Secondary foreground ── ink text on white secondary buttons */
-    --secondary-foreground:    var(--color-ink);
+    /* ── Secondary foreground ── white text on black secondary buttons */
+    --secondary-foreground:    var(--color-paper);
 
-    /* ── Secondary hover ── intense white on hover */
-    --secondary-hover:         var(--color-paper-intense);
+    /* ── Secondary hover ── softened black on hover */
+    --secondary-hover:         var(--color-ink-intense);
 
 
     /* ══════════════════════════════════════════════

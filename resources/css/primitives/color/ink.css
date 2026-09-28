@@ -1,11 +1,9 @@
 /* Color primitive: ink
  * ─────────────────────────────────────────────────────────────────────────────
- * The primary dark color used for body text, headings, and high-contrast
- * content on light backgrounds. The darkest neutral in the system.
+ * Soft black used for body text, headings, and the secondary brand fill.
+ * Pairs with the primary brand orange (#FF7F11).
  *
- * Base:      hsl(270 70% 7.8%) — deep violet-tinted near-black
- * Note:      Warm-neutral undertone stays readable against the brand
- *            --color-orange (#FF8700) primary accent.
+ * Base:      hsl(0 0% 12.9%) — #212121 soft black
  *
  * Alpha scale:
  *   faint   10% — very subtle dark overlay on light surfaces
@@ -16,21 +14,21 @@
  * ─────────────────────────────────────────────────────────────────────────────
  */
 :root {
-    /* ── Full ── near-black primary text, headings, high-contrast UI */
-    --color-ink:         hsl(270 70% 7.8%);
+    /* ── Full ── soft black primary text, headings, secondary brand fill */
+    --color-ink:         hsl(0 0% 12.9%);
 
     /* ── Faint (10%) ── subtle dark overlay, pressed state background */
-    --color-ink-faint:   hsl(270 70% 7.8% / 0.1);
+    --color-ink-faint:   hsl(0 0% 12.9% / 0.1);
 
     /* ── Subtle (15%) ── light scrim, hover overlay on colored surfaces */
-    --color-ink-subtle:  hsl(270 70% 7.8% / 0.15);
+    --color-ink-subtle:  hsl(0 0% 12.9% / 0.15);
 
     /* ── Muted (25%) ── secondary text tint, caption overlay */
-    --color-ink-muted:   hsl(270 70% 7.8% / 0.25);
+    --color-ink-muted:   hsl(0 0% 12.9% / 0.25);
 
     /* ── Strong (50%) ── modal backdrop, focus dimmer */
-    --color-ink-strong:  hsl(270 70% 7.8% / 0.5);
+    --color-ink-strong:  hsl(0 0% 12.9% / 0.5);
 
     /* ── Intense (75%) ── near-opaque dark overlay, high-contrast tint */
-    --color-ink-intense: hsl(270 70% 7.8% / 0.75);
+    --color-ink-intense: hsl(0 0% 12.9% / 0.75);
 }

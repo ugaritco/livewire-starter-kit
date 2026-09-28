@@ -4,7 +4,7 @@
  * Each file defines a color palette with its full and alpha variants.
  *
  * Color roles:
- *   orange  — primary brand accent (#FF8700), CTAs, focus rings
+ *   orange  — primary brand accent (#FF7F11), CTAs, focus rings
  *   red     — error / destructive (#FF0000); hot end of heat ramp
  *   gradient— orange→red heat stops and CSS gradient tokens
  *   purple  — secondary cool accent, decorative highlights

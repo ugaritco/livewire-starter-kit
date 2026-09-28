@@ -4,7 +4,7 @@
  * Used for primary actions, focus rings, highlights, and brand moments.
  * Also anchors the warm end of the orange→red heat gradient.
  *
- * Base:      hsl(32 100% 50%) — #FF8700 vivid brand orange
+ * Base:      hsl(27.73 100% 53.3%) — #FF7F11 vivid brand orange
  *
  * Alpha scale:
  *   faint   10% — brand background wash
@@ -16,20 +16,20 @@
  */
 :root {
     /* ── Full ── solid brand orange, primary CTA and focus indicator */
-    --color-orange:         hsl(32 100% 50%);
+    --color-orange:         hsl(27.73 100% 53.3%);
 
     /* ── Faint (10%) ── brand background wash, tag fill */
-    --color-orange-faint:   hsl(32 100% 50% / 0.1);
+    --color-orange-faint:   hsl(27.73 100% 53.3% / 0.1);
 
     /* ── Subtle (15%) ── hover tint on orange-accented surfaces */
-    --color-orange-subtle:  hsl(32 100% 50% / 0.15);
+    --color-orange-subtle:  hsl(27.73 100% 53.3% / 0.15);
 
     /* ── Muted (25%) ── soft brand chip, unread indicator */
-    --color-orange-muted:   hsl(32 100% 50% / 0.25);
+    --color-orange-muted:   hsl(27.73 100% 53.3% / 0.25);
 
     /* ── Strong (50%) ── semi-opaque brand or progress fill */
-    --color-orange-strong:  hsl(32 100% 50% / 0.5);
+    --color-orange-strong:  hsl(27.73 100% 53.3% / 0.5);
 
     /* ── Intense (75%) ── brand border, activity icon */
-    --color-orange-intense: hsl(32 100% 50% / 0.75);
+    --color-orange-intense: hsl(27.73 100% 53.3% / 0.75);
 }

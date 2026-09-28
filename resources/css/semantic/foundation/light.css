@@ -58,7 +58,7 @@
        §3  BRAND / PRIMARY — main action color
        ══════════════════════════════════════════════ */
 
-    /* ── Primary ── brand CTA fill (orange #FF8700) */
+    /* ── Primary ── brand CTA fill (orange #FF7F11) */
     --primary:                 var(--color-orange);
 
     /* ── Primary foreground ── text on primary buttons */
@@ -75,13 +75,13 @@
        §4  SECONDARY — secondary action color
        ══════════════════════════════════════════════ */
 
-    /* ── Secondary ── secondary button fill (ink = dark) */
+    /* ── Secondary ── secondary button fill (soft black #212121) */
     --secondary:               var(--color-ink);
 
     /* ── Secondary foreground ── text on secondary buttons */
     --secondary-foreground:    var(--color-paper);
 
-    /* ── Secondary hover ── darkened secondary on hover */
+    /* ── Secondary hover ── softened black on hover */
     --secondary-hover:         var(--color-ink-intense);
 
 
